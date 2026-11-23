@@ -3,7 +3,7 @@
 **Judul/hook:** Bangun rumah di atas tanah lembek, bisa nggak?
 **Durasi:** 81,5 detik (audio Chris, speed 1.1)
 **Sumber teks kebenaran:** [`script.json`](script.json). File ini versi baca + catatan riset.
-**Status:** naskah dilanjutkan pemilik ("lanjut ep 3"). Audio ✅ (24 kredit, 1.295 karakter), animasi ✅, preview dikirim; menunggu OK pemilik untuk render final.
+**Status:** naskah dilanjutkan pemilik ("lanjut ep 3"). Audio ✅ (24 kredit, 1.295 karakter), animasi ✅, preview disetujui, final + cover ✅. Siap upload.
 
 ## Naskah
 
