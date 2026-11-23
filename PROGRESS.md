@@ -11,27 +11,32 @@ _Update file ini di setiap PR. Paling baru di atas._
 | Scene kit (lembah sungai, hujan, panah, label, subtitle) | ✅ `engine/` |
 | Pipeline render (Three.js → Chromium headless → ffmpeg) | ✅ `tools/render.mjs` |
 | Ep. 01 Bendungan: naskah + cek fakta | ✅ `episodes/01-bendungan/naskah.md` |
-| Ep. 01 Bendungan: animasi | ✅ versi 1 (timing estimasi, tanpa suara) |
-| Ep. 01 Bendungan: audio TTS | ⏳ **menunggu pemilik**: generate dari naskah, upload sebagai `episodes/01-bendungan/audio.mp3` |
+| Ep. 01 Bendungan: animasi | ✅ versi 1, disinkronkan ke audio |
+| Suara TTS | ✅ KIE → ElevenLabs Multilingual v2, suara Chris, speed 1.1 (`tools/tts.mjs`) |
+| Ep. 01 Bendungan: audio + sinkron | ✅ `episodes/01-bendungan/audio.mp3` (89 dtk), timing dari jeda audio |
 | Handle akun | ⏳ belum diputuskan (`brand.json` masih `@pakbero.id`) |
 | Ep. 02 dst | ⬜ antrean di `IDE-VIDEO.md` |
 
 ## Langkah berikutnya
 
-1. Pemilik: review preview ep. 01, beri catatan revisi.
-2. Pemilik: generate TTS dari blok "Naskah untuk TTS" di `episodes/01-bendungan/naskah.md`, lalu upload audio (+ timestamp per kata kalau ada).
-3. Claude: `tools/align.py` → `tools/timing.mjs` → render final 1080x1920 dengan audio. (`align.py` belum dites dengan audio asli.)
-4. Pemilik: putuskan handle → update `brand.json`.
+1. Pemilik: review preview ep. 01 (dengan suara), beri catatan revisi.
+2. Claude: render final 1080x1920 (`node tools/render.mjs --ep 01-bendungan --scale 2`, ±30+ menit di container).
+3. Pemilik: putuskan handle → update `brand.json` → render ulang.
+4. Belum ada musik latar / efek suara (opsional, perlu sumber bebas lisensi).
 5. Lanjut ep. 02 (usulan: Rumah tahan gempa).
 
 ## Catatan teknis / kendala yang diketahui
 
 - Kamera di lembah sempit gampang tertutup tebing. Taruh kamera di atas alur sungai (|x| < 3.5) atau di diagram potongan.
 - Panah gaya pakai `depthTest:false` supaya terlihat menembus air.
-- Durasi saat ini ±86 dtk (estimasi). Durasi final mengikuti audio.
-- Render preview 540x960: sekitar beberapa menit di container cloud.
+- Durasi ep. 01: ±90 dtk (mengikuti audio).
+- Render preview 540x960 ±9 menit (~5 fps) di container cloud; final 1080x1920 jauh lebih lama.
+- Narasi dibaca satu tarikan; bagian Situ Gintung belum dibuat lebih pelan (TTS satu task). Bisa dipecah jadi beberapa task kalau perlu.
 
 ## Log
+
+### 2026-11-23: Suara TTS via KIE
+- `tools/tts.mjs`, penyelarasan jeda audio di `tools/timing.mjs`, suara Chris dipilih pemilik dari 4 sampel (Liam, Will, Chris, Jessica).
 
 ### 2026-11-23: Pilot "Bendungan" v1
 - Engine 3D, maskot, pipeline render, naskah + riset, preview tanpa suara.

@@ -39,7 +39,22 @@ node tools/render.mjs --ep 01-bendungan --scale 2      # final 1080x1920 (+audio
 node tools/render.mjs --serve                          # buka di browser, ?play=1 untuk putar
 ```
 
-Kalau audio datang: simpan sebagai `episodes/<ep>/audio.mp3` → `python3 tools/align.py episodes/<ep>/audio.mp3` (butuh `pip install faster-whisper`) → `node tools/timing.mjs episodes/<ep>` → render. Animasi otomatis ikut waktu suara karena adegan diikat ke id baris.
+### Suara (TTS)
+
+TTS memakai **KIE** (kie.ai) → model `elevenlabs/text-to-speech-multilingual-v2`, suara **Chris**, speed **1.1** (setelan di `brand.json` → `tts`; bisa ditimpa per episode lewat `"tts"` di `script.json`).
+
+```bash
+KIE_API_KEY=<key pemilik> NODE_USE_ENV_PROXY=1 node tools/tts.mjs episodes/<ep>   # → audio.mp3 + timing.json
+```
+
+- **API key tidak boleh di-commit.** Minta ke pemilik (atau simpan sebagai network secret di environment).
+- Jaringan environment harus mengizinkan: `api.kie.ai`, `kie.ai`, `tempfile.aiquickdraw.com`, `static.aiquickdraw.com` (contoh suara). Node butuh `NODE_USE_ENV_PROXY=1` di container cloud.
+- Biaya: ±12 kredit per 1.000 karakter, minimal 12 kredit per task. 1 episode ≈ 24 kredit.
+- KIE **tidak** mengembalikan timestamp per kata, jadi `tools/timing.mjs` menyelaraskan sendiri: jeda di audio (ffmpeg silencedetect) dicocokkan ke tanda baca naskah dengan DP yang menjaga kecepatan bicara konsisten. Cek hasilnya (`timing.json`) dan beberapa still sebelum render final.
+- Alternatif lebih presisi: `python3 tools/align.py` (faster-whisper → `words.json`; perlu akses huggingface.co untuk unduh model).
+- Contoh suara lain ada di `out/tts/` lokal (tidak di-commit). Daftar ID suara: `node kie-cli.mjs doc elevenlabs/text-to-speech-multilingual-v2`.
+
+Animasi otomatis ikut waktu suara karena adegan diikat ke id baris naskah.
 
 ## Engine (ringkas)
 
