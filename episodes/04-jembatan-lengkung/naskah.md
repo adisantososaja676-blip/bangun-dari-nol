@@ -4,7 +4,7 @@
 **Asal ide:** request penonton (komentar YouTube ep. 01, @Danzzz_W2s: "Buat jembatan").
 **Durasi:** ±89 detik (perkiraan 1412 karakter; final mengikuti audio)
 **Sumber teks kebenaran:** [`script.json`](script.json). File ini versi baca + catatan riset.
-**Status:** direvisi sesuai review pemilik (5 baris + catatan). Audio belum dibuat; tunggu aba-aba pemilik.
+**Status:** 📄 **dokumen saja** (keputusan pemilik, sesi 3). Naskah + cek fakta final setelah review. **Jangan generate audio/animasi sebelum pemilik bilang lanjut.**
 
 ## Beda dengan video referensi
 
@@ -69,6 +69,42 @@ Video referensi @ngekepoyuk.id juga membahas jembatan, tapi rantainya **jembatan
 - TTS: "Batang Semarang" ditulis tanpa tanda pisah supaya pembacaannya aman.
 
 **Catatan visual:** sungai & lembah ep. 01 dipakai ulang (`buildValley`), dilebarkan, tepinya tanah lunak. Penggantung jalan = batang baja tegak (bukan kabel). Tahap baja padat istilah: label `batang pengikat`, `perletakan`, `siar muai` muncul **satu per satu**, masing-masing dengan sorotan bagiannya. Diagram panah: tekan (kuning, sepanjang lengkung), dorongan samping (merah) di kaki lengkung, tarik di batang pengikat. Pemuaian: jalan memanjang dilebih-lebihkan + label "+3,6 cm". Kalikuto: dua lengkung merah berdiri tegak di tiap tepi lalu berputar turun sampai bertemu. Tidak ada tragedi nyata di episode ini.
+
+## Rencana adegan per baris (untuk sesi produksi nanti)
+
+Dunia: `buildValley` ep. 01 (W dilebarkan ±12, tepi tanah cokelat lunak), kamera di atas alur (|x| < 3,5) atau potongan samping. Pak Bero di tepi kiri.
+
+| id | Visual | Label / panah |
+|---|---|---|
+| hook | Sungai lebar, Pak Bero di tepi memandang seberang | |
+| intro | Pak Bero melambai; kartu kecil "Request: @Danzzz_W2s" (tanya pemilik dulu boleh tampilkan nama atau tidak) | Pak Bero |
+| lempeng | Lempeng batu panjang turun & diletakkan dari tepi ke tepi | |
+| lemah | Close-up potongan lempeng: panah tekan di atas, tarik di bawah | Tekan / Tarik |
+| patah | Pak Bero melangkah, lempeng melendut, retak dari bawah lalu patah dua, jatuh ke air | Gaya tarik (kuning), patah (merah) |
+| lengkung | Batu baji tersusun satu per satu jadi lengkung | panah tekan mengikuti lengkung |
+| dorong | Panah merah horizontal di kedua kaki lengkung; bandingkan lengkung tinggi vs landai (panah membesar) | Dorongan |
+| runtuh | Tepi tanah lunak bergeser keluar, lengkung melebar dan runtuh | runtuh (merah) |
+| pangkal | Blok pangkal batu besar muncul; lalu pangkal "menggembung" jadi raksasa di tanah lunak | Pangkal jembatan |
+| baja | Lengkung baja merah-oranye di atas, jalan digantung pakai **batang baja tegak** (bukan kabel) | Baja |
+| ikat | Jalan menyala kuning; panah tarik di sepanjang jalan, panah dorongan di kaki hilang | **Batang pengikat** (muncul sendiri) |
+| muai | Matahari terik, jalan memanjang (dilebih-lebihkan) | +3,6 cm |
+| dikunci | Ujung dikunci, pangkal retak | retak (merah) |
+| geser | Satu ujung di atas rol/bantalan → bergeser bebas; lalu zoom celah bergerigi di aspal | **Perletakan** lalu **Siar muai** (bergantian, tidak bersamaan) |
+| gludak | Mobil kecil melindas siar muai, efek getar + teks "gludak!" | |
+| berdiri | Mobil lewat, Pak Bero senang | Berdiri |
+| roma | Lokasi lain (x=300): jembatan batu dua lengkung di sungai kota, pejalan kaki | Kartu: "Jembatan Fabricius · Roma · 62 SM" |
+| kalikuto | Lokasi lain (x=600): dua setengah lengkung baja berdiri tegak di tiap tepi, berputar turun pelan-pelan sampai bertemu | Kartu: "Jembatan Kalikuto · Tol Batang Semarang" |
+| outro | Kembali ke jembatan Pak Bero, melambai | |
+
+Aset baru yang bisa disimpan di `engine/`: lengkung batu baji (instanced), lengkung baja + penggantung, mobil kecil low-poly (berguna untuk ep. jalan raya).
+
+Perintah produksi (setelah pemilik bilang lanjut):
+
+```bash
+KIE_API_KEY=proxy-injected NODE_USE_ENV_PROXY=1 node tools/tts.mjs episodes/04-jembatan-lengkung
+node tools/render.mjs --ep 04-jembatan-lengkung --still 2,10,20
+node tools/render.mjs --ep 04-jembatan-lengkung --scale 1
+```
 
 ## Caption (draf)
 
