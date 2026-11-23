@@ -17,7 +17,7 @@ _Update file ini di setiap PR. Paling baru di atas._
 | Handle akun | ✅ `@pakbero.id` (IG sudah dibuat + foto profil + bio; belum ada postingan) |
 | Foto profil | ✅ `desain/avatar-*.png` (`tools/avatar.mjs`) |
 | Banner YouTube | ✅ `desain/banner-youtube.png` (`tools/banner.mjs`) |
-| Akun | IG ✅ `@pakbero.id` · TikTok ⏳ bio · YouTube ✅ channel dibuat (handle `@pakbero.id` sudah dipakai orang, pakai alternatif) · FB Page ⏳ |
+| Akun | ✅ IG `@pakbero.id` · TikTok · YouTube (handle alternatif) · Facebook Page "Pak Bero Bangun dari Nol" (sambungkan ke IG) |
 | SOP produksi & upload | ✅ `SOP.md` |
 | Ep. 01: upload kit (caption 4 platform) + cover | ✅ `episodes/01-bendungan/upload.md`, cover via `tools/cover.mjs` |
 | Ep. 01: render final 1080x1920 | ✅ dikirim ke pemilik (27 MB; file video tidak di-commit, render ulang dengan `--scale 2`) |
