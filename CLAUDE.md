@@ -48,7 +48,7 @@ KIE_API_KEY=<key pemilik> NODE_USE_ENV_PROXY=1 node tools/tts.mjs episodes/<ep> 
 ```
 
 - **API key tidak boleh di-commit.** Minta ke pemilik (atau simpan sebagai network secret di environment).
-- Jaringan environment harus mengizinkan: `api.kie.ai`, `kie.ai`, `tempfile.aiquickdraw.com`, `static.aiquickdraw.com` (contoh suara). Node butuh `NODE_USE_ENV_PROXY=1` di container cloud.
+- Jaringan environment harus mengizinkan: `api.kie.ai`, `kie.ai`, `tempfile.aiquickdraw.com`, `file.aiquickdraw.com` (hasil Gemini), `static.aiquickdraw.com` (contoh suara). Node butuh `NODE_USE_ENV_PROXY=1` di container cloud.
 - Biaya: ±12 kredit per 1.000 karakter, minimal 12 kredit per task. 1 episode ≈ 24 kredit.
 - KIE **tidak** mengembalikan timestamp per kata, jadi `tools/timing.mjs` menyelaraskan sendiri: jeda di audio (ffmpeg silencedetect) dicocokkan ke tanda baca naskah dengan DP yang menjaga kecepatan bicara konsisten. Cek hasilnya (`timing.json`) dan beberapa still sebelum render final.
 - Alternatif lebih presisi: `python3 tools/align.py` (faster-whisper → `words.json`; perlu akses huggingface.co untuk unduh model).
