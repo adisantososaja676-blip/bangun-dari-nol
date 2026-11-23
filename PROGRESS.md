@@ -18,14 +18,14 @@ _Update file ini di setiap PR. Paling baru di atas._
 | Foto profil | ✅ `desain/avatar-*.png` (`tools/avatar.mjs`) |
 | SOP produksi & upload | ✅ `SOP.md` |
 | Ep. 01: upload kit (caption 4 platform) + cover | ✅ `episodes/01-bendungan/upload.md`, cover via `tools/cover.mjs` |
-| Ep. 01: render final 1080x1920 | ⏳ sedang dirender (file di `out/`, tidak di-commit) |
+| Ep. 01: render final 1080x1920 | ✅ dikirim ke pemilik (27 MB; file video tidak di-commit, render ulang dengan `--scale 2`) |
 | Ep. 02 dst | ⬜ antrean di `IDE-VIDEO.md` |
 
 ## Langkah berikutnya
 
 > Jadwal: **posting harian**, mulai setelah stok 5–7 video siap. Bio IG sudah "Video baru setiap hari".
 
-1. ✅ Pemilik menyetujui preview ep. 01. Render final berjalan.
+1. ✅ Ep. 01 final + cover sudah dikirim ke pemilik.
 2. Pemilik: simpan file final & cover, JANGAN posting dulu sampai stok 5–7 video.
 3. Pemilik: buat akun TikTok/YouTube/FB dengan handle yang sama `pakbero.id`, pasang foto profil.
 4. Belum ada musik latar / efek suara (opsional, perlu sumber bebas lisensi).
