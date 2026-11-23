@@ -62,7 +62,9 @@ Saran yang sudah diberikan ke pemilik (status belum dikonfirmasi): akun Creator/
 |---|---|---|
 | 01 | Bendungan | ✅ **Sudah diunggah pemilik ke semua platform (23 Nov 2026)** dengan cover `01-bendungan-cover.jpg` |
 | 02 | Rumah tahan gempa | ✅ Final + cover selesai, siap upload. Menyebut gempa Nias 2005 (visual tenang) |
-| 03–05 | Pondasi tanah lembek, Gedung vs angin, Jalan raya (usulan, aset saling pakai ulang) | Belum |
+| 03 | Pondasi di tanah lembek | ✅ Final + cover selesai & diunduh pemilik (sesi 3), siap upload |
+| 04 | Jembatan lengkung (**request penonton** @Danzzz_W2s di YouTube ep. 01) | 📄 Dokumen saja (naskah final + cek fakta + rencana adegan), produksi menunggu pemilik (sesi 3). Rantai sengaja beda dari video referensi (jembatan gantung) |
+| 05 | Gedung vs angin / Jalan raya (usulan) | Belum |
 
 Ep. 01 menyebut tragedi **Situ Gintung (2009)**: visual dibuat tenang & serius. Kalau ada komentar korban/keluarga, balas dengan empati.
 
@@ -118,3 +120,54 @@ node tools/cover.mjs out/02-rumah-gempa-t53_9.png "Rumah tahan|*gempa*?" "Bisa n
 - Ep. 02: **siap upload** (pemilik upload besok, caption di `episodes/02-rumah-gempa/upload.md`).
 - Ep. 03: usulan Claude **"Pondasi di tanah lembek"** (rumah ep. 02 dipindah ke rawa lalu amblas; hook Jakarta turun; rantai: pondasi dangkal → pondasi telapak → konsolidasi → penurunan tidak seragam → tiang pancang; fakta penutup Menara Pisa / pondasi cakar ayam, **perlu riset**). Pemilik sempat mengetik "gas ep 3" tapi belum dikirim → anggap **belum disetujui**, tanyakan dulu.
 - Cadangan ep. 04–05: Gedung pencakar langit vs angin (peredam Taipei 101), Jalan raya.
+
+---
+
+# Sesi 3 (23 Nov 2026): Ep. 03 Pondasi di tanah lembek + naskah ep. 04
+
+> Arsip chat sesi ketiga (pemilik menghapus chat-nya setelah sesi ini). Sesi berikutnya: baca juga bagian ini.
+
+## Yang dikerjakan
+
+- PR #1 & #2 sudah di-merge sebelumnya. Sesi ini bekerja di branch `claude/determined-fermat-dkrh49` → **PR #3**, di-merge ke `main` di akhir sesi atas permintaan pemilik.
+- **Ep. 03 selesai penuh:** pemilik mengunggah `naskah.md` + `script.json` (hasil sesi sebelumnya) dan menulis "lanjut ep 3" → TTS → animasi → preview → **disetujui ("OK gas")** → final 1080x1920 (24 MB, 81,5 dtk) + cover. Video, cover, dan `upload.md` dikirim ke pemilik sebagai lampiran (pemilik sudah mengunduh ketiganya).
+- **Ep. 04 = request penonton:** komentar YouTube ep. 01 dari @Danzzz_W2s: "Buat jembatan" (2 like). Pemilik minta riset "super akurat dan berdaging". Naskah **jembatan lengkung** + cek fakta ditulis, direview pemilik (pemilik mengecek langsung ke sumber), direvisi, lalu pemilik memutuskan **"dokumen aja untuk ep 4"**.
+
+## Keputusan & catatan
+
+| Topik | Catatan |
+|---|---|
+| API key KIE | Key lama ditolak (401). Pemilik menyimpan key baru lewat formulir aman → network secret `api.kie.ai` (Authorization: Bearer). Saldo sebelum TTS ep. 03: 982,86 kredit; TTS ep. 03 = 24 kredit (1.295 karakter) → sisa ±959 |
+| Gaya visual ep. 03 | **Diorama potongan tanah**: balok tanah melayang, muka depan terpotong di garis dinding depan rumah, supaya lapisan tanah, air pori, pondasi & tiang pancang terlihat |
+| Aset baru | `engine/house.js` (`createHouse`: rumah akhir ep. 02, retak via `setCrack`) & `engine/soil.js` (`buildDiorama`: lapisan tanah, rawa, batu). Dipakai ulang untuk ep. jalan raya/terowongan |
+| Hook ep. 03 | Rumah sudah amblas & miring (teaser), lalu rumah "diterbangkan" ke rawa |
+| Pisa | Visual miring 5,5° → berkurang 0,5°; angka populer 3,97° sengaja tidak dipakai |
+| Cover ep. 03 | Frame t=1.5 (rumah amblas, miring, retak). Teks "Rumah di tanah\|*lembek*?" + "Bisa nggak?" |
+| Kecepatan render | Preview 540x960 ±6 menit; final 1080x1920 ±15 menit (81 dtk) |
+| Ep. 04 vs referensi | Video referensi = jembatan **gantung** (tali → kabel → angkur → Tacoma → rangka pengaku). Ep. 04 sengaja **lengkung**: lempeng batu → lengkung batu → pangkal → lengkung baja + batang pengikat → pemuaian → perletakan + siar muai. Penggantung jalan di animasi = **batang baja tegak**, jangan tonjolkan kabel |
+| Review pemilik ep. 04 | Fakta benar (Fabricius 62 SM, metode Kalikuto, lengkung terikat, 3,6 cm). Diperbaiki: alasan pangkal raksasa = **tepi tanah lunak** (bukan sungai lebar); "Batang Semarang" tanpa tanda pisah (aman untuk TTS); link VINCI rusak dihapus; durasi ±89 dtk (batas 90 dtk). Label tahap baja (`batang pengikat`, `perletakan`, `siar muai`) harus muncul **satu per satu** |
+| Riset dari container | Jaringan container memblokir WebFetch ke situs sumber (DNS ENOTFOUND). Verifikasi lewat WebSearch silang; pemilik bisa cek langsung |
+| Ide engagement | Sarankan pemilik membalas komentar request ("Siap, lagi digarap! 🦫") |
+
+## Pertanyaan terbuka untuk pemilik
+
+- Boleh nama penonton **@Danzzz_W2s** ditampilkan di video ep. 04 (kartu "Request: ...")? Kalau tidak, cukup "request dari komentar".
+- Kapan ep. 04 lanjut produksi (TTS ±24 kredit + animasi)?
+- Handle YouTube final (dari sesi 1, masih belum dicatat).
+
+## Status per akhir sesi 3
+
+| Ep | Status |
+|---|---|
+| 01 Bendungan | Tayang |
+| 02 Rumah tahan gempa | Siap upload (pemilik) |
+| 03 Pondasi di tanah lembek | Siap upload (pemilik); file sudah diunduh pemilik |
+| 04 Jembatan lengkung | 📄 Dokumen saja: `script.json` final, `naskah.md` (cek fakta + rencana adegan per baris + perintah produksi). **Jangan buat audio/animasi sebelum pemilik bilang lanjut** |
+
+## Render ulang ep. 03
+
+```bash
+node tools/render.mjs --ep 03-pondasi-lembek --scale 2                       # final → out/03-pondasi-lembek.mp4
+node tools/render.mjs --ep 03-pondasi-lembek --still 1.5 --scale 2 --clean   # frame cover
+node tools/cover.mjs out/03-pondasi-lembek-t1_5.png "Rumah di tanah|*lembek*?" "Bisa nggak?" out/03-pondasi-lembek-cover.jpg
+```

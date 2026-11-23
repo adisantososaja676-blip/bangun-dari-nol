@@ -60,6 +60,7 @@ Animasi otomatis ikut waktu suara karena adegan diikat ke id baris naskah.
 
 ## Engine (ringkas)
 
+- `engine/house.js`: rumah Pak Bero (`createHouse`, retak `setCrack`). `engine/soil.js`: diorama potongan tanah (`buildDiorama`).
 - `engine/kit.js`: renderer, palet `PAL`, lembah sungai `buildValley`, tanah lapang `buildField`, goyangan gempa `quake`, hujan, panah, partikel instanced, kamera `cameraAt(keys,t)`.
 - `engine/bero.js`: model & pose Pak Bero.
 - `engine/overlay.js`: subtitle per kata, label 3D→2D, kartu, watermark.

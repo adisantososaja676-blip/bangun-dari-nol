@@ -25,29 +25,47 @@ _Update file ini di setiap PR. Paling baru di atas._
 | Ep. 02 Rumah tahan gempa: naskah + cek fakta + audio + animasi | ✅ `episodes/02-rumah-gempa/` (81 dtk), preview dikirim ke pemilik |
 | Ep. 02: upload kit + render final + cover | ✅ preview disetujui pemilik; final 1080x1920 (39 MB) & cover (frame t=53.9, rumah oleng) dikirim. Siap upload |
 | Dunia "tanah lapang" + helper gempa | ✅ `buildField`, `quake` di `engine/kit.js` (bisa dipakai ep. 03–05) |
-| Ep. 03 dst | ⬜ antrean di `IDE-VIDEO.md` |
+| Ep. 03 Pondasi di tanah lembek: naskah + cek fakta + audio + animasi | ✅ `episodes/03-pondasi-lembek/` (81,5 dtk), preview disetujui pemilik ("OK gas") |
+| Ep. 03: upload kit + render final + cover | ✅ final 1080x1920 & cover (frame t=1.5, rumah amblas miring retak) dikirim. Siap upload |
+| Aset baru: rumah & diorama potongan tanah | ✅ `engine/house.js` (`createHouse`), `engine/soil.js` (`buildDiorama`) |
+| Ep. 04 Jembatan lengkung (request penonton): naskah + cek fakta | 🟡 `episodes/04-jembatan-lengkung/` (±89 dtk), 📄 **dokumen saja** (naskah + cek fakta + rencana adegan); produksi menunggu aba-aba pemilik |
+| Ep. 05 dst | ⬜ antrean di `IDE-VIDEO.md` |
 
 ## Langkah berikutnya
 
-> Jadwal target: **posting harian** jam 18.00–19.00 WIB. Ep. 01 sudah tayang; stok berikutnya belum ada.
+> Jadwal target: **posting harian** jam 18.00–19.00 WIB. Ep. 01 sudah tayang. Stok siap upload: ep. 02 & 03.
 
-1. **Pemilik:** upload ep. 02 (`upload.md`, cover `out/02-rumah-gempa-cover.jpg`). Cover dibuat ulang: `render.mjs --ep 02-rumah-gempa --still 53.9 --scale 2 --clean` lalu `cover.mjs ... "Rumah tahan|*gempa*?" "Bisa nggak?"`.
-2. **Claude:** ep. 03 usulan **Pondasi di tanah lembek** (lanjutan rumah ep. 02 yang amblas; hook Jakarta turun; tiang pancang; fakta Pisa/cakar ayam, perlu riset). Menunggu persetujuan topik dari pemilik. Cadangan ep. 04–05: Gedung vs angin (Taipei 101), Jalan raya.
-2. ✅ API key KIE baru sudah tersimpan sebagai **network secret** environment (host `api.kie.ai`). Jalankan TTS dengan `KIE_API_KEY=proxy-injected` (proxy mengganti nilainya).
-3. **Pemilik:** merge PR #1 (`pilot-bendungan`) ke `main`.
-4. **Pemilik:** kabari handle YouTube final, lalu catat di `KONTEKS.md`.
-5. **Pemilik:** pantau komentar ep. 01; usulan topik masuk `IDE-VIDEO.md`.
-6. Setelah 12 video: evaluasi (retensi 3 dtk, % ditonton, komentar).
+1. **Pemilik:** upload ep. 02 (`episodes/02-rumah-gempa/upload.md` + cover). Render ulang kalau file hilang: lihat `KONTEKS.md` sesi 2.
+2. **Pemilik:** upload ep. 03 (`episodes/03-pondasi-lembek/upload.md` + cover). Render ulang kalau file hilang: lihat `KONTEKS.md` sesi 3.
+3. **Pemilik:** balas komentar request "Buat jembatan" di YouTube ep. 01; putuskan boleh/tidak nama penonton tampil di ep. 04.
+4. **Claude (setelah pemilik bilang lanjut):** ep. 04 Jembatan lengkung: `script.json` sudah final (±89 dtk), rencana adegan per baris ada di `episodes/04-jembatan-lengkung/naskah.md`. Langkah: TTS → stills → preview → OK → final + cover + `upload.md`.
+5. **Claude:** ep. 05 usulan: Gedung vs angin (Taipei 101) atau Jalan raya (pakai `buildDiorama` untuk lapisan jalan). Cek komentar penonton dulu.
+6. **Pemilik:** kabari handle YouTube final, lalu catat di `KONTEKS.md`.
+7. Setelah 12 video: evaluasi (retensi 3 dtk, % ditonton, komentar).
+
+✅ API key KIE tersimpan sebagai **network secret** environment (host `api.kie.ai`, disimpan ulang di sesi 3). TTS: `KIE_API_KEY=proxy-injected NODE_USE_ENV_PROXY=1 node tools/tts.mjs episodes/<ep>`. Cek saldo: `curl -s -H "Authorization: Bearer x" https://api.kie.ai/api/v1/chat/credit` (sisa ±959 kredit per akhir sesi 3).
 
 ## Catatan teknis / kendala yang diketahui
 
 - Kamera di lembah sempit gampang tertutup tebing. Taruh kamera di atas alur sungai (|x| < 3.5) atau di diagram potongan.
 - Panah gaya pakai `depthTest:false` supaya terlihat menembus air.
 - Durasi ep. 01: ±90 dtk (mengikuti audio).
-- Render preview 540x960 ±9 menit (~5 fps) di container cloud; final 1080x1920 jauh lebih lama.
+- Render preview 540x960 ±6–9 menit di container cloud; final 1080x1920 ±15 menit (ep. 03, 81 dtk).
+- WebFetch ke situs sumber riset diblokir jaringan container; pakai WebSearch silang, dan minta pemilik cek langsung untuk klaim berisiko.
 - Narasi dibaca satu tarikan; bagian Situ Gintung belum dibuat lebih pelan (TTS satu task). Bisa dipecah jadi beberapa task kalau perlu.
 
 ## Log
+
+### 2026-11-23: Ep. 04 Jembatan lengkung (dokumen)
+- Request penonton (YouTube ep. 01). Naskah + cek fakta 13 klaim, direview & dikoreksi pemilik, rencana adegan per baris. Produksi ditunda (keputusan pemilik).
+
+### 2026-11-23: Ep. 03 Pondasi di tanah lembek
+- Preview disetujui → final 1080x1920 (24 MB) + cover t=1.5 dikirim & diunduh pemilik.
+- Naskah + cek fakta dari pemilik (hasil sesi sebelumnya) dimasukkan ke repo.
+- Key KIE lama ditolak (401) → pemilik simpan ulang lewat formulir aman. Saldo sebelum TTS: 982,86 kredit.
+- TTS Chris (24 kredit, 1.295 karakter), timing dari jeda audio (38/40 jeda cocok), 81,5 dtk.
+- `scene.js`: diorama potongan tanah rawa, rumah amblas → pondasi telapak → air pori keluar (konsolidasi) → miring & retak → tiang pancang dipukul sampai tanah keras (panah ujung + gesekan). Menara Pisa (miring 5,5° → berkurang 0,5° lewat penggalian sisi tinggi) di x=300, menara listrik + cakar ayam di x=600.
+- Aset baru: `engine/house.js`, `engine/soil.js`.
 
 ### 2026-11-23: Ep. 02 Rumah tahan gempa
 - Riset + naskah + cek fakta (BMKG 2024, rumah tembokan terkekang, gaya inersia atap, Omo Hada Nias 2005).
