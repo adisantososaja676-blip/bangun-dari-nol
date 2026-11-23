@@ -62,20 +62,30 @@ if (args.still) {
     '-y', '-loglevel', 'error', '-f', 'image2pipe', '-framerate', String(fps), '-i', '-',
     ...(audio ? ['-ss', String(from), '-t', String(to - from), '-i', audio] : []),
     '-c:v', 'libx264', '-preset', 'medium', '-crf', scale >= 2 ? '17' : '21', '-pix_fmt', 'yuv420p',
-    ...(audio ? ['-c:a', 'aac', '-b:a', '192k', '-shortest'] : []),
+    // apad: audio diberi hening di akhir; -shortest lalu mengikuti panjang video (bukan audio)
+    ...(audio ? ['-af', 'apad', '-c:a', 'aac', '-b:a', '192k', '-shortest'] : []),
     '-movflags', '+faststart', out,
   ], { stdio: ['pipe', 'inherit', 'inherit'] });
+  let ffClosed = false; ff.on('close', () => { ffClosed = true; });
   const n = Math.round((to - from) * fps);
   const t0 = Date.now();
   for (let i = 0; i < n; i++) {
     const t = from + i / fps;
-    await page.evaluate((t) => window.renderAt(t), t);
-    const buf = await stage.screenshot({ type: 'jpeg', quality: 92 });
-    if (!ff.stdin.write(buf)) await new Promise((r) => ff.stdin.once('drain', r));
+    // pengaman: kalau satu frame macet, coba ulang (pernah macet di dekat akhir video)
+    let buf;
+    for (let attempt = 0; attempt < 3 && !buf; attempt++) {
+      try {
+        await page.evaluate((t) => window.renderAt(t), t);
+        buf = await stage.screenshot({ type: 'jpeg', quality: 92, timeout: 20000 });
+      } catch (e) { console.error(`\nframe ${i} gagal (percobaan ${attempt + 1}): ${e.message.split('\n')[0]}`); }
+    }
+    if (!buf) throw new Error(`frame ${i} gagal 3x`);
+    if (ffClosed) throw new Error('ffmpeg berhenti lebih awal');
+    if (!ff.stdin.write(buf)) await new Promise((r) => { ff.stdin.once('drain', r); ff.once('close', r); });
     if (i % 60 === 0) process.stdout.write(`\r${i}/${n} frame · ${((Date.now() - t0) / 1000).toFixed(0)}s`);
   }
   ff.stdin.end();
-  await new Promise((r) => ff.on('close', r));
+  if (!ffClosed) await new Promise((r) => ff.on('close', r));
   console.log(`\n${out}${audio ? ' (+audio)' : ' (tanpa audio)'}`);
 }
 await browser.close();
