@@ -21,17 +21,19 @@ _Update file ini di setiap PR. Paling baru di atas._
 | SOP produksi & upload | ✅ `SOP.md` |
 | Ep. 01: upload kit (caption 4 platform) + cover | ✅ `episodes/01-bendungan/upload.md`, cover via `tools/cover.mjs` |
 | Ep. 01: render final 1080x1920 | ✅ dikirim ke pemilik (27 MB; file video tidak di-commit, render ulang dengan `--scale 2`) |
+| **Ep. 01: TAYANG** | ✅ diunggah pemilik ke IG, TikTok, YouTube, Facebook (23 Nov 2026) |
 | Ep. 02 dst | ⬜ antrean di `IDE-VIDEO.md` |
 
 ## Langkah berikutnya
 
-> Jadwal: **posting harian**, mulai setelah stok 5–7 video siap. Bio IG sudah "Video baru setiap hari".
+> Jadwal target: **posting harian** jam 18.00–19.00 WIB. Ep. 01 sudah tayang; stok berikutnya belum ada.
 
-1. ✅ Ep. 01 final + cover sudah dikirim ke pemilik.
-2. Pemilik: simpan file final & cover, JANGAN posting dulu sampai stok 5–7 video.
-3. Pemilik: buat akun TikTok/YouTube/FB dengan handle yang sama `pakbero.id`, pasang foto profil.
-4. Belum ada musik latar / efek suara (opsional, perlu sumber bebas lisensi).
-5. Lanjut ep. 02 (usulan: Rumah tahan gempa).
+1. **Claude:** produksi ep. 02 "Rumah tahan gempa" (naskah → TTS → animasi → preview → final + cover + `upload.md`). Lanjut ep. 03–05 untuk stok.
+2. **Pemilik:** berikan API key KIE **baru** saat TTS dibutuhkan (key lama sudah dibocorkan di chat).
+3. **Pemilik:** merge PR #1 (`pilot-bendungan`) ke `main`.
+4. **Pemilik:** kabari handle YouTube final, lalu catat di `KONTEKS.md`.
+5. **Pemilik:** pantau komentar ep. 01; usulan topik masuk `IDE-VIDEO.md`.
+6. Setelah 12 video: evaluasi (retensi 3 dtk, % ditonton, komentar).
 
 ## Catatan teknis / kendala yang diketahui
 
@@ -42,6 +44,9 @@ _Update file ini di setiap PR. Paling baru di atas._
 - Narasi dibaca satu tarikan; bagian Situ Gintung belum dibuat lebih pelan (TTS satu task). Bisa dipecah jadi beberapa task kalau perlu.
 
 ## Log
+
+### 2026-11-23: Ep. 01 tayang + arsip konteks
+- Pemilik mengunggah ep. 01 ke 4 platform. Semua konteks chat diarsipkan di `KONTEKS.md`.
 
 ### 2026-11-23: Perbaikan render
 - Render macet di akhir karena `-shortest` membuat ffmpeg berhenti saat audio (89,2 dtk) lebih pendek dari video (90,45 dtk). Diperbaiki dengan `apad` + deteksi ffmpeg tertutup + coba ulang per frame.

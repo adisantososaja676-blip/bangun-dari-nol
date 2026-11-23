@@ -4,6 +4,7 @@ Repo ini adalah dapur produksi akun video pendek edukasi 3D **"Bangun dari Nol"*
 
 ## Baca dulu (urut)
 
+1. `KONTEKS.md`: **arsip keputusan & konteks chat awal** (akun sosmed, suara, environment, masalah teknis)
 1. `PROGRESS.md`: status terakhir & langkah berikutnya (**selalu update di akhir sesi**)
 1. `SOP.md`: pembagian kerja Claude vs pemilik per video + checklist upload
 2. `PLAN.md`: strategi & keputusan (jangan diubah tanpa persetujuan pemilik)

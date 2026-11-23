@@ -11,6 +11,7 @@ Maskot: **berang-berang insinyur**.
 | [`PLAN.md`](PLAN.md) | Strategi lengkap: konsep, rumus naskah, pipeline, jadwal, monetisasi, risiko |
 | [`IDE-VIDEO.md`](IDE-VIDEO.md) | 30 ide video pertama |
 | [`referensi/ANALISIS.md`](referensi/ANALISIS.md) | Bedah video referensi (@ngekepoyuk.id) |
+| [`KONTEKS.md`](KONTEKS.md) | **Arsip konteks & semua keputusan dari chat awal** |
 | [`PROGRESS.md`](PROGRESS.md) | **Status terakhir & langkah berikutnya** |
 | [`SOP.md`](SOP.md) | **Alur produksi & checklist upload ke 4 platform** |
 | [`CLAUDE.md`](CLAUDE.md) | Panduan teknis untuk sesi Claude berikutnya (pipeline, engine, aturan) |
@@ -25,7 +26,10 @@ Maskot: **berang-berang insinyur**.
 - [x] Desain maskot & scene kit
 - [x] Pipeline render (Three.js → MP4)
 - [x] Pilot "Bendungan" v1 (tanpa suara)
-- [ ] Pilot dengan audio TTS
+- [x] Pilot dengan audio TTS
+- [x] Akun IG, TikTok, YouTube, Facebook
+- [x] Ep. 01 tayang
+- [ ] Stok ep. 02–07
 
 ## Mulai cepat
 
