@@ -237,3 +237,46 @@ export function makeRain(kit, count = 500, area = [30, 16, 34], center = [0, 6, 
   };
   return rain;
 }
+
+// Tanah lapang (untuk episode di darat): rumput, petak tanah di tengah,
+// pohon bulat, semak, bukit pastel. Semua di dalam `root` supaya bisa
+// digoyang (gempa) atau dipindah (lokasi kedua, mis. x=300).
+// clear: area kosong untuk bangunan & kamera {x0,x1,z0,z1}.
+export function buildField(kit, { seed = 11, plot = 4.2, clear = { x0: -9, x1: 9, z0: -5, z1: 16 }, at = [0, 0, 0], trees = 120 } = {}) {
+  const R = rng(seed);
+  const root = new THREE.Group(); root.position.set(...at); kit.scene.add(root);
+  const ground = mesh(new THREE.BoxGeometry(220, 0.5, 220), PAL.grass); ground.position.y = -0.25; root.add(ground);
+  if (plot > 0) {
+    const dirt = mesh(new THREE.CylinderGeometry(plot, plot + 0.3, 0.04, 18), PAL.bed); dirt.position.y = 0.02; root.add(dirt);
+  }
+  const inClear = (x, z) => x > clear.x0 && x < clear.x1 && z > clear.z0 && z < clear.z1;
+  const treeGeoT = new THREE.CylinderGeometry(0.12, 0.16, 1, 6);
+  const leafGeo = new THREE.IcosahedronGeometry(1, 0);
+  for (let i = 0; i < trees; i++) {
+    const a = R() * Math.PI * 2, d = 7 + R() * 45;
+    const x = Math.cos(a) * d, z = Math.sin(a) * d;
+    if (inClear(x, z)) continue;
+    const s = 0.8 + R() * 0.9;
+    const tr = mesh(treeGeoT, PAL.trunk); tr.scale.set(s, s, s); tr.position.set(x, 0.5 * s, z); root.add(tr);
+    const lf = mesh(leafGeo, [PAL.leaf, PAL.leaf2, PAL.leaf3][i % 3]);
+    lf.scale.set(s * 0.95, s * 1.05, s * 0.95); lf.position.set(x, 1.45 * s, z); lf.rotation.y = R() * 3; root.add(lf);
+  }
+  for (let i = 0; i < 60; i++) {
+    const a = R() * Math.PI * 2, d = 4.6 + R() * 25;
+    const x = Math.cos(a) * d, z = Math.sin(a) * d;
+    if (inClear(x, z) && d < 6) continue;
+    if (z > 3 && Math.abs(x) < 5) continue; // jangan menutupi kamera depan
+    const b = mesh(leafGeo, PAL.grassDark); b.scale.setScalar(0.25 + R() * 0.3); b.position.set(x, 0.1, z); root.add(b);
+  }
+  for (let i = 0; i < 16; i++) {
+    const h = 10 + R() * 16;
+    const hill = mesh(new THREE.ConeGeometry(8 + R() * 8, h, 5), i % 2 ? PAL.hills : PAL.hills2, { shadow: false, receive: false });
+    const a = R() * Math.PI * 2;
+    hill.position.set(Math.cos(a) * (85 + R() * 20), h / 2 - 2, Math.sin(a) * (85 + R() * 20));
+    hill.rotation.y = R() * 3; root.add(hill);
+  }
+  return { root };
+}
+
+// Goyangan tanah gempa: offset x (meter) pada waktu t dengan amplitudo A.
+export const quake = (t, A, f = 2.4) => A * (Math.sin(2 * Math.PI * f * t) + 0.35 * Math.sin(2 * Math.PI * 5.3 * t + 1));

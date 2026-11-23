@@ -32,7 +32,8 @@
   - **Gemini 3.1 Flash & 3.8 Flash** selalu gagal di KIE (kode 524 "generate task timeout", termasuk teks Inggris sederhana). **3.8 Flash-Lite** berhasil.
   - **Keputusan final: ElevenLabs Chris** (setelan di `brand.json` → `tts`).
 - KIE tidak memberi timestamp per kata → `tools/timing.mjs` menyelaraskan dari jeda audio.
-- ⚠️ API key KIE sempat ditempel di chat → pemilik diminta **membuat key baru**. Key TIDAK disimpan di repo. Minta key ke pemilik saat perlu TTS.
+- ⚠️ API key KIE sempat ditempel di chat → pemilik diminta **membuat key baru**. Key TIDAK disimpan di repo.
+- ✅ Key baru disimpan pemilik sebagai **network secret** environment untuk `api.kie.ai` (sesi ep. 02). Proxy menyuntikkan key otomatis: `KIE_API_KEY=proxy-injected NODE_USE_ENV_PROXY=1 node tools/tts.mjs episodes/<ep>`.
 
 ## 4. Environment cloud (Claude Code)
 
@@ -60,7 +61,7 @@ Saran yang sudah diberikan ke pemilik (status belum dikonfirmasi): akun Creator/
 | # | Topik | Status |
 |---|---|---|
 | 01 | Bendungan | ✅ **Sudah diunggah pemilik ke semua platform (23 Nov 2026)** dengan cover `01-bendungan-cover.jpg` |
-| 02 | Rumah tahan gempa (usulan) | Belum dimulai |
+| 02 | Rumah tahan gempa | Naskah + audio + animasi selesai, preview menunggu review pemilik. Menyebut gempa Nias 2005 (visual tenang) |
 | 03–05 | Pondasi tanah lembek, Gedung vs angin, Jalan raya (usulan, aset saling pakai ulang) | Belum |
 
 Ep. 01 menyebut tragedi **Situ Gintung (2009)**: visual dibuat tenang & serius. Kalau ada komentar korban/keluarga, balas dengan empati.

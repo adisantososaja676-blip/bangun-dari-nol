@@ -22,14 +22,18 @@ _Update file ini di setiap PR. Paling baru di atas._
 | Ep. 01: upload kit (caption 4 platform) + cover | ✅ `episodes/01-bendungan/upload.md`, cover via `tools/cover.mjs` |
 | Ep. 01: render final 1080x1920 | ✅ dikirim ke pemilik (27 MB; file video tidak di-commit, render ulang dengan `--scale 2`) |
 | **Ep. 01: TAYANG** | ✅ diunggah pemilik ke IG, TikTok, YouTube, Facebook (23 Nov 2026) |
-| Ep. 02 dst | ⬜ antrean di `IDE-VIDEO.md` |
+| Ep. 02 Rumah tahan gempa: naskah + cek fakta + audio + animasi | ✅ `episodes/02-rumah-gempa/` (81 dtk), preview dikirim ke pemilik |
+| Ep. 02: upload kit | ✅ `episodes/02-rumah-gempa/upload.md` (render final + cover setelah preview disetujui) |
+| Dunia "tanah lapang" + helper gempa | ✅ `buildField`, `quake` di `engine/kit.js` (bisa dipakai ep. 03–05) |
+| Ep. 03 dst | ⬜ antrean di `IDE-VIDEO.md` |
 
 ## Langkah berikutnya
 
 > Jadwal target: **posting harian** jam 18.00–19.00 WIB. Ep. 01 sudah tayang; stok berikutnya belum ada.
 
-1. **Claude:** produksi ep. 02 "Rumah tahan gempa" (naskah → TTS → animasi → preview → final + cover + `upload.md`). Lanjut ep. 03–05 untuk stok.
-2. **Pemilik:** berikan API key KIE **baru** saat TTS dibutuhkan (key lama sudah dibocorkan di chat).
+1. **Pemilik:** tonton preview ep. 02, kasih OK/revisi. **Claude:** setelah OK → render final 1080x1920 + cover (`--still 3 --scale 2 --clean`).
+2. **Claude:** lanjut ep. 03–05 untuk stok (usulan: Gedung vs angin, Pondasi tanah lembek, Jalan raya; pakai `buildField`).
+2. ✅ API key KIE baru sudah tersimpan sebagai **network secret** environment (host `api.kie.ai`). Jalankan TTS dengan `KIE_API_KEY=proxy-injected` (proxy mengganti nilainya).
 3. **Pemilik:** merge PR #1 (`pilot-bendungan`) ke `main`.
 4. **Pemilik:** kabari handle YouTube final, lalu catat di `KONTEKS.md`.
 5. **Pemilik:** pantau komentar ep. 01; usulan topik masuk `IDE-VIDEO.md`.
@@ -44,6 +48,12 @@ _Update file ini di setiap PR. Paling baru di atas._
 - Narasi dibaca satu tarikan; bagian Situ Gintung belum dibuat lebih pelan (TTS satu task). Bisa dipecah jadi beberapa task kalau perlu.
 
 ## Log
+
+### 2026-11-23: Ep. 02 Rumah tahan gempa
+- Riset + naskah + cek fakta (BMKG 2024, rumah tembokan terkekang, gaya inersia atap, Omo Hada Nias 2005).
+- TTS Chris (24 kredit, 1.280 karakter), timing dari jeda audio (44/48 jeda cocok).
+- `scene.js`: bata instanced (2 tata letak), runtuh balistik, rangka beton bertulang transparan → padat, 3 varian atap, goyang geser, Omo Hada di x=300.
+- Kit baru: `buildField` (tanah lapang) & `quake` (goyangan tanah).
 
 ### 2026-11-23: Ep. 01 tayang + arsip konteks
 - Pemilik mengunggah ep. 01 ke 4 platform. Semua konteks chat diarsipkan di `KONTEKS.md`.
