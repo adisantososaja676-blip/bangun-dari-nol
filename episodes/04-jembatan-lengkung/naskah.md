@@ -77,7 +77,7 @@ Dunia: `buildValley` ep. 01 (W dilebarkan ±12, tepi tanah cokelat lunak), kamer
 | id | Visual | Label / panah |
 |---|---|---|
 | hook | Sungai lebar, Pak Bero di tepi memandang seberang | |
-| intro | Pak Bero melambai; kartu kecil "Request: @Danzzz_W2s" (tanya pemilik dulu boleh tampilkan nama atau tidak) | Pak Bero |
+| intro | Pak Bero melambai; kartu kecil "Request dari komentar" (**tanpa nama penonton**, keputusan pemilik) | Pak Bero |
 | lempeng | Lempeng batu panjang turun & diletakkan dari tepi ke tepi | |
 | lemah | Close-up potongan lempeng: panah tekan di atas, tarik di bawah | Tekan / Tarik |
 | patah | Pak Bero melangkah, lempeng melendut, retak dari bawah lalu patah dua, jatuh ke air | Gaya tarik (kuning), patah (merah) |

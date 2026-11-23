@@ -23,21 +23,21 @@ _Update file ini di setiap PR. Paling baru di atas._
 | Ep. 01: render final 1080x1920 | ✅ dikirim ke pemilik (27 MB; file video tidak di-commit, render ulang dengan `--scale 2`) |
 | **Ep. 01: TAYANG** | ✅ diunggah pemilik ke IG, TikTok, YouTube, Facebook (23 Nov 2026) |
 | Ep. 02 Rumah tahan gempa: naskah + cek fakta + audio + animasi | ✅ `episodes/02-rumah-gempa/` (81 dtk), preview dikirim ke pemilik |
-| Ep. 02: upload kit + render final + cover | ✅ preview disetujui pemilik; final 1080x1920 (39 MB) & cover (frame t=53.9, rumah oleng) dikirim. Siap upload |
+| Ep. 02: upload kit + render final + cover | ✅ final 1080x1920 & cover dikirim. **TAYANG** |
 | Dunia "tanah lapang" + helper gempa | ✅ `buildField`, `quake` di `engine/kit.js` (bisa dipakai ep. 03–05) |
 | Ep. 03 Pondasi di tanah lembek: naskah + cek fakta + audio + animasi | ✅ `episodes/03-pondasi-lembek/` (81,5 dtk), preview disetujui pemilik ("OK gas") |
-| Ep. 03: upload kit + render final + cover | ✅ final 1080x1920 & cover (frame t=1.5, rumah amblas miring retak) dikirim. Siap upload |
+| Ep. 03: upload kit + render final + cover | ✅ final 1080x1920 & cover (frame t=1.5) dikirim. **TAYANG** |
 | Aset baru: rumah & diorama potongan tanah | ✅ `engine/house.js` (`createHouse`), `engine/soil.js` (`buildDiorama`) |
 | Ep. 04 Jembatan lengkung (request penonton): naskah + cek fakta | 🟡 `episodes/04-jembatan-lengkung/` (±89 dtk), 📄 **dokumen saja** (naskah + cek fakta + rencana adegan); produksi menunggu aba-aba pemilik |
 | Ep. 05 dst | ⬜ antrean di `IDE-VIDEO.md` |
 
 ## Langkah berikutnya
 
-> Jadwal target: **posting harian** jam 18.00–19.00 WIB. Ep. 01 sudah tayang. Stok siap upload: ep. 02 & 03.
+> Jadwal target: **posting harian** jam 18.00–19.00 WIB. Ep. 01, 02, 03 sudah tayang. **Stok siap upload: 0** → ep. 04 perlu diproduksi.
 
-1. **Pemilik:** upload ep. 02 (`episodes/02-rumah-gempa/upload.md` + cover). Render ulang kalau file hilang: lihat `KONTEKS.md` sesi 2.
-2. **Pemilik:** upload ep. 03 (`episodes/03-pondasi-lembek/upload.md` + cover). Render ulang kalau file hilang: lihat `KONTEKS.md` sesi 3.
-3. **Pemilik:** balas komentar request "Buat jembatan" di YouTube ep. 01; putuskan boleh/tidak nama penonton tampil di ep. 04.
+1. ✅ Ep. 02 & 03 sudah diunggah pemilik.
+2. ✅ Komentar request "Buat jembatan" dibalas. Nama penonton **tidak** ditampilkan di video.
+3. **Pemilik:** pantau komentar ep. 01–03 untuk request topik berikutnya.
 4. **Claude (setelah pemilik bilang lanjut):** ep. 04 Jembatan lengkung: `script.json` sudah final (±89 dtk), rencana adegan per baris ada di `episodes/04-jembatan-lengkung/naskah.md`. Langkah: TTS → stills → preview → OK → final + cover + `upload.md`.
 5. **Claude:** ep. 05 usulan: Gedung vs angin (Taipei 101) atau Jalan raya (pakai `buildDiorama` untuk lapisan jalan). Cek komentar penonton dulu.
 6. **Pemilik:** kabari handle YouTube final, lalu catat di `KONTEKS.md`.
