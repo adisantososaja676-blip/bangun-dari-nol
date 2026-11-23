@@ -1,0 +1,27 @@
+{
+  "id": "03-pondasi-lembek",
+  "title": "Bangun rumah di atas tanah lembek, bisa nggak?",
+  "notes": "Penanda teks: *kata* = kuning (istilah), !kata! = merah (kegagalan). Hapus penanda saat generate TTS.",
+  "lines": [
+    { "id": "hook",     "text": "Bangun rumah di atas tanah *lembek*, bisa nggak?" },
+    { "id": "intro",    "text": "Pak Bero mindahin rumahnya ke tanah rawa." },
+    { "id": "jakarta",  "text": "Ini bukan soal sepele. Di beberapa titik Jakarta, tanahnya turun lebih dari *10 senti* per tahun." },
+    { "id": "taruh",    "text": "Pak Bero langsung naruh rumahnya di atas tanah." },
+    { "id": "dukung",   "text": "Masalahnya, tanah lembek punya *daya dukung* kecil." },
+    { "id": "amblas",   "text": "Bebannya kebesaran, rumahnya !amblas!." },
+    { "id": "telapak",  "text": "Jadi kakinya dilebarin pakai *pondasi telapak*." },
+    { "id": "sebar",    "text": "Bebannya nyebar ke area yang lebih luas, rumahnya berhenti amblas." },
+    { "id": "air",      "text": "Tapi tanah lembek itu penuh air." },
+    { "id": "konsol",   "text": "Ditekan terus, airnya pelan-pelan keluar dan tanahnya memadat. Ini namanya *konsolidasi*." },
+    { "id": "turun",    "text": "Rumahnya !turun! sedikit demi sedikit, bisa sampai bertahun-tahun." },
+    { "id": "beda",     "text": "Masalahnya, tanah di satu sisi lebih lembek dari sisi lain. Ini bikin *penurunan tidak seragam*." },
+    { "id": "miring",   "text": "Rumahnya !miring!, dindingnya !retak!." },
+    { "id": "tiang",    "text": "Solusinya, Pak Bero nancepin *tiang pancang* sampai ketemu *tanah keras*." },
+    { "id": "gesek",    "text": "Ujungnya bertumpu di tanah keras, sisinya ikut ditahan gesekan tanah." },
+    { "id": "berdiri",  "text": "Sekarang rumahnya *berdiri* lurus." },
+    { "id": "pisa1",    "text": "Oh iya, Menara Pisa miring juga gara-gara ini. Pondasinya cuma sedalam *3 meter*, di atas tanah lunak." },
+    { "id": "pisa2",    "text": "Insinyur nyelametinnya dengan ngambil tanah dari sisi yang tinggi, sampai miringnya berkurang *setengah derajat*." },
+    { "id": "cakar",    "text": "Indonesia juga punya jawaban: tahun 1961, Profesor Sedijatmo bikin pondasi *cakar ayam* buat menara listrik di rawa Ancol." },
+    { "id": "outro",    "text": "Habis ini, Pak Bero bangun apa lagi ya?" }
+  ]
+}

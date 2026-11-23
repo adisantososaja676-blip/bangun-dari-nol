@@ -62,7 +62,8 @@ Saran yang sudah diberikan ke pemilik (status belum dikonfirmasi): akun Creator/
 |---|---|---|
 | 01 | Bendungan | ✅ **Sudah diunggah pemilik ke semua platform (23 Nov 2026)** dengan cover `01-bendungan-cover.jpg` |
 | 02 | Rumah tahan gempa | ✅ Final + cover selesai, siap upload. Menyebut gempa Nias 2005 (visual tenang) |
-| 03–05 | Pondasi tanah lembek, Gedung vs angin, Jalan raya (usulan, aset saling pakai ulang) | Belum |
+| 03 | Pondasi di tanah lembek | 🟡 Audio + animasi selesai, preview dikirim, menunggu OK pemilik (sesi 3) |
+| 04–05 | Gedung vs angin, Jalan raya (usulan) | Belum |
 
 Ep. 01 menyebut tragedi **Situ Gintung (2009)**: visual dibuat tenang & serius. Kalau ada komentar korban/keluarga, balas dengan empati.
 
@@ -118,3 +119,31 @@ node tools/cover.mjs out/02-rumah-gempa-t53_9.png "Rumah tahan|*gempa*?" "Bisa n
 - Ep. 02: **siap upload** (pemilik upload besok, caption di `episodes/02-rumah-gempa/upload.md`).
 - Ep. 03: usulan Claude **"Pondasi di tanah lembek"** (rumah ep. 02 dipindah ke rawa lalu amblas; hook Jakarta turun; rantai: pondasi dangkal → pondasi telapak → konsolidasi → penurunan tidak seragam → tiang pancang; fakta penutup Menara Pisa / pondasi cakar ayam, **perlu riset**). Pemilik sempat mengetik "gas ep 3" tapi belum dikirim → anggap **belum disetujui**, tanyakan dulu.
 - Cadangan ep. 04–05: Gedung pencakar langit vs angin (peredam Taipei 101), Jalan raya.
+
+---
+
+# Sesi 3 (23 Nov 2026): Ep. 03 Pondasi di tanah lembek
+
+> Arsip chat sesi ketiga. Sesi berikutnya: baca juga bagian ini.
+
+## Yang dikerjakan
+
+- PR #1 dan #2 sudah di-merge ke `main`. Sesi ini bekerja di branch `claude/determined-fermat-dkrh49` (dari `main`).
+- Pemilik mengunggah `naskah.md` + `script.json` ep. 03 (dibuat sesi sebelumnya, status "menunggu review") dan menulis **"lanjut ep 3"** → dianggap naskah disetujui; lanjut ke audio & animasi.
+- Key KIE yang tersimpan ditolak api.kie.ai (401). Pemilik menyimpan key baru lewat formulir aman (network secret `api.kie.ai`, header `Authorization: Bearer`). Setelah itu jalan.
+- TTS 24 kredit → audio 81,5 dtk. Animasi selesai, preview 540x960 dikirim ke pemilik.
+
+## Keputusan & catatan
+
+| Topik | Catatan |
+|---|---|
+| Gaya visual ep. 03 | **Diorama potongan tanah** (balok tanah melayang, muka depan terpotong di garis dinding depan rumah) supaya lapisan tanah, air pori, pondasi & tiang pancang terlihat |
+| Aset baru | `engine/house.js` (rumah akhir ep. 02: bata, rangka beton, atap seng) & `engine/soil.js` (`buildDiorama`). Bisa dipakai ep. jalan raya/terowongan |
+| Pisa | Visual miring 5,5° → berkurang 0,5° (sesuai naskah: "berkurang setengah derajat"); angka 3,97° tidak dipakai |
+| Cakar ayam | Pelat beton tipis + pipa beton vertikal di bawahnya, menara listrik kisi-kisi |
+| Hook | Rumah sudah amblas & miring (teaser), lalu flashback: rumah "diterbangkan" ke rawa |
+
+## Status per akhir sesi 3
+
+- Ep. 03: preview dikirim, **menunggu OK pemilik** → render final + cover + kirim.
+- Ep. 02: siap upload (lihat sesi 2).
