@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bangun dari Nol · Engine</title>
+<style>
+  @font-face { font-family: 'Nunito'; font-weight: 800; src: url('/node_modules/@fontsource/nunito/files/nunito-latin-800-normal.woff2') format('woff2'); }
+  @font-face { font-family: 'Nunito'; font-weight: 900; src: url('/node_modules/@fontsource/nunito/files/nunito-latin-900-normal.woff2') format('woff2'); }
+  :root { --yellow: #ffd23f; --red: #ff5a5f; --ink: #10363d; --teal: #1f8f8a; }
+  html, body { margin: 0; background: #111; overflow: hidden; font-family: 'Nunito', system-ui, sans-serif; }
+  #stage { position: relative; width: 540px; height: 960px; overflow: hidden; }
+  #gl { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+  #overlay { position: absolute; inset: 0; pointer-events: none; }
+
+  .sub { position: absolute; left: 6%; right: 6%; transform: translateY(-50%); text-align: center;
+         font-weight: 900; font-size: 34px; line-height: 1.15; color: #fff; letter-spacing: 0.2px;
+         text-shadow: 0 3px 0 rgba(0,0,0,.35); -webkit-text-stroke: 7px #10363d; paint-order: stroke fill; }
+  .sub .w { display: inline-block; transform-origin: 50% 70%; }
+  .sub .w.y { color: var(--yellow); }
+  .sub .w.r { color: var(--red); }
+
+  .wm { position: absolute; top: 26px; left: 22px; display: flex; align-items: center; gap: 7px;
+        font-weight: 800; font-size: 14px; color: #fff; -webkit-text-stroke: 3px rgba(16,54,61,.55); paint-order: stroke fill; }
+  .wm-av { width: 24px; height: 24px; border-radius: 50%; background: #8d5a33; border: 2px solid #fff;
+           display: grid; place-items: center; font-size: 12px; -webkit-text-stroke: 0; color: #fff; }
+
+  .lbl { position: absolute; width: 0; height: 0; }
+  .lbl-pill { position: absolute; left: 0; top: 0; white-space: nowrap; transform-origin: 50% 100%;
+              background: #fff; color: var(--ink); font-weight: 900; font-size: 15px; letter-spacing: .6px;
+              padding: 5px 13px; border-radius: 999px; box-shadow: 0 3px 0 rgba(16,54,61,.35); text-transform: uppercase; }
+  .lbl-line { position: absolute; left: -1.5px; width: 3px; background: #fff; border-radius: 2px; }
+  .lbl-dot { position: absolute; left: -5px; top: -5px; width: 10px; height: 10px; border-radius: 50%; background: #fff; box-shadow: 0 0 0 3px rgba(16,54,61,.35); }
+  .lbl.red .lbl-pill { background: var(--red); color: #fff; }
+  .lbl.yellow .lbl-pill { background: var(--yellow); }
+
+  .dim { position: absolute; inset: 0; background: #0d1b22; opacity: 0; }
+  .card { position: absolute; left: 50%; transform: translateX(-50%); width: 78%; text-align: center;
+          background: rgba(255,255,255,.95); color: var(--ink); border-radius: 18px; padding: 14px 16px;
+          box-shadow: 0 6px 0 rgba(0,0,0,.25); opacity: 0; }
+  .card:empty { display: none; }
+  .card-t { font-weight: 900; font-size: 20px; }
+  .card-b { font-weight: 800; font-size: 14px; opacity: .75; margin-top: 3px; }
+
+  #bar { position: absolute; left: 0; right: 0; bottom: 0; display: none; gap: 8px; padding: 8px; background: rgba(0,0,0,.6); color: #fff; font: 12px system-ui; align-items: center; }
+  body.play #bar { display: flex; }
+  #bar input { flex: 1; }
+</style>
+<script type="importmap">
+{ "imports": { "three": "/node_modules/three/build/three.module.js" } }
+</script>
+</head>
+<body>
+<div id="stage">
+  <canvas id="gl"></canvas>
+  <div id="overlay"></div>
+  <div id="bar"><button id="pp">⏯</button><input id="scrub" type="range" min="0" max="1000" value="0"><span id="tt">0.0</span></div>
+</div>
+<script type="module" src="/engine/main.js"></script>
+</body>
+</html>
