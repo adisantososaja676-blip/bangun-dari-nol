@@ -7,6 +7,14 @@ Dokumen ini ringkasannya, supaya desain tetap konsisten di setiap episode.
 
 `avatar-wave-teal.png` (utama), `avatar-happy-peach.png`, `avatar-wave-sky.png`, 1080x1080, dibuat ulang dengan `node tools/avatar.mjs`.
 
+## Banner YouTube
+
+`banner-youtube.png` (2560x1440). Teks & maskot di area aman 1546x423. Buat ulang: `node tools/banner.mjs` (`--guide` untuk menampilkan garis area aman).
+
+## Cover/thumbnail video
+
+`node tools/cover.mjs <frame.png> "Judul|*kata kuning*" "Tag merah" out/<ep>-cover.jpg`, frame dari `render.mjs --still <t> --scale 2 --clean`.
+
 ## Pak Bero (berang-berang insinyur)
 
 ![Pak Bero](pak-bero.png)

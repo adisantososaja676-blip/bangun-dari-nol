@@ -13,6 +13,7 @@ export const BERO_PAL = {
 export function createBero() {
   const P = BERO_PAL;
   const root = new THREE.Group();          // posisi di dunia
+  root.name = 'bero';
   const bodyPivot = new THREE.Group();     // untuk lompat/goyang
   root.add(bodyPivot);
   const ico = (r, d = 1) => new THREE.IcosahedronGeometry(r, d);
