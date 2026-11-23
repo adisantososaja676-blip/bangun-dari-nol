@@ -16,14 +16,17 @@ _Update file ini di setiap PR. Paling baru di atas._
 | Ep. 01 Bendungan: audio + sinkron | ✅ `episodes/01-bendungan/audio.mp3` (89 dtk), timing dari jeda audio |
 | Handle akun | ✅ `@pakbero.id` (IG sudah dibuat + foto profil + bio; belum ada postingan) |
 | Foto profil | ✅ `desain/avatar-*.png` (`tools/avatar.mjs`) |
+| SOP produksi & upload | ✅ `SOP.md` |
+| Ep. 01: upload kit (caption 4 platform) + cover | ✅ `episodes/01-bendungan/upload.md`, cover via `tools/cover.mjs` |
+| Ep. 01: render final 1080x1920 | ⏳ sedang dirender (file di `out/`, tidak di-commit) |
 | Ep. 02 dst | ⬜ antrean di `IDE-VIDEO.md` |
 
 ## Langkah berikutnya
 
 > Jadwal: **posting harian**, mulai setelah stok 5–7 video siap. Bio IG sudah "Video baru setiap hari".
 
-1. Pemilik: review preview ep. 01 (dengan suara), beri catatan revisi.
-2. Claude: render final 1080x1920 (`node tools/render.mjs --ep 01-bendungan --scale 2`, ±30+ menit di container).
+1. ✅ Pemilik menyetujui preview ep. 01. Render final berjalan.
+2. Pemilik: simpan file final & cover, JANGAN posting dulu sampai stok 5–7 video.
 3. Pemilik: buat akun TikTok/YouTube/FB dengan handle yang sama `pakbero.id`, pasang foto profil.
 4. Belum ada musik latar / efek suara (opsional, perlu sumber bebas lisensi).
 5. Lanjut ep. 02 (usulan: Rumah tahan gempa).

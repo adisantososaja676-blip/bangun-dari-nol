@@ -5,6 +5,7 @@ Repo ini adalah dapur produksi akun video pendek edukasi 3D **"Bangun dari Nol"*
 ## Baca dulu (urut)
 
 1. `PROGRESS.md`: status terakhir & langkah berikutnya (**selalu update di akhir sesi**)
+1. `SOP.md`: pembagian kerja Claude vs pemilik per video + checklist upload
 2. `PLAN.md`: strategi & keputusan (jangan diubah tanpa persetujuan pemilik)
 3. `desain/MASKOT.md`: aturan desain (konsistensi visual)
 4. `IDE-VIDEO.md`: antrean topik
@@ -70,3 +71,4 @@ Animasi otomatis ikut waktu suara karena adegan diikat ke id baris naskah.
 1. Salin `episodes/01-bendungan` → `episodes/NN-topik`, tulis `script.json` & `naskah.md` (rumus di `PLAN.md` §3).
 2. Tulis `scene.js` (pakai ulang kit; tambah aset baru ke `engine/` kalau bisa dipakai episode lain).
 3. Cek still di setiap baris, lalu render preview, kirim ke pemilik, buat PR.
+4. Setelah disetujui: render final + cover (`--still 4 --scale 2` → `out/NN-cover.jpg`), tulis `upload.md` (caption per platform, lihat ep. 01).

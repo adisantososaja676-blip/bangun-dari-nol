@@ -32,7 +32,7 @@ const server = http.createServer((req, res) => {
   fs.createReadStream(p).pipe(res);
 });
 await new Promise((r) => server.listen(PORT, r));
-const url = `http://localhost:${PORT}/engine/index.html?ep=${ep}&dpr=${scale}`;
+const url = `http://localhost:${PORT}/engine/index.html?ep=${ep}&dpr=${scale}${args.clean ? '&clean=1' : ''}`;
 if (args.serve) { console.log(`Buka: ${url}&play=1`); await new Promise(() => {}); }
 
 const { chromium } = require('playwright');

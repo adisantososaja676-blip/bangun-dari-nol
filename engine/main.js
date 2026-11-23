@@ -29,6 +29,8 @@ const kit = createKit(document.getElementById('gl'), stage.clientWidth, stage.cl
 const overlay = createOverlay(document.getElementById('overlay'), timing, brand);
 const sceneApi = build(kit, T);
 
+// ?clean=1 → tanpa subtitle/label (untuk cover)
+if (q.has('clean')) document.body.classList.add('clean');
 window.DURATION = timing.duration;
 window.renderAt = (t) => {
   const state = sceneApi.update(t) ?? {};

@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="id"><head><meta charset="utf-8"><title>Cover</title>
+<style>
+@font-face { font-family: 'Nunito'; font-weight: 900; src: url('/node_modules/@fontsource/nunito/files/nunito-latin-900-normal.woff2') format('woff2'); }
+html,body{margin:0;background:#111}
+#c{position:relative;width:540px;height:960px;overflow:hidden;font-family:Nunito,sans-serif}
+#c img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.t{position:absolute;left:5%;right:5%;top:9%;text-align:center;color:#fff;font-weight:900;font-size:50px;line-height:1.05;
+   -webkit-text-stroke:10px #10363d;paint-order:stroke fill;text-shadow:0 5px 0 rgba(0,0,0,.35)}
+.t .y{color:#ffd23f}
+.tag{position:absolute;left:50%;top:74%;transform:translateX(-50%) rotate(-3deg);background:#ff5a5f;color:#fff;font-weight:900;
+   font-size:34px;padding:8px 26px;border-radius:999px;box-shadow:0 4px 0 rgba(0,0,0,.3);white-space:nowrap}
+</style></head><body>
+<div id="c"><img id="bg"><div class="t" id="t"></div><div class="tag" id="tag"></div></div>
+<script>
+// /desain/cover.html?img=/out/cover-bg.png&t=Nahan sungai pakai|*ranting*?&tag=Bisa nggak?
+const q=new URLSearchParams(location.search);
+document.getElementById('bg').src=q.get('img');
+document.getElementById('t').innerHTML=(q.get('t')||'').split('|').map(s=>s.replace(/\*([^*]+)\*/g,'<span class="y">$1</span>')).join('<br>');
+const tag=q.get('tag'); const el=document.getElementById('tag'); tag?el.textContent=tag:el.remove();
+document.getElementById('bg').onload=()=>document.fonts.ready.then(()=>window.READY=true);
+</script></body></html>

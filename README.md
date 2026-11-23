@@ -12,6 +12,7 @@ Maskot: **berang-berang insinyur**.
 | [`IDE-VIDEO.md`](IDE-VIDEO.md) | 30 ide video pertama |
 | [`referensi/ANALISIS.md`](referensi/ANALISIS.md) | Bedah video referensi (@ngekepoyuk.id) |
 | [`PROGRESS.md`](PROGRESS.md) | **Status terakhir & langkah berikutnya** |
+| [`SOP.md`](SOP.md) | **Alur produksi & checklist upload ke 4 platform** |
 | [`CLAUDE.md`](CLAUDE.md) | Panduan teknis untuk sesi Claude berikutnya (pipeline, engine, aturan) |
 | [`desain/MASKOT.md`](desain/MASKOT.md) | Desain Pak Bero, palet, gaya teks |
 | [`episodes/`](episodes) | Naskah, timing, dan adegan 3D per episode |
