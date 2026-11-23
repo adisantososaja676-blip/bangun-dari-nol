@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<title>Avatar Pak Bero</title>
+<style>html,body{margin:0;background:#111}#c{width:540px;height:540px;display:block}</style>
+<script type="importmap">{ "imports": { "three": "/node_modules/three/build/three.module.js" } }</script>
+</head>
+<body>
+<canvas id="c"></canvas>
+<script type="module">
+// Foto profil: Pak Bero close-up, latar gradasi polos (aman dipotong bulat).
+// ?v=wave|happy|point  &bg=teal|peach
+import * as THREE from 'three';
+import { createBero } from '/engine/bero.js';
+const q = new URLSearchParams(location.search);
+const dpr = Number(q.get('dpr') ?? 2);
+const canvas = document.getElementById('c');
+const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, preserveDrawingBuffer: true });
+renderer.setPixelRatio(dpr); renderer.setSize(540, 540, false);
+renderer.shadowMap.enabled = true;
+const scene = new THREE.Scene();
+const bgs = { teal: ['#7fe0d6', '#2bb5ac'], peach: ['#ffe2b8', '#ffb36b'], sky: ['#bfe9f7', '#6ec6e6'] };
+const [c0, c1] = bgs[q.get('bg') ?? 'teal'];
+const cv = document.createElement('canvas'); cv.width = cv.height = 512;
+const g = cv.getContext('2d');
+const grad = g.createRadialGradient(256, 200, 40, 256, 256, 380);
+grad.addColorStop(0, c0); grad.addColorStop(1, c1);
+g.fillStyle = grad; g.fillRect(0, 0, 512, 512);
+const tex = new THREE.CanvasTexture(cv); tex.colorSpace = THREE.SRGBColorSpace; scene.background = tex;
+
+scene.add(new THREE.HemisphereLight('#ffffff', '#8a7a5a', 1.6));
+const sun = new THREE.DirectionalLight('#fff1d6', 2.4); sun.position.set(2, 4, 5); scene.add(sun);
+const rim = new THREE.DirectionalLight('#ffffff', 1.2); rim.position.set(-3, 2, -3); scene.add(rim);
+
+const bero = createBero(); scene.add(bero.root);
+const anim = q.get('v') ?? 'wave';
+// waktu dipilih supaya mata terbuka & lengan di posisi bagus
+bero.pose(Number(q.get('t') ?? 0.55), anim, { yaw: Number(q.get('yaw') ?? 0.28) });
+const camera = new THREE.PerspectiveCamera(30, 1, 0.1, 50);
+camera.position.set(0.22, 1.38, 3.3);
+camera.lookAt(0.04, 1.2, 0);
+renderer.render(scene, camera);
+window.READY = true;
+</script>
+</body>
+</html>

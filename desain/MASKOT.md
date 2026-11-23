@@ -3,6 +3,10 @@
 Sumber kebenaran desain ada di kode (`engine/bero.js`, `engine/kit.js`, `engine/index.html`).
 Dokumen ini ringkasannya, supaya desain tetap konsisten di setiap episode.
 
+## Foto profil
+
+`avatar-wave-teal.png` (utama), `avatar-happy-peach.png`, `avatar-wave-sky.png`, 1080x1080, dibuat ulang dengan `node tools/avatar.mjs`.
+
 ## Pak Bero (berang-berang insinyur)
 
 ![Pak Bero](pak-bero.png)

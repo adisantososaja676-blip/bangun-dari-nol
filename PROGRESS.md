@@ -14,14 +14,15 @@ _Update file ini di setiap PR. Paling baru di atas._
 | Ep. 01 Bendungan: animasi | ✅ versi 1, disinkronkan ke audio |
 | Suara TTS | ✅ KIE → ElevenLabs Multilingual v2, suara Chris, speed 1.1 (`tools/tts.mjs`) |
 | Ep. 01 Bendungan: audio + sinkron | ✅ `episodes/01-bendungan/audio.mp3` (89 dtk), timing dari jeda audio |
-| Handle akun | ⏳ belum diputuskan (`brand.json` masih `@pakbero.id`) |
+| Handle akun | ✅ `@pakbero.id` (IG sudah dibuat, nama "Pak Bero \| Bangun Dari Nol") |
+| Foto profil | ✅ `desain/avatar-*.png` (`tools/avatar.mjs`) |
 | Ep. 02 dst | ⬜ antrean di `IDE-VIDEO.md` |
 
 ## Langkah berikutnya
 
 1. Pemilik: review preview ep. 01 (dengan suara), beri catatan revisi.
 2. Claude: render final 1080x1920 (`node tools/render.mjs --ep 01-bendungan --scale 2`, ±30+ menit di container).
-3. Pemilik: putuskan handle → update `brand.json` → render ulang.
+3. Pemilik: buat akun TikTok/YouTube/FB dengan handle yang sama `pakbero.id`, pasang foto profil.
 4. Belum ada musik latar / efek suara (opsional, perlu sumber bebas lisensi).
 5. Lanjut ep. 02 (usulan: Rumah tahan gempa).
 
