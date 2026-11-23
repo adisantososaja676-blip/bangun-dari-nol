@@ -63,7 +63,8 @@ Saran yang sudah diberikan ke pemilik (status belum dikonfirmasi): akun Creator/
 | 01 | Bendungan | ✅ **Sudah diunggah pemilik ke semua platform (23 Nov 2026)** dengan cover `01-bendungan-cover.jpg` |
 | 02 | Rumah tahan gempa | ✅ Final + cover selesai, siap upload. Menyebut gempa Nias 2005 (visual tenang) |
 | 03 | Pondasi di tanah lembek | ✅ Final + cover selesai (sesi 3), siap upload |
-| 04–05 | Gedung vs angin, Jalan raya (usulan) | Belum |
+| 04 | Jembatan lengkung (**request penonton** @Danzzz_W2s di YouTube ep. 01) | 🟡 Naskah + cek fakta, menunggu review (sesi 3). Rantai sengaja beda dari video referensi (jembatan gantung) |
+| 05 | Gedung vs angin / Jalan raya (usulan) | Belum |
 
 Ep. 01 menyebut tragedi **Situ Gintung (2009)**: visual dibuat tenang & serius. Kalau ada komentar korban/keluarga, balas dengan empati.
 
@@ -147,3 +148,4 @@ node tools/cover.mjs out/02-rumah-gempa-t53_9.png "Rumah tahan|*gempa*?" "Bisa n
 
 - Ep. 03: preview disetujui ("OK gas") → final 1080x1920 + cover (frame t=1.5, judul "Rumah di tanah *lembek*?" + "Bisa nggak?") dikirim. **Siap upload.**
 - Ep. 02: siap upload (lihat sesi 2).
+- Ep. 04: pemilik meneruskan komentar YouTube "Buat jembatan" (2 like) dan minta riset "super akurat dan berdaging". Naskah jembatan lengkung + cek fakta ditulis; **menunggu review**. Catatan: jaringan container memblokir WebFetch ke situs sumber, jadi verifikasi lewat pencarian silang.

@@ -1,0 +1,83 @@
+{
+  "id": "04-jembatan-lengkung",
+  "title": "Bikin jembatan nyeberangin sungai lebar, bisa nggak?",
+  "notes": "Request penonton (komentar YouTube ep. 01: 'Buat jembatan'). Penanda teks: *kata* = kuning (istilah), !kata! = merah (kegagalan). Hapus penanda saat generate TTS.",
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Bikin *jembatan* nyeberangin sungai lebar, bisa nggak?"
+    },
+    {
+      "id": "intro",
+      "text": "Ini request dari komentar kalian. Pak Bero mulai dari batu."
+    },
+    {
+      "id": "lempeng",
+      "text": "Lempengan batu panjang ditaruh dari tepi ke tepi."
+    },
+    {
+      "id": "lemah",
+      "text": "Masalahnya, batu itu kuat ditekan, tapi lemah ditarik."
+    },
+    {
+      "id": "patah",
+      "text": "Diinjak, bagian bawahnya kena *gaya tarik*, batunya !patah!."
+    },
+    {
+      "id": "lengkung",
+      "text": "Jadi batunya disusun *melengkung*. Sekarang semua batu saling *tekan*."
+    },
+    {
+      "id": "dorong",
+      "text": "Masalahnya, lengkung itu ngedorong ke samping. Makin landai, makin kuat dorongannya."
+    },
+    {
+      "id": "runtuh",
+      "text": "Tepi sungainya kegeser, lengkungnya !runtuh!."
+    },
+    {
+      "id": "pangkal",
+      "text": "Jadi kakinya ditahan *pangkal jembatan* yang berat. Tapi buat sungai lebar, pangkalnya harus raksasa."
+    },
+    {
+      "id": "baja",
+      "text": "Solusinya, lengkungnya dibikin dari *baja*, dan jalannya digantung di bawahnya."
+    },
+    {
+      "id": "ikat",
+      "text": "Ujung lengkungnya diikat ke jalan. Jalannya jadi *batang pengikat* yang nahan dorongan itu sendiri."
+    },
+    {
+      "id": "muai",
+      "text": "Masalahnya, baja kena panas itu *memuai*. Baja 100 meter bisa memanjang hampir *4 senti* kalau suhunya naik 30 derajat."
+    },
+    {
+      "id": "dikunci",
+      "text": "Kalau ujungnya dikunci mati, pangkalnya kedorong sampai !retak!."
+    },
+    {
+      "id": "geser",
+      "text": "Jadi satu ujungnya ditaruh di *perletakan* yang bisa geser, dan jalannya dikasih celah: *siar muai*."
+    },
+    {
+      "id": "gludak",
+      "text": "Itu sambungan besi yang bunyi gludak kalau mobil lewat."
+    },
+    {
+      "id": "berdiri",
+      "text": "Sekarang jembatannya *berdiri*, mobil bisa lewat."
+    },
+    {
+      "id": "roma",
+      "text": "Oh iya, lengkung batu itu awet. Jembatan Fabricius di Roma dibangun tahun 62 Sebelum Masehi, dan masih dilewatin orang sampai sekarang."
+    },
+    {
+      "id": "kalikuto",
+      "text": "Di Indonesia ada Jembatan Kalikuto di tol Batang–Semarang. Dua bagian lengkung bajanya dirakit berdiri di tiap tepi, lalu direbahin sampai ketemu di atas sungai."
+    },
+    {
+      "id": "outro",
+      "text": "Habis ini, Pak Bero bangun apa lagi ya?"
+    }
+  ]
+}

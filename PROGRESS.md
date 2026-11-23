@@ -28,7 +28,8 @@ _Update file ini di setiap PR. Paling baru di atas._
 | Ep. 03 Pondasi di tanah lembek: naskah + cek fakta + audio + animasi | ✅ `episodes/03-pondasi-lembek/` (81,5 dtk), preview disetujui pemilik ("OK gas") |
 | Ep. 03: upload kit + render final + cover | ✅ final 1080x1920 & cover (frame t=1.5, rumah amblas miring retak) dikirim. Siap upload |
 | Aset baru: rumah & diorama potongan tanah | ✅ `engine/house.js` (`createHouse`), `engine/soil.js` (`buildDiorama`) |
-| Ep. 04 dst | ⬜ antrean di `IDE-VIDEO.md` |
+| Ep. 04 Jembatan lengkung (request penonton): naskah + cek fakta | 🟡 `episodes/04-jembatan-lengkung/` (±92 dtk), **menunggu review pemilik** |
+| Ep. 05 dst | ⬜ antrean di `IDE-VIDEO.md` |
 
 ## Langkah berikutnya
 
@@ -36,7 +37,7 @@ _Update file ini di setiap PR. Paling baru di atas._
 
 1. **Pemilik:** upload ep. 02 (`upload.md`, cover `out/02-rumah-gempa-cover.jpg`). Cover dibuat ulang: `render.mjs --ep 02-rumah-gempa --still 53.9 --scale 2 --clean` lalu `cover.mjs ... "Rumah tahan|*gempa*?" "Bisa nggak?"`.
 2. **Pemilik:** upload ep. 03 (`episodes/03-pondasi-lembek/upload.md`, cover `out/03-pondasi-lembek-cover.jpg`). Render ulang: `render.mjs --ep 03-pondasi-lembek --scale 2`; cover: `--still 1.5 --scale 2 --clean` lalu `cover.mjs out/03-pondasi-lembek-t1_5.png "Rumah di tanah|*lembek*?" "Bisa nggak?" out/03-pondasi-lembek-cover.jpg`.
-   **Claude:** ep. 04–05: Gedung vs angin (Taipei 101), Jalan raya (bisa pakai `buildDiorama` untuk lapisan jalan).
+   **Pemilik:** review naskah ep. 04 (jembatan lengkung, request penonton). **Claude:** setelah OK → TTS + animasi (pakai `buildValley` ep. 01). Cadangan ep. 05: Gedung vs angin (Taipei 101), Jalan raya (bisa pakai `buildDiorama` untuk lapisan jalan).
 2. ✅ API key KIE tersimpan sebagai **network secret** environment (host `api.kie.ai`, disimpan ulang di sesi 3 karena key lama ditolak 401). Jalankan TTS dengan `KIE_API_KEY=proxy-injected`. Cek cepat: `curl -s -H "Authorization: Bearer x" https://api.kie.ai/api/v1/chat/credit`.
 3. **Pemilik:** merge PR #1 (`pilot-bendungan`) ke `main`.
 4. **Pemilik:** kabari handle YouTube final, lalu catat di `KONTEKS.md`.
