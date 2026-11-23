@@ -33,28 +33,34 @@ _Update file ini di setiap PR. Paling baru di atas._
 
 ## Langkah berikutnya
 
-> Jadwal target: **posting harian** jam 18.00–19.00 WIB. Ep. 01 sudah tayang; stok berikutnya belum ada.
+> Jadwal target: **posting harian** jam 18.00–19.00 WIB. Ep. 01 sudah tayang. Stok siap upload: ep. 02 & 03.
 
-1. **Pemilik:** upload ep. 02 (`upload.md`, cover `out/02-rumah-gempa-cover.jpg`). Cover dibuat ulang: `render.mjs --ep 02-rumah-gempa --still 53.9 --scale 2 --clean` lalu `cover.mjs ... "Rumah tahan|*gempa*?" "Bisa nggak?"`.
-2. **Pemilik:** upload ep. 03 (`episodes/03-pondasi-lembek/upload.md`, cover `out/03-pondasi-lembek-cover.jpg`). Render ulang: `render.mjs --ep 03-pondasi-lembek --scale 2`; cover: `--still 1.5 --scale 2 --clean` lalu `cover.mjs out/03-pondasi-lembek-t1_5.png "Rumah di tanah|*lembek*?" "Bisa nggak?" out/03-pondasi-lembek-cover.jpg`.
-   Ep. 04 (jembatan lengkung, request penonton) **berhenti di dokumen** atas keputusan pemilik. **Claude:** baru TTS + animasi kalau pemilik bilang lanjut (rencana adegan ada di `naskah.md`). Cadangan ep. 05: Gedung vs angin (Taipei 101), Jalan raya (bisa pakai `buildDiorama` untuk lapisan jalan).
-2. ✅ API key KIE tersimpan sebagai **network secret** environment (host `api.kie.ai`, disimpan ulang di sesi 3 karena key lama ditolak 401). Jalankan TTS dengan `KIE_API_KEY=proxy-injected`. Cek cepat: `curl -s -H "Authorization: Bearer x" https://api.kie.ai/api/v1/chat/credit`.
-3. **Pemilik:** merge PR #1 (`pilot-bendungan`) ke `main`.
-4. **Pemilik:** kabari handle YouTube final, lalu catat di `KONTEKS.md`.
-5. **Pemilik:** pantau komentar ep. 01; usulan topik masuk `IDE-VIDEO.md`.
-6. Setelah 12 video: evaluasi (retensi 3 dtk, % ditonton, komentar).
+1. **Pemilik:** upload ep. 02 (`episodes/02-rumah-gempa/upload.md` + cover). Render ulang kalau file hilang: lihat `KONTEKS.md` sesi 2.
+2. **Pemilik:** upload ep. 03 (`episodes/03-pondasi-lembek/upload.md` + cover). Render ulang kalau file hilang: lihat `KONTEKS.md` sesi 3.
+3. **Pemilik:** balas komentar request "Buat jembatan" di YouTube ep. 01; putuskan boleh/tidak nama penonton tampil di ep. 04.
+4. **Claude (setelah pemilik bilang lanjut):** ep. 04 Jembatan lengkung: `script.json` sudah final (±89 dtk), rencana adegan per baris ada di `episodes/04-jembatan-lengkung/naskah.md`. Langkah: TTS → stills → preview → OK → final + cover + `upload.md`.
+5. **Claude:** ep. 05 usulan: Gedung vs angin (Taipei 101) atau Jalan raya (pakai `buildDiorama` untuk lapisan jalan). Cek komentar penonton dulu.
+6. **Pemilik:** kabari handle YouTube final, lalu catat di `KONTEKS.md`.
+7. Setelah 12 video: evaluasi (retensi 3 dtk, % ditonton, komentar).
+
+✅ API key KIE tersimpan sebagai **network secret** environment (host `api.kie.ai`, disimpan ulang di sesi 3). TTS: `KIE_API_KEY=proxy-injected NODE_USE_ENV_PROXY=1 node tools/tts.mjs episodes/<ep>`. Cek saldo: `curl -s -H "Authorization: Bearer x" https://api.kie.ai/api/v1/chat/credit` (sisa ±959 kredit per akhir sesi 3).
 
 ## Catatan teknis / kendala yang diketahui
 
 - Kamera di lembah sempit gampang tertutup tebing. Taruh kamera di atas alur sungai (|x| < 3.5) atau di diagram potongan.
 - Panah gaya pakai `depthTest:false` supaya terlihat menembus air.
 - Durasi ep. 01: ±90 dtk (mengikuti audio).
-- Render preview 540x960 ±9 menit (~5 fps) di container cloud; final 1080x1920 jauh lebih lama.
+- Render preview 540x960 ±6–9 menit di container cloud; final 1080x1920 ±15 menit (ep. 03, 81 dtk).
+- WebFetch ke situs sumber riset diblokir jaringan container; pakai WebSearch silang, dan minta pemilik cek langsung untuk klaim berisiko.
 - Narasi dibaca satu tarikan; bagian Situ Gintung belum dibuat lebih pelan (TTS satu task). Bisa dipecah jadi beberapa task kalau perlu.
 
 ## Log
 
+### 2026-11-23: Ep. 04 Jembatan lengkung (dokumen)
+- Request penonton (YouTube ep. 01). Naskah + cek fakta 13 klaim, direview & dikoreksi pemilik, rencana adegan per baris. Produksi ditunda (keputusan pemilik).
+
 ### 2026-11-23: Ep. 03 Pondasi di tanah lembek
+- Preview disetujui → final 1080x1920 (24 MB) + cover t=1.5 dikirim & diunduh pemilik.
 - Naskah + cek fakta dari pemilik (hasil sesi sebelumnya) dimasukkan ke repo.
 - Key KIE lama ditolak (401) → pemilik simpan ulang lewat formulir aman. Saldo sebelum TTS: 982,86 kredit.
 - TTS Chris (24 kredit, 1.295 karakter), timing dari jeda audio (38/40 jeda cocok), 81,5 dtk.
