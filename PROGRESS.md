@@ -23,7 +23,7 @@ _Update file ini di setiap PR. Paling baru di atas._
 | Ep. 01: render final 1080x1920 | ✅ dikirim ke pemilik (27 MB; file video tidak di-commit, render ulang dengan `--scale 2`) |
 | **Ep. 01: TAYANG** | ✅ diunggah pemilik ke IG, TikTok, YouTube, Facebook (23 Nov 2026) |
 | Ep. 02 Rumah tahan gempa: naskah + cek fakta + audio + animasi | ✅ `episodes/02-rumah-gempa/` (81 dtk), preview dikirim ke pemilik |
-| Ep. 02: upload kit | ✅ `episodes/02-rumah-gempa/upload.md` (render final + cover setelah preview disetujui) |
+| Ep. 02: upload kit + render final + cover | ✅ preview disetujui pemilik; final 1080x1920 (39 MB) & cover (frame t=53.9, rumah oleng) dikirim. Siap upload |
 | Dunia "tanah lapang" + helper gempa | ✅ `buildField`, `quake` di `engine/kit.js` (bisa dipakai ep. 03–05) |
 | Ep. 03 dst | ⬜ antrean di `IDE-VIDEO.md` |
 
@@ -31,8 +31,8 @@ _Update file ini di setiap PR. Paling baru di atas._
 
 > Jadwal target: **posting harian** jam 18.00–19.00 WIB. Ep. 01 sudah tayang; stok berikutnya belum ada.
 
-1. **Pemilik:** tonton preview ep. 02, kasih OK/revisi. **Claude:** setelah OK → render final 1080x1920 + cover (`--still 3 --scale 2 --clean`).
-2. **Claude:** lanjut ep. 03–05 untuk stok (usulan: Gedung vs angin, Pondasi tanah lembek, Jalan raya; pakai `buildField`).
+1. **Pemilik:** upload ep. 02 (`upload.md`, cover `out/02-rumah-gempa-cover.jpg`). Cover dibuat ulang: `render.mjs --ep 02-rumah-gempa --still 53.9 --scale 2 --clean` lalu `cover.mjs ... "Rumah tahan|*gempa*?" "Bisa nggak?"`.
+2. **Claude:** ep. 03 usulan **Pondasi di tanah lembek** (lanjutan rumah ep. 02 yang amblas; hook Jakarta turun; tiang pancang; fakta Pisa/cakar ayam, perlu riset). Menunggu persetujuan topik dari pemilik. Cadangan ep. 04–05: Gedung vs angin (Taipei 101), Jalan raya.
 2. ✅ API key KIE baru sudah tersimpan sebagai **network secret** environment (host `api.kie.ai`). Jalankan TTS dengan `KIE_API_KEY=proxy-injected` (proxy mengganti nilainya).
 3. **Pemilik:** merge PR #1 (`pilot-bendungan`) ke `main`.
 4. **Pemilik:** kabari handle YouTube final, lalu catat di `KONTEKS.md`.

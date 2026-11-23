@@ -61,7 +61,7 @@ Saran yang sudah diberikan ke pemilik (status belum dikonfirmasi): akun Creator/
 | # | Topik | Status |
 |---|---|---|
 | 01 | Bendungan | ✅ **Sudah diunggah pemilik ke semua platform (23 Nov 2026)** dengan cover `01-bendungan-cover.jpg` |
-| 02 | Rumah tahan gempa | Naskah + audio + animasi selesai, preview menunggu review pemilik. Menyebut gempa Nias 2005 (visual tenang) |
+| 02 | Rumah tahan gempa | ✅ Final + cover selesai, siap upload. Menyebut gempa Nias 2005 (visual tenang) |
 | 03–05 | Pondasi tanah lembek, Gedung vs angin, Jalan raya (usulan, aset saling pakai ulang) | Belum |
 
 Ep. 01 menyebut tragedi **Situ Gintung (2009)**: visual dibuat tenang & serius. Kalau ada komentar korban/keluarga, balas dengan empati.
