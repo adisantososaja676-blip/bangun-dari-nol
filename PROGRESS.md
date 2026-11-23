@@ -28,7 +28,7 @@ _Update file ini di setiap PR. Paling baru di atas._
 | Ep. 03 Pondasi di tanah lembek: naskah + cek fakta + audio + animasi | ✅ `episodes/03-pondasi-lembek/` (81,5 dtk), preview disetujui pemilik ("OK gas") |
 | Ep. 03: upload kit + render final + cover | ✅ final 1080x1920 & cover (frame t=1.5, rumah amblas miring retak) dikirim. Siap upload |
 | Aset baru: rumah & diorama potongan tanah | ✅ `engine/house.js` (`createHouse`), `engine/soil.js` (`buildDiorama`) |
-| Ep. 04 Jembatan lengkung (request penonton): naskah + cek fakta | 🟡 `episodes/04-jembatan-lengkung/` (±92 dtk), **menunggu review pemilik** |
+| Ep. 04 Jembatan lengkung (request penonton): naskah + cek fakta | 🟡 `episodes/04-jembatan-lengkung/` (±89 dtk), direvisi sesuai review pemilik; **TTS menunggu aba-aba** |
 | Ep. 05 dst | ⬜ antrean di `IDE-VIDEO.md` |
 
 ## Langkah berikutnya
