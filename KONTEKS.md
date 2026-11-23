@@ -81,3 +81,40 @@ Ep. 01 menyebut tragedi **Situ Gintung (2009)**: visual dibuat tenang & serius. 
 - Bahasa Indonesia santai. Pemilik suka langkah konkret ("isi apa", "klik apa").
 - Setiap hasil kerja → commit → push → PR (pemilik ingin progres tersimpan walau pindah akun Claude).
 - Kirim file ke pemilik (video/gambar) saat selesai. Video final tidak di-commit (besar); bisa dirender ulang.
+
+---
+
+# Sesi 2 (23 Nov 2026): Ep. 02 Rumah tahan gempa
+
+> Arsip chat sesi kedua (pemilik akan menghapus chat-nya). Sesi berikutnya: baca juga bagian ini.
+
+## Yang dikerjakan
+
+- Pemilik minta "gas lagi untuk konten besok". Repo `main` masih versi lama; pekerjaan terbaru ada di branch `pilot-bendungan` (PR #1, **belum di-merge**). Sesi ini bekerja di branch `claude/trusting-ptolemy-6xa877` yang dibuat dari `pilot-bendungan`.
+- **PR #2** (`claude/trusting-ptolemy-6xa877` → base `pilot-bendungan`) berisi ep. 02. Setelah PR #1 di-merge, base PR #2 otomatis pindah ke `main`. Urutan merge: **PR #1 dulu, lalu PR #2**.
+- Ep. 02 selesai penuh: riset + naskah + cek fakta → TTS → animasi → preview → **disetujui pemilik ("OK")** → final 1080x1920 (39 MB, 81 dtk) + cover. File video & cover dikirim ke pemilik di chat (tidak di-commit; render ulang dengan perintah di bawah).
+
+## Keputusan & catatan
+
+| Topik | Catatan |
+|---|---|
+| API key KIE | Pemilik memasukkan key baru lewat formulir aman → tersimpan sebagai **network secret** environment untuk host `api.kie.ai`. Tidak perlu minta key lagi. Jalankan: `KIE_API_KEY=proxy-injected NODE_USE_ENV_PROXY=1 node tools/tts.mjs episodes/<ep>` |
+| Biaya TTS ep. 02 | 24 kredit (1.280 karakter) |
+| Cover ep. 02 | Dipilih frame **t=53.9** (rumah oleng, atap genteng berat, Pak Bero terlihat), bukan frame runtuh (t=21.8) yang kurang jelas. Teks: "Rumah tahan\|*gempa*?" + tag "Bisa nggak?" |
+| Fakta sensitif ep. 02 | Gempa Nias 2005: visual tenang. Angka "hampir 30 ribu gempa" = versi Kepala BMKG (BPS: 7.442, metode beda) |
+| Kit baru | `buildField` (tanah lapang) & `quake` (goyangan gempa) di `engine/kit.js`, dipakai ulang untuk episode di darat |
+| Kirim file ke pemilik | Panel file di aplikasi Claude **tidak bisa membuka file repo** (izin sesi). Kirim file sebagai lampiran (SendUserFile) dan/atau tempel isi caption langsung di chat |
+
+## Render ulang ep. 02
+
+```bash
+node tools/render.mjs --ep 02-rumah-gempa --scale 2                       # final → out/02-rumah-gempa.mp4 (±21 menit)
+node tools/render.mjs --ep 02-rumah-gempa --still 53.9 --scale 2 --clean  # frame cover
+node tools/cover.mjs out/02-rumah-gempa-t53_9.png "Rumah tahan|*gempa*?" "Bisa nggak?" out/02-rumah-gempa-cover.jpg
+```
+
+## Status per akhir sesi 2
+
+- Ep. 02: **siap upload** (pemilik upload besok, caption di `episodes/02-rumah-gempa/upload.md`).
+- Ep. 03: usulan Claude **"Pondasi di tanah lembek"** (rumah ep. 02 dipindah ke rawa lalu amblas; hook Jakarta turun; rantai: pondasi dangkal → pondasi telapak → konsolidasi → penurunan tidak seragam → tiang pancang; fakta penutup Menara Pisa / pondasi cakar ayam, **perlu riset**). Pemilik sempat mengetik "gas ep 3" tapi belum dikirim → anggap **belum disetujui**, tanyakan dulu.
+- Cadangan ep. 04–05: Gedung pencakar langit vs angin (peredam Taipei 101), Jalan raya.
