@@ -13,7 +13,7 @@ Dokumen ini ringkasannya, supaya desain tetap konsisten di setiap episode.
 
 ## Cover/thumbnail video
 
-`node tools/cover.mjs <frame.png> "Judul|*kata kuning*" "Tag merah" out/<ep>-cover.jpg`, frame dari `render.mjs --still <t> --scale 2 --clean`.
+`node tools/cover.mjs <frame.png> "Judul|*kata kuning*" "Tag merah" out/<ep>-cover.jpg`, frame dari `render.mjs --still <t> --scale 2 --clean`. Judul & tag sengaja berada di 15–80% tinggi supaya aman saat grid IG memotong ke 3:4.
 
 ## Pak Bero (berang-berang insinyur)
 
