@@ -7,7 +7,7 @@
 | Payung konten | **"Bangun dari nol"**: maskot membangun sesuatu, gagal, lalu memperbaikinya. Satu video = satu rantai evolusi solusi. |
 | Maskot | **Berang-berang insinyur**. Usulan nama: *Pak Bero*, *Bang Berang*, *Si Bendu*. |
 | Tujuan | Monetisasi (adsense + brand deal) |
-| Kapasitas | < 5 jam/minggu, budget ~0 (di luar TTS) |
+| Kapasitas | < 5 jam/minggu, budget ~0 (di luar TTS). Jadwal harian ≈ 3–3,5 jam/minggu waktu pemilik |
 | Suara | AI TTS berbayar, di-generate sendiri |
 | Durasi | 60–90 detik, 9:16 |
 | Platform | YouTube Shorts, TikTok, Instagram Reels, Facebook Reels (file yang sama, tanpa watermark) |
@@ -57,8 +57,10 @@ Catatan:
 
 ## 5. Jadwal
 
-- **Minggu 0:** setup pipeline, maskot, pilot "Bendungan"
-- **Minggu 1–4:** 3 video/minggu (12 video), posting di jam yang sama
+- **Minggu 0:** setup pipeline, maskot, pilot "Bendungan" ✅
+- **Sebelum posting pertama:** kumpulkan stok 5–7 video + perbanyak aset 3D yang bisa dipakai ulang (tanah, beton, baja, crane, gedung)
+- **Lalu posting SETIAP HARI** (diubah dari 3x/minggu, 2026-11-23), jam sama (usulan 18.00–19.00 WIB)
+- **Aturan stok:** selalu ≥3 video siap di depan; kalau menipis, turun sementara ke 5x/minggu daripada kualitas turun
 - **Evaluasi setelah 12 video:** retensi 3 detik pertama, % rata-rata ditonton, jumlah komentar. Gandakan topik yang menang.
 
 ## 6. Realita monetisasi

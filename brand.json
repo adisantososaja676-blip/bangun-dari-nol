@@ -1,0 +1,15 @@
+{
+  "handle": "@pakbero.id",
+  "avatar": "B",
+  "mascot": "Pak Bero",
+  "note": "Handle masih placeholder. Ganti di sini setelah akun dibuat; semua video ikut berubah saat dirender ulang.",
+  "tts": {
+    "model": "elevenlabs/text-to-speech-multilingual-v2",
+    "voice": "iP95p4xoKVk53GoZ742B",
+    "voiceName": "Chris",
+    "speed": 1.1,
+    "stability": 0.45,
+    "similarity_boost": 0.75,
+    "style": 0.15
+  }
+}
