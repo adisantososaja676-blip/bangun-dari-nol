@@ -49,7 +49,7 @@ TTS memakai **KIE** (kie.ai) → model `elevenlabs/text-to-speech-multilingual-v
 KIE_API_KEY=<key pemilik> NODE_USE_ENV_PROXY=1 node tools/tts.mjs episodes/<ep>   # → audio.mp3 + timing.json
 ```
 
-- **API key tidak boleh di-commit.** Minta ke pemilik (atau simpan sebagai network secret di environment).
+- **API key tidak boleh di-commit.** Sudah tersimpan sebagai network secret environment (`api.kie.ai`): pakai `KIE_API_KEY=proxy-injected`.
 - Jaringan environment harus mengizinkan: `api.kie.ai`, `kie.ai`, `tempfile.aiquickdraw.com`, `file.aiquickdraw.com` (hasil Gemini), `static.aiquickdraw.com` (contoh suara). Node butuh `NODE_USE_ENV_PROXY=1` di container cloud.
 - Biaya: ±12 kredit per 1.000 karakter, minimal 12 kredit per task. 1 episode ≈ 24 kredit.
 - KIE **tidak** mengembalikan timestamp per kata, jadi `tools/timing.mjs` menyelaraskan sendiri: jeda di audio (ffmpeg silencedetect) dicocokkan ke tanda baca naskah dengan DP yang menjaga kecepatan bicara konsisten. Cek hasilnya (`timing.json`) dan beberapa still sebelum render final.
@@ -60,7 +60,7 @@ Animasi otomatis ikut waktu suara karena adegan diikat ke id baris naskah.
 
 ## Engine (ringkas)
 
-- `engine/kit.js`: renderer, palet `PAL`, lembah sungai `buildValley`, hujan, panah, partikel instanced, kamera `cameraAt(keys,t)`.
+- `engine/kit.js`: renderer, palet `PAL`, lembah sungai `buildValley`, tanah lapang `buildField`, goyangan gempa `quake`, hujan, panah, partikel instanced, kamera `cameraAt(keys,t)`.
 - `engine/bero.js`: model & pose Pak Bero.
 - `engine/overlay.js`: subtitle per kata, label 3D→2D, kartu, watermark.
 - `engine/main.js`: memuat episode & `window.renderAt(t)`.

@@ -1,0 +1,1368 @@
+{
+ "id": "02-rumah-gempa",
+ "source": "audio-silence",
+ "duration": 81.47,
+ "lines": [
+  {
+   "id": "hook",
+   "words": [
+    {
+     "w": "Bikin",
+     "color": null,
+     "start": 0.226,
+     "end": 0.464
+    },
+    {
+     "w": "rumah",
+     "color": null,
+     "start": 0.464,
+     "end": 0.701
+    },
+    {
+     "w": "yang",
+     "color": null,
+     "start": 0.701,
+     "end": 0.904
+    },
+    {
+     "w": "nggak",
+     "color": null,
+     "start": 0.904,
+     "end": 1.141
+    },
+    {
+     "w": "roboh",
+     "color": null,
+     "start": 1.141,
+     "end": 1.379
+    },
+    {
+     "w": "kena",
+     "color": null,
+     "start": 1.379,
+     "end": 1.581
+    },
+    {
+     "w": "gempa,",
+     "color": "y",
+     "start": 1.581,
+     "end": 1.818
+    },
+    {
+     "w": "bisa",
+     "color": null,
+     "start": 1.954,
+     "end": 2.156
+    },
+    {
+     "w": "nggak?",
+     "color": null,
+     "start": 2.156,
+     "end": 2.393
+    }
+   ],
+   "start": 0.226,
+   "end": 2.837
+  },
+  {
+   "id": "intro",
+   "words": [
+    {
+     "w": "Ini",
+     "color": null,
+     "start": 2.837,
+     "end": 3.039
+    },
+    {
+     "w": "Pak",
+     "color": "y",
+     "start": 3.039,
+     "end": 3.241
+    },
+    {
+     "w": "Bero,",
+     "color": "y",
+     "start": 3.241,
+     "end": 3.486
+    },
+    {
+     "w": "berang-berang",
+     "color": null,
+     "start": 3.635,
+     "end": 4.197
+    },
+    {
+     "w": "insinyur.",
+     "color": null,
+     "start": 4.197,
+     "end": 4.596
+    }
+   ],
+   "start": 2.837,
+   "end": 5.336
+  },
+  {
+   "id": "bmkg",
+   "words": [
+    {
+     "w": "Tahun",
+     "color": null,
+     "start": 5.336,
+     "end": 5.66
+    },
+    {
+     "w": "2024",
+     "color": null,
+     "start": 5.66,
+     "end": 6.323
+    },
+    {
+     "w": "aja,",
+     "color": null,
+     "start": 6.323,
+     "end": 6.55
+    },
+    {
+     "w": "BMKG",
+     "color": null,
+     "start": 6.991,
+     "end": 7.285
+    },
+    {
+     "w": "nyatat",
+     "color": null,
+     "start": 7.285,
+     "end": 7.682
+    },
+    {
+     "w": "hampir",
+     "color": null,
+     "start": 7.682,
+     "end": 8.078
+    },
+    {
+     "w": "30",
+     "color": "y",
+     "start": 8.078,
+     "end": 8.475
+    },
+    {
+     "w": "ribu",
+     "color": "y",
+     "start": 8.475,
+     "end": 8.769
+    },
+    {
+     "w": "gempa",
+     "color": null,
+     "start": 8.769,
+     "end": 9.115
+    },
+    {
+     "w": "di",
+     "color": null,
+     "start": 9.115,
+     "end": 9.305
+    },
+    {
+     "w": "Indonesia.",
+     "color": null,
+     "start": 9.305,
+     "end": 9.857
+    }
+   ],
+   "start": 5.336,
+   "end": 10.728
+  },
+  {
+   "id": "tumpuk",
+   "words": [
+    {
+     "w": "Pak",
+     "color": null,
+     "start": 10.728,
+     "end": 11.002
+    },
+    {
+     "w": "Bero",
+     "color": null,
+     "start": 11.002,
+     "end": 11.335
+    },
+    {
+     "w": "numpuk",
+     "color": null,
+     "start": 11.335,
+     "end": 11.785
+    },
+    {
+     "w": "bata,",
+     "color": null,
+     "start": 11.785,
+     "end": 12.118
+    },
+    {
+     "w": "rapi,",
+     "color": null,
+     "start": 12.237,
+     "end": 12.485
+    },
+    {
+     "w": "tanpa",
+     "color": null,
+     "start": 12.651,
+     "end": 12.943
+    },
+    {
+     "w": "perekat.",
+     "color": null,
+     "start": 12.943,
+     "end": 13.321
+    }
+   ],
+   "start": 10.728,
+   "end": 13.95
+  },
+  {
+   "id": "goyang",
+   "words": [
+    {
+     "w": "Masalahnya,",
+     "color": null,
+     "start": 13.95,
+     "end": 14.457
+    },
+    {
+     "w": "gempa",
+     "color": null,
+     "start": 14.63,
+     "end": 14.879
+    },
+    {
+     "w": "itu",
+     "color": null,
+     "start": 14.879,
+     "end": 15.054
+    },
+    {
+     "w": "bukan",
+     "color": null,
+     "start": 15.054,
+     "end": 15.304
+    },
+    {
+     "w": "cuma",
+     "color": null,
+     "start": 15.304,
+     "end": 15.516
+    },
+    {
+     "w": "goyang",
+     "color": null,
+     "start": 15.516,
+     "end": 15.802
+    },
+    {
+     "w": "naik",
+     "color": null,
+     "start": 15.802,
+     "end": 16.014
+    },
+    {
+     "w": "turun.",
+     "color": null,
+     "start": 16.014,
+     "end": 16.264
+    }
+   ],
+   "start": 13.95,
+   "end": 16.835
+  },
+  {
+   "id": "lateral",
+   "words": [
+    {
+     "w": "Tanahnya",
+     "color": null,
+     "start": 16.835,
+     "end": 17.165
+    },
+    {
+     "w": "juga",
+     "color": null,
+     "start": 17.165,
+     "end": 17.358
+    },
+    {
+     "w": "ngedorong",
+     "color": null,
+     "start": 17.358,
+     "end": 17.722
+    },
+    {
+     "w": "ke",
+     "color": null,
+     "start": 17.722,
+     "end": 17.847
+    },
+    {
+     "w": "samping.",
+     "color": null,
+     "start": 17.847,
+     "end": 18.143
+    },
+    {
+     "w": "Ini",
+     "color": null,
+     "start": 18.656,
+     "end": 18.84
+    },
+    {
+     "w": "namanya",
+     "color": null,
+     "start": 18.84,
+     "end": 19.18
+    },
+    {
+     "w": "gaya",
+     "color": "y",
+     "start": 19.18,
+     "end": 19.403
+    },
+    {
+     "w": "lateral.",
+     "color": "y",
+     "start": 19.403,
+     "end": 19.744
+    }
+   ],
+   "start": 16.835,
+   "end": 20.618
+  },
+  {
+   "id": "ambruk",
+   "words": [
+    {
+     "w": "Batanya",
+     "color": null,
+     "start": 20.618,
+     "end": 21.014
+    },
+    {
+     "w": "bergeser,",
+     "color": null,
+     "start": 21.014,
+     "end": 21.456
+    },
+    {
+     "w": "rumahnya",
+     "color": null,
+     "start": 21.557,
+     "end": 22.005
+    },
+    {
+     "w": "ambruk.",
+     "color": "r",
+     "start": 22.005,
+     "end": 22.36
+    }
+   ],
+   "start": 20.618,
+   "end": 23.097
+  },
+  {
+   "id": "semen",
+   "words": [
+    {
+     "w": "Jadi",
+     "color": null,
+     "start": 23.097,
+     "end": 23.329
+    },
+    {
+     "w": "batanya",
+     "color": null,
+     "start": 23.329,
+     "end": 23.684
+    },
+    {
+     "w": "direkatkan",
+     "color": null,
+     "start": 23.684,
+     "end": 24.162
+    },
+    {
+     "w": "pakai",
+     "color": null,
+     "start": 24.162,
+     "end": 24.435
+    },
+    {
+     "w": "semen.",
+     "color": "y",
+     "start": 24.435,
+     "end": 24.708
+    }
+   ],
+   "start": 23.097,
+   "end": 25.403
+  },
+  {
+   "id": "kuat",
+   "words": [
+    {
+     "w": "Dindingnya",
+     "color": null,
+     "start": 25.403,
+     "end": 25.944
+    },
+    {
+     "w": "kuat",
+     "color": null,
+     "start": 25.944,
+     "end": 26.208
+    },
+    {
+     "w": "nahan",
+     "color": null,
+     "start": 26.208,
+     "end": 26.518
+    },
+    {
+     "w": "beban",
+     "color": null,
+     "start": 26.518,
+     "end": 26.828
+    },
+    {
+     "w": "dari",
+     "color": null,
+     "start": 26.828,
+     "end": 27.092
+    },
+    {
+     "w": "atas.",
+     "color": null,
+     "start": 27.092,
+     "end": 27.356
+    }
+   ],
+   "start": 25.403,
+   "end": 27.943
+  },
+  {
+   "id": "getas",
+   "words": [
+    {
+     "w": "Tapi",
+     "color": null,
+     "start": 27.943,
+     "end": 28.208
+    },
+    {
+     "w": "bata",
+     "color": null,
+     "start": 28.208,
+     "end": 28.474
+    },
+    {
+     "w": "itu",
+     "color": null,
+     "start": 28.474,
+     "end": 28.693
+    },
+    {
+     "w": "getas:",
+     "color": "y",
+     "start": 28.693,
+     "end": 29.004
+    },
+    {
+     "w": "kuat",
+     "color": null,
+     "start": 29.348,
+     "end": 29.61
+    },
+    {
+     "w": "ditekan,",
+     "color": null,
+     "start": 29.61,
+     "end": 30.01
+    },
+    {
+     "w": "lemah",
+     "color": null,
+     "start": 30.436,
+     "end": 30.736
+    },
+    {
+     "w": "digoyang.",
+     "color": null,
+     "start": 30.736,
+     "end": 31.169
+    }
+   ],
+   "start": 27.943,
+   "end": 32.074
+  },
+  {
+   "id": "retak",
+   "words": [
+    {
+     "w": "Muncul",
+     "color": null,
+     "start": 32.074,
+     "end": 32.378
+    },
+    {
+     "w": "retak",
+     "color": "r",
+     "start": 32.378,
+     "end": 32.642
+    },
+    {
+     "w": "menyilang,",
+     "color": null,
+     "start": 32.642,
+     "end": 33.063
+    }
+   ],
+   "start": 32.074,
+   "end": 33.42
+  },
+  {
+   "id": "runtuh",
+   "words": [
+    {
+     "w": "lalu",
+     "color": null,
+     "start": 33.42,
+     "end": 33.641
+    },
+    {
+     "w": "dindingnya",
+     "color": null,
+     "start": 33.641,
+     "end": 34.095
+    },
+    {
+     "w": "runtuh.",
+     "color": "r",
+     "start": 34.095,
+     "end": 34.393
+    }
+   ],
+   "start": 33.42,
+   "end": 35.268
+  },
+  {
+   "id": "rangka",
+   "words": [
+    {
+     "w": "Solusinya,",
+     "color": null,
+     "start": 35.268,
+     "end": 35.784
+    },
+    {
+     "w": "dinding",
+     "color": null,
+     "start": 35.975,
+     "end": 36.328
+    },
+    {
+     "w": "dipeluk",
+     "color": null,
+     "start": 36.328,
+     "end": 36.68
+    },
+    {
+     "w": "rangka",
+     "color": null,
+     "start": 36.68,
+     "end": 36.992
+    },
+    {
+     "w": "beton",
+     "color": "y",
+     "start": 36.992,
+     "end": 37.264
+    },
+    {
+     "w": "bertulang:",
+     "color": "y",
+     "start": 37.264,
+     "end": 37.697
+    }
+   ],
+   "start": 35.268,
+   "end": 38.278
+  },
+  {
+   "id": "sloof",
+   "words": [
+    {
+     "w": "sloof",
+     "color": "y",
+     "start": 38.278,
+     "end": 38.549
+    },
+    {
+     "w": "di",
+     "color": null,
+     "start": 38.549,
+     "end": 38.699
+    },
+    {
+     "w": "bawah,",
+     "color": null,
+     "start": 38.699,
+     "end": 38.97
+    }
+   ],
+   "start": 38.278,
+   "end": 39.493
+  },
+  {
+   "id": "kolom",
+   "words": [
+    {
+     "w": "kolom",
+     "color": "y",
+     "start": 39.493,
+     "end": 39.757
+    },
+    {
+     "w": "praktis",
+     "color": "y",
+     "start": 39.757,
+     "end": 40.099
+    },
+    {
+     "w": "di",
+     "color": null,
+     "start": 40.099,
+     "end": 40.244
+    },
+    {
+     "w": "tiap",
+     "color": null,
+     "start": 40.244,
+     "end": 40.468
+    },
+    {
+     "w": "sudut,",
+     "color": null,
+     "start": 40.468,
+     "end": 40.732
+    }
+   ],
+   "start": 39.493,
+   "end": 41.229
+  },
+  {
+   "id": "ringbalk",
+   "words": [
+    {
+     "w": "dan",
+     "color": null,
+     "start": 41.229,
+     "end": 41.424
+    },
+    {
+     "w": "ring",
+     "color": "y",
+     "start": 41.424,
+     "end": 41.661
+    },
+    {
+     "w": "balok",
+     "color": "y",
+     "start": 41.661,
+     "end": 41.94
+    },
+    {
+     "w": "di",
+     "color": null,
+     "start": 41.94,
+     "end": 42.094
+    },
+    {
+     "w": "atas.",
+     "color": null,
+     "start": 42.094,
+     "end": 42.331
+    }
+   ],
+   "start": 41.229,
+   "end": 42.949
+  },
+  {
+   "id": "satu",
+   "words": [
+    {
+     "w": "Sekarang",
+     "color": null,
+     "start": 42.949,
+     "end": 43.293
+    },
+    {
+     "w": "dindingnya",
+     "color": null,
+     "start": 43.293,
+     "end": 43.708
+    },
+    {
+     "w": "nggak",
+     "color": null,
+     "start": 43.708,
+     "end": 43.946
+    },
+    {
+     "w": "bisa",
+     "color": null,
+     "start": 43.946,
+     "end": 44.148
+    },
+    {
+     "w": "lepas",
+     "color": null,
+     "start": 44.148,
+     "end": 44.386
+    },
+    {
+     "w": "sendiri-sendiri.",
+     "color": null,
+     "start": 44.386,
+     "end": 44.943
+    }
+   ],
+   "start": 42.949,
+   "end": 45.829
+  },
+  {
+   "id": "atap",
+   "words": [
+    {
+     "w": "Masalahnya,",
+     "color": null,
+     "start": 45.829,
+     "end": 46.232
+    },
+    {
+     "w": "atapnya",
+     "color": null,
+     "start": 46.583,
+     "end": 46.906
+    },
+    {
+     "w": "pakai",
+     "color": null,
+     "start": 46.906,
+     "end": 47.154
+    },
+    {
+     "w": "genteng",
+     "color": null,
+     "start": 47.154,
+     "end": 47.477
+    },
+    {
+     "w": "beton",
+     "color": null,
+     "start": 47.477,
+     "end": 47.725
+    },
+    {
+     "w": "yang",
+     "color": null,
+     "start": 47.725,
+     "end": 47.937
+    },
+    {
+     "w": "berat.",
+     "color": null,
+     "start": 47.937,
+     "end": 48.185
+    }
+   ],
+   "start": 45.829,
+   "end": 48.73
+  },
+  {
+   "id": "inersia",
+   "words": [
+    {
+     "w": "Makin",
+     "color": null,
+     "start": 48.73,
+     "end": 48.973
+    },
+    {
+     "w": "berat",
+     "color": null,
+     "start": 48.973,
+     "end": 49.216
+    },
+    {
+     "w": "bagian",
+     "color": null,
+     "start": 49.216,
+     "end": 49.496
+    },
+    {
+     "w": "atas,",
+     "color": null,
+     "start": 49.496,
+     "end": 49.702
+    },
+    {
+     "w": "makin",
+     "color": null,
+     "start": 49.985,
+     "end": 50.238
+    },
+    {
+     "w": "besar",
+     "color": null,
+     "start": 50.238,
+     "end": 50.491
+    },
+    {
+     "w": "gaya",
+     "color": null,
+     "start": 50.491,
+     "end": 50.707
+    },
+    {
+     "w": "gempa",
+     "color": null,
+     "start": 50.707,
+     "end": 50.96
+    },
+    {
+     "w": "yang",
+     "color": null,
+     "start": 50.96,
+     "end": 51.176
+    },
+    {
+     "w": "ngedorongnya.",
+     "color": null,
+     "start": 51.176,
+     "end": 51.694
+    }
+   ],
+   "start": 48.73,
+   "end": 52.333
+  },
+  {
+   "id": "oleng",
+   "words": [
+    {
+     "w": "Rumahnya",
+     "color": null,
+     "start": 52.333,
+     "end": 52.75
+    },
+    {
+     "w": "oleng,",
+     "color": "r",
+     "start": 52.75,
+     "end": 53.038
+    },
+    {
+     "w": "kolomnya",
+     "color": null,
+     "start": 53.513,
+     "end": 53.912
+    },
+    {
+     "w": "mulai",
+     "color": null,
+     "start": 53.912,
+     "end": 54.188
+    },
+    {
+     "w": "retak.",
+     "color": "r",
+     "start": 54.188,
+     "end": 54.463
+    }
+   ],
+   "start": 52.333,
+   "end": 55.271
+  },
+  {
+   "id": "ringan",
+   "words": [
+    {
+     "w": "Jadi",
+     "color": null,
+     "start": 55.271,
+     "end": 55.479
+    },
+    {
+     "w": "atapnya",
+     "color": null,
+     "start": 55.479,
+     "end": 55.797
+    },
+    {
+     "w": "diganti",
+     "color": null,
+     "start": 55.797,
+     "end": 56.114
+    },
+    {
+     "w": "yang",
+     "color": null,
+     "start": 56.114,
+     "end": 56.323
+    },
+    {
+     "w": "ringan,",
+     "color": "y",
+     "start": 56.323,
+     "end": 56.604
+    }
+   ],
+   "start": 55.271,
+   "end": 57.038
+  },
+  {
+   "id": "ikat",
+   "words": [
+    {
+     "w": "dan",
+     "color": null,
+     "start": 57.038,
+     "end": 57.22
+    },
+    {
+     "w": "semua",
+     "color": null,
+     "start": 57.22,
+     "end": 57.48
+    },
+    {
+     "w": "rangka",
+     "color": null,
+     "start": 57.48,
+     "end": 57.779
+    },
+    {
+     "w": "diikat",
+     "color": null,
+     "start": 57.779,
+     "end": 58.078
+    },
+    {
+     "w": "jadi",
+     "color": null,
+     "start": 58.078,
+     "end": 58.299
+    },
+    {
+     "w": "satu,",
+     "color": null,
+     "start": 58.299,
+     "end": 58.52
+    },
+    {
+     "w": "dari",
+     "color": null,
+     "start": 58.939,
+     "end": 59.155
+    },
+    {
+     "w": "pondasi",
+     "color": null,
+     "start": 59.155,
+     "end": 59.486
+    },
+    {
+     "w": "sampai",
+     "color": null,
+     "start": 59.486,
+     "end": 59.778
+    },
+    {
+     "w": "atap.",
+     "color": null,
+     "start": 59.778,
+     "end": 59.994
+    }
+   ],
+   "start": 57.038,
+   "end": 60.555
+  },
+  {
+   "id": "datang",
+   "words": [
+    {
+     "w": "Sekarang",
+     "color": null,
+     "start": 60.555,
+     "end": 60.938
+    },
+    {
+     "w": "gempa",
+     "color": null,
+     "start": 60.938,
+     "end": 61.202
+    },
+    {
+     "w": "datang,",
+     "color": null,
+     "start": 61.202,
+     "end": 61.506
+    },
+    {
+     "w": "rumahnya",
+     "color": null,
+     "start": 61.772,
+     "end": 62.212
+    },
+    {
+     "w": "ikut",
+     "color": null,
+     "start": 62.212,
+     "end": 62.471
+    },
+    {
+     "w": "goyang,",
+     "color": null,
+     "start": 62.471,
+     "end": 62.821
+    }
+   ],
+   "start": 60.555,
+   "end": 62.945
+  },
+  {
+   "id": "berdiri",
+   "words": [
+    {
+     "w": "tapi",
+     "color": null,
+     "start": 62.945,
+     "end": 63.17
+    },
+    {
+     "w": "tetap",
+     "color": null,
+     "start": 63.17,
+     "end": 63.434
+    },
+    {
+     "w": "berdiri.",
+     "color": "y",
+     "start": 63.434,
+     "end": 63.777
+    }
+   ],
+   "start": 62.945,
+   "end": 64.743
+  },
+  {
+   "id": "nias1",
+   "words": [
+    {
+     "w": "Oh",
+     "color": null,
+     "start": 64.743,
+     "end": 64.879
+    },
+    {
+     "w": "iya,",
+     "color": null,
+     "start": 64.879,
+     "end": 65.053
+    },
+    {
+     "w": "waktu",
+     "color": null,
+     "start": 65.194,
+     "end": 65.44
+    },
+    {
+     "w": "gempa",
+     "color": null,
+     "start": 65.44,
+     "end": 65.687
+    },
+    {
+     "w": "Nias",
+     "color": null,
+     "start": 65.687,
+     "end": 65.897
+    },
+    {
+     "w": "tahun",
+     "color": null,
+     "start": 65.897,
+     "end": 66.144
+    },
+    {
+     "w": "2005,",
+     "color": null,
+     "start": 66.144,
+     "end": 66.649
+    },
+    {
+     "w": "banyak",
+     "color": null,
+     "start": 67.109,
+     "end": 67.394
+    },
+    {
+     "w": "bangunan",
+     "color": null,
+     "start": 67.394,
+     "end": 67.753
+    },
+    {
+     "w": "modern",
+     "color": null,
+     "start": 67.753,
+     "end": 68.037
+    },
+    {
+     "w": "roboh.",
+     "color": null,
+     "start": 68.037,
+     "end": 68.285
+    }
+   ],
+   "start": 64.743,
+   "end": 68.933
+  },
+  {
+   "id": "nias2",
+   "words": [
+    {
+     "w": "Tapi",
+     "color": null,
+     "start": 68.933,
+     "end": 69.19
+    },
+    {
+     "w": "rumah",
+     "color": null,
+     "start": 69.19,
+     "end": 69.492
+    },
+    {
+     "w": "adat",
+     "color": null,
+     "start": 69.492,
+     "end": 69.749
+    },
+    {
+     "w": "Omo",
+     "color": "y",
+     "start": 69.749,
+     "end": 69.961
+    },
+    {
+     "w": "Hada",
+     "color": "y",
+     "start": 69.961,
+     "end": 70.218
+    },
+    {
+     "w": "banyak",
+     "color": null,
+     "start": 70.218,
+     "end": 70.565
+    },
+    {
+     "w": "yang",
+     "color": null,
+     "start": 70.565,
+     "end": 70.822
+    },
+    {
+     "w": "tetap",
+     "color": null,
+     "start": 70.822,
+     "end": 71.124
+    },
+    {
+     "w": "berdiri.",
+     "color": null,
+     "start": 71.124,
+     "end": 71.516
+    }
+   ],
+   "start": 68.933,
+   "end": 72.169
+  },
+  {
+   "id": "nias3",
+   "words": [
+    {
+     "w": "Tiangnya",
+     "color": null,
+     "start": 72.169,
+     "end": 72.513
+    },
+    {
+     "w": "nggak",
+     "color": null,
+     "start": 72.513,
+     "end": 72.75
+    },
+    {
+     "w": "ditanam,",
+     "color": null,
+     "start": 72.75,
+     "end": 73.058
+    },
+    {
+     "w": "cuma",
+     "color": null,
+     "start": 73.417,
+     "end": 73.626
+    },
+    {
+     "w": "ditaruh",
+     "color": null,
+     "start": 73.626,
+     "end": 73.944
+    },
+    {
+     "w": "di",
+     "color": null,
+     "start": 73.944,
+     "end": 74.079
+    },
+    {
+     "w": "atas",
+     "color": null,
+     "start": 74.079,
+     "end": 74.287
+    },
+    {
+     "w": "batu,",
+     "color": "y",
+     "start": 74.287,
+     "end": 74.495
+    }
+   ],
+   "start": 72.169,
+   "end": 74.686
+  },
+  {
+   "id": "nias4",
+   "words": [
+    {
+     "w": "jadi",
+     "color": null,
+     "start": 74.686,
+     "end": 74.911
+    },
+    {
+     "w": "rumahnya",
+     "color": null,
+     "start": 74.911,
+     "end": 75.294
+    },
+    {
+     "w": "bisa",
+     "color": null,
+     "start": 75.294,
+     "end": 75.519
+    },
+    {
+     "w": "sedikit",
+     "color": null,
+     "start": 75.519,
+     "end": 75.862
+    },
+    {
+     "w": "bergeser",
+     "color": null,
+     "start": 75.862,
+     "end": 76.245
+    },
+    {
+     "w": "waktu",
+     "color": null,
+     "start": 76.245,
+     "end": 76.509
+    },
+    {
+     "w": "tanah",
+     "color": null,
+     "start": 76.509,
+     "end": 76.774
+    },
+    {
+     "w": "bergoyang.",
+     "color": null,
+     "start": 76.774,
+     "end": 77.196
+    }
+   ],
+   "start": 74.686,
+   "end": 78.36
+  },
+  {
+   "id": "outro",
+   "words": [
+    {
+     "w": "Habis",
+     "color": null,
+     "start": 78.36,
+     "end": 78.573
+    },
+    {
+     "w": "ini,",
+     "color": null,
+     "start": 78.573,
+     "end": 78.723
+    },
+    {
+     "w": "Pak",
+     "color": null,
+     "start": 78.844,
+     "end": 78.994
+    },
+    {
+     "w": "Bero",
+     "color": null,
+     "start": 78.994,
+     "end": 79.175
+    },
+    {
+     "w": "bangun",
+     "color": null,
+     "start": 79.175,
+     "end": 79.42
+    },
+    {
+     "w": "apa",
+     "color": null,
+     "start": 79.42,
+     "end": 79.569
+    },
+    {
+     "w": "lagi",
+     "color": null,
+     "start": 79.569,
+     "end": 79.75
+    },
+    {
+     "w": "ya?",
+     "color": null,
+     "start": 79.75,
+     "end": 79.868
+    }
+   ],
+   "start": 78.36,
+   "end": 81.47
+  }
+ ]
+}
