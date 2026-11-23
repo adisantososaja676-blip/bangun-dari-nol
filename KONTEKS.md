@@ -61,8 +61,8 @@ Saran yang sudah diberikan ke pemilik (status belum dikonfirmasi): akun Creator/
 | # | Topik | Status |
 |---|---|---|
 | 01 | Bendungan | ✅ **Sudah diunggah pemilik ke semua platform (23 Nov 2026)** dengan cover `01-bendungan-cover.jpg` |
-| 02 | Rumah tahan gempa | ✅ Final + cover selesai, siap upload. Menyebut gempa Nias 2005 (visual tenang) |
-| 03 | Pondasi di tanah lembek | ✅ Final + cover selesai & diunduh pemilik (sesi 3), siap upload |
+| 02 | Rumah tahan gempa | ✅ **Tayang** (sesi 3). Menyebut gempa Nias 2005 (visual tenang) |
+| 03 | Pondasi di tanah lembek | ✅ **Tayang** (sesi 3) |
 | 04 | Jembatan lengkung (**request penonton** @Danzzz_W2s di YouTube ep. 01) | 📄 Dokumen saja (naskah final + cek fakta + rencana adegan), produksi menunggu pemilik (sesi 3). Rantai sengaja beda dari video referensi (jembatan gantung) |
 | 05 | Gedung vs angin / Jalan raya (usulan) | Belum |
 
@@ -147,11 +147,11 @@ node tools/cover.mjs out/02-rumah-gempa-t53_9.png "Rumah tahan|*gempa*?" "Bisa n
 | Ep. 04 vs referensi | Video referensi = jembatan **gantung** (tali → kabel → angkur → Tacoma → rangka pengaku). Ep. 04 sengaja **lengkung**: lempeng batu → lengkung batu → pangkal → lengkung baja + batang pengikat → pemuaian → perletakan + siar muai. Penggantung jalan di animasi = **batang baja tegak**, jangan tonjolkan kabel |
 | Review pemilik ep. 04 | Fakta benar (Fabricius 62 SM, metode Kalikuto, lengkung terikat, 3,6 cm). Diperbaiki: alasan pangkal raksasa = **tepi tanah lunak** (bukan sungai lebar); "Batang Semarang" tanpa tanda pisah (aman untuk TTS); link VINCI rusak dihapus; durasi ±89 dtk (batas 90 dtk). Label tahap baja (`batang pengikat`, `perletakan`, `siar muai`) harus muncul **satu per satu** |
 | Riset dari container | Jaringan container memblokir WebFetch ke situs sumber (DNS ENOTFOUND). Verifikasi lewat WebSearch silang; pemilik bisa cek langsung |
-| Ide engagement | Sarankan pemilik membalas komentar request ("Siap, lagi digarap! 🦫") |
+| Ide engagement | Pemilik membalas komentar request ("Siap, request diterima! 🦫🌉 …") |
+| Nama penonton di video | **Tidak ditampilkan** (pemilik: "kalo ragu gausah aja"). Ep. 04 cukup "request dari komentar kalian" seperti di naskah; **jangan** buat kartu "Request: @…". Berlaku juga untuk request berikutnya kecuali pemilik bilang lain |
 
 ## Pertanyaan terbuka untuk pemilik
 
-- Boleh nama penonton **@Danzzz_W2s** ditampilkan di video ep. 04 (kartu "Request: ...")? Kalau tidak, cukup "request dari komentar".
 - Kapan ep. 04 lanjut produksi (TTS ±24 kredit + animasi)?
 - Handle YouTube final (dari sesi 1, masih belum dicatat).
 
@@ -160,8 +160,8 @@ node tools/cover.mjs out/02-rumah-gempa-t53_9.png "Rumah tahan|*gempa*?" "Bisa n
 | Ep | Status |
 |---|---|
 | 01 Bendungan | Tayang |
-| 02 Rumah tahan gempa | Siap upload (pemilik) |
-| 03 Pondasi di tanah lembek | Siap upload (pemilik); file sudah diunduh pemilik |
+| 02 Rumah tahan gempa | ✅ **Tayang** (diunggah pemilik di akhir sesi 3) |
+| 03 Pondasi di tanah lembek | ✅ **Tayang** (diunggah pemilik di akhir sesi 3) |
 | 04 Jembatan lengkung | 📄 Dokumen saja: `script.json` final, `naskah.md` (cek fakta + rencana adegan per baris + perintah produksi). **Jangan buat audio/animasi sebelum pemilik bilang lanjut** |
 
 ## Render ulang ep. 03
