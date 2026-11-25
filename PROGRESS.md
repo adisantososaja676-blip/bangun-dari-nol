@@ -34,7 +34,8 @@ _Update file ini di setiap PR. Paling baru di atas._
 | Ep. 05 Jalan raya: naskah + cek fakta + audio + animasi | ✅ `episodes/05-jalan-raya/` (83,1 dtk), naskah & preview disetujui ("OK") |
 | Ep. 05: upload kit + render final + cover | ✅ final 1080x1920 + cover (frame t=2, mobil hampir masuk lubang) dikirim. **Siap upload** |
 | Aset baru: truk, skrip pangkas jeda | ✅ `engine/truck.js` (`createTruck`, `setLoad` 0–2), `tools/trim-pauses.py` |
-| Ep. 06 dst | ⬜ antrean di `IDE-VIDEO.md` |
+| Ep. 06 Kolam renang (request penonton): naskah + cek fakta | 🟡 `episodes/06-kolam-renang/` (±1.235 karakter), **menunggu review pemilik** |
+| Ep. 07 dst | ⬜ antrean di `IDE-VIDEO.md` |
 
 ## Langkah berikutnya
 
@@ -45,7 +46,7 @@ _Update file ini di setiap PR. Paling baru di atas._
 3. **Pemilik:** pantau komentar ep. 01–03 untuk request topik berikutnya.
 4. **Pemilik:** upload ep. 04 (video, cover, `upload.md` sudah dikirim) + balas komentar request.
 5. **Pemilik:** upload ep. 05 (video, cover, `upload.md` sudah dikirim). Stok siap upload: ep. 04 + ep. 05.
-6. **Claude:** ep. 06: cek komentar penonton dulu; cadangan: Gedung vs angin (Taipei 101), Candi tanpa semen, Terowongan.
+6. **Pemilik:** review naskah ep. 06 Kolam renang (request penonton), terutama catatan akurasi (terangkat, kedalaman Olimpiade). **Claude (setelah OK):** TTS → `trim-pauses` → animasi diorama kolam + muka air tanah → preview.
 7. **Pemilik:** kabari handle YouTube final, lalu catat di `KONTEKS.md`.
 8. Setelah 12 video: evaluasi (retensi 3 dtk, % ditonton, komentar).
 

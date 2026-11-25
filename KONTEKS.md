@@ -186,3 +186,4 @@ node tools/cover.mjs out/03-pondasi-lembek-t1_5.png "Rumah di tanah|*lembek*?" "
 - Ep. 05 preview disetujui → final + cover (frame t=2, teks "Jalan nggak gampang|*bolong*?") + `upload.md` dikirim. Render ulang: `node tools/render.mjs --ep 05-jalan-raya --scale 2`; cover: `--still 2 --scale 2 --clean` lalu `node tools/cover.mjs out/05-jalan-raya-t2.png "Jalan nggak gampang|*bolong*?" "Bisa nggak?" out/05-jalan-raya-cover.jpg`.
 - PR: sesi ini hanya punya satu branch → ep. 04 & 05 digabung di **PR #5** (judul diganti "Ep. 04 Jembatan lengkung + Ep. 05 Jalan raya" atas pilihan pemilik).
 - Saldo KIE akhir sesi 4: **910,86 kredit**.
+- **Ep. 06 = Kolam renang (request penonton)**, nama penonton tidak ditampilkan. Naskah + cek fakta ditulis, menunggu review pemilik.

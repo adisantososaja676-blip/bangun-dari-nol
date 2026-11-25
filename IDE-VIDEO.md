@@ -34,3 +34,4 @@ Semua mengikuti rumus: coba → "Masalahnya, …" → perbaiki → berdiri.
 | 28 | Jalan layang | |
 | 29 | Bendungan raksasa: lengkung vs gravitasi | Sekuel ep. 1 |
 | 30 | Jembatan gantung | Paling akhir: terlalu mirip video referensi |
+| 31 | Kolam renang | **Request penonton** → dikerjakan jadi ep. 06 |
