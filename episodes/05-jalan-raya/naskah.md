@@ -3,7 +3,7 @@
 **Judul/hook:** Bikin jalan yang nggak gampang bolong, bisa nggak?
 **Durasi:** 83,1 detik (audio TTS 1.336 karakter; jeda dipangkas maks. 0,5 dtk)
 **Sumber teks kebenaran:** [`script.json`](script.json). File ini versi baca + catatan riset.
-**Status:** 🎬 naskah disetujui pemilik (sesi 4); audio + animasi + preview selesai, menunggu OK preview.
+**Status:** ✅ final + cover + `upload.md` (sesi 4), siap upload.
 
 ## Naskah
 

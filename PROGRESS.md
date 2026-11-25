@@ -31,7 +31,8 @@ _Update file ini di setiap PR. Paling baru di atas._
 | Ep. 04 Jembatan lengkung (request penonton): naskah + cek fakta + audio + animasi | ✅ `episodes/04-jembatan-lengkung/` (85,8 dtk), disetujui pemilik ("OK") |
 | Ep. 04: upload kit + render final + cover | ✅ final 1080x1920 (27 MB) + cover (frame t=62.5, jembatan baja) dikirim. **Siap upload** |
 | Aset baru: mobil low-poly | ✅ `engine/car.js` (`createCar`, roda berputar, efek guncang) |
-| Ep. 05 Jalan raya: naskah + cek fakta + audio + animasi | 🟡 `episodes/05-jalan-raya/` (83,1 dtk), naskah disetujui ("OK"), preview dikirim, **menunggu OK pemilik** |
+| Ep. 05 Jalan raya: naskah + cek fakta + audio + animasi | ✅ `episodes/05-jalan-raya/` (83,1 dtk), naskah & preview disetujui ("OK") |
+| Ep. 05: upload kit + render final + cover | ✅ final 1080x1920 + cover (frame t=2, mobil hampir masuk lubang) dikirim. **Siap upload** |
 | Aset baru: truk, skrip pangkas jeda | ✅ `engine/truck.js` (`createTruck`, `setLoad` 0–2), `tools/trim-pauses.py` |
 | Ep. 06 dst | ⬜ antrean di `IDE-VIDEO.md` |
 
@@ -43,9 +44,10 @@ _Update file ini di setiap PR. Paling baru di atas._
 2. ✅ Komentar request "Buat jembatan" dibalas. Nama penonton **tidak** ditampilkan di video.
 3. **Pemilik:** pantau komentar ep. 01–03 untuk request topik berikutnya.
 4. **Pemilik:** upload ep. 04 (video, cover, `upload.md` sudah dikirim) + balas komentar request.
-5. **Pemilik:** tonton preview ep. 05 → OK / revisi. **Claude (setelah OK):** render final `--scale 2` + cover + `upload.md` (draf caption di `naskah.md`). Usulan cover: frame lubang + mobil (t≈1.5), teks "Jalan nggak gampang|*bolong*?" + "Bisa nggak?".
-6. **Pemilik:** kabari handle YouTube final, lalu catat di `KONTEKS.md`.
-7. Setelah 12 video: evaluasi (retensi 3 dtk, % ditonton, komentar).
+5. **Pemilik:** upload ep. 05 (video, cover, `upload.md` sudah dikirim). Stok siap upload: ep. 04 + ep. 05.
+6. **Claude:** ep. 06: cek komentar penonton dulu; cadangan: Gedung vs angin (Taipei 101), Candi tanpa semen, Terowongan.
+7. **Pemilik:** kabari handle YouTube final, lalu catat di `KONTEKS.md`.
+8. Setelah 12 video: evaluasi (retensi 3 dtk, % ditonton, komentar).
 
 ✅ API key KIE tersimpan sebagai **network secret** environment (host `api.kie.ai`). Key sesi 3 **kedaluwarsa 24 Nov 2026** → disimpan ulang di sesi 4. Kalau 401 "expired", minta pemilik isi formulir aman lagi. TTS: `KIE_API_KEY=proxy-injected NODE_USE_ENV_PROXY=1 node tools/tts.mjs episodes/<ep>`. Cek saldo: `curl -s -H "Authorization: Bearer x" https://api.kie.ai/api/v1/chat/credit` (sisa 934,86 kredit setelah TTS ep. 04, sesi 4).
 
@@ -64,6 +66,9 @@ _Update file ini di setiap PR. Paling baru di atas._
 - Pemilik pilih jalan raya ("pastikan risetnya akurat"). Riset silang: FHWA (batu pecah vs kerikil bulat), TxDOT (lapisan menyebar beban), APWA/PennDOT (lubang = air + beban), sejarah tarmac (debu), AASHO (pangkat 4, hati-hati: analisis ulang ≈ pangkat 3), Buton (Badan Geologi 792,5 juta ton sumber daya). Naskah OK pemilik.
 - TTS 24 kredit (sisa 910,86), 87,3 → 83,1 dtk setelah `tools/trim-pauses.py`.
 - `scene.js`: diorama dipotong di garis tengah jalan (lapisan terlihat di muka depan, ujung kanan = potongan melintang untuk cembung + selokan). Tanah → lumpur (mobil terjebak) → kerikil bulat menggelinding → batu pecah berlapis → segitiga sebaran beban → debu & batu lepas → aspal → retak + air meresap → lubang tumbuh tiap mobil lewat → cembung + selokan + tambalan → truk kelebihan muatan + kartu AASHO → Pulau Buton (x=300).
+
+### 2026-11-25: Ep. 05 final
+- Preview disetujui → final 1080x1920 + cover t=2 ("Jalan nggak gampang|*bolong*?") + `upload.md` dikirim. PR #5 berisi ep. 04 + ep. 05 (satu branch sesi).
 
 ### 2026-11-25: Ep. 04 final
 - Disetujui pemilik → final 1080x1920 (27 MB) + cover t=62.5 ("Bikin jembatan|*lengkung*?") + `upload.md` dikirim.
