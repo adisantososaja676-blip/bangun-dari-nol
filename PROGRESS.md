@@ -28,7 +28,8 @@ _Update file ini di setiap PR. Paling baru di atas._
 | Ep. 03 Pondasi di tanah lembek: naskah + cek fakta + audio + animasi | ✅ `episodes/03-pondasi-lembek/` (81,5 dtk), preview disetujui pemilik ("OK gas") |
 | Ep. 03: upload kit + render final + cover | ✅ final 1080x1920 & cover (frame t=1.5) dikirim. **TAYANG** |
 | Aset baru: rumah & diorama potongan tanah | ✅ `engine/house.js` (`createHouse`), `engine/soil.js` (`buildDiorama`) |
-| Ep. 04 Jembatan lengkung (request penonton): naskah + cek fakta | 🟡 `episodes/04-jembatan-lengkung/` (±89 dtk), 📄 **dokumen saja** (naskah + cek fakta + rencana adegan); produksi menunggu aba-aba pemilik |
+| Ep. 04 Jembatan lengkung (request penonton): naskah + cek fakta + audio + animasi | 🟡 `episodes/04-jembatan-lengkung/` (85,8 dtk), preview dikirim, **menunggu OK pemilik** |
+| Aset baru: mobil low-poly | ✅ `engine/car.js` (`createCar`, roda berputar, efek guncang) |
 | Ep. 05 dst | ⬜ antrean di `IDE-VIDEO.md` |
 
 ## Langkah berikutnya
@@ -38,12 +39,12 @@ _Update file ini di setiap PR. Paling baru di atas._
 1. ✅ Ep. 02 & 03 sudah diunggah pemilik.
 2. ✅ Komentar request "Buat jembatan" dibalas. Nama penonton **tidak** ditampilkan di video.
 3. **Pemilik:** pantau komentar ep. 01–03 untuk request topik berikutnya.
-4. **Claude (setelah pemilik bilang lanjut):** ep. 04 Jembatan lengkung: `script.json` sudah final (±89 dtk), rencana adegan per baris ada di `episodes/04-jembatan-lengkung/naskah.md`. Langkah: TTS → stills → preview → OK → final + cover + `upload.md`.
+4. **Pemilik:** tonton preview ep. 04 → OK / revisi. **Claude (setelah OK):** render final `--scale 2` + cover + `upload.md` (caption draf ada di `naskah.md`). Usulan cover: frame lengkung batu runtuh (t≈27) atau jembatan baja + mobil (t≈63), teks "Jembatan|*lengkung*?" + "Bisa nggak?".
 5. **Claude:** ep. 05 usulan: Gedung vs angin (Taipei 101) atau Jalan raya (pakai `buildDiorama` untuk lapisan jalan). Cek komentar penonton dulu.
 6. **Pemilik:** kabari handle YouTube final, lalu catat di `KONTEKS.md`.
 7. Setelah 12 video: evaluasi (retensi 3 dtk, % ditonton, komentar).
 
-✅ API key KIE tersimpan sebagai **network secret** environment (host `api.kie.ai`, disimpan ulang di sesi 3). TTS: `KIE_API_KEY=proxy-injected NODE_USE_ENV_PROXY=1 node tools/tts.mjs episodes/<ep>`. Cek saldo: `curl -s -H "Authorization: Bearer x" https://api.kie.ai/api/v1/chat/credit` (sisa ±959 kredit per akhir sesi 3).
+✅ API key KIE tersimpan sebagai **network secret** environment (host `api.kie.ai`). Key sesi 3 **kedaluwarsa 24 Nov 2026** → disimpan ulang di sesi 4. Kalau 401 "expired", minta pemilik isi formulir aman lagi. TTS: `KIE_API_KEY=proxy-injected NODE_USE_ENV_PROXY=1 node tools/tts.mjs episodes/<ep>`. Cek saldo: `curl -s -H "Authorization: Bearer x" https://api.kie.ai/api/v1/chat/credit` (sisa 934,86 kredit setelah TTS ep. 04, sesi 4).
 
 ## Catatan teknis / kendala yang diketahui
 
@@ -55,6 +56,12 @@ _Update file ini di setiap PR. Paling baru di atas._
 - Narasi dibaca satu tarikan; bagian Situ Gintung belum dibuat lebih pelan (TTS satu task). Bisa dipecah jadi beberapa task kalau perlu.
 
 ## Log
+
+### 2026-11-25: Ep. 04 Jembatan lengkung (produksi)
+- Pemilik: "lanjut ep 4". Key KIE kedaluwarsa → disimpan ulang. TTS Chris 24 kredit (1.412 karakter), audio asli 91,6 dtk.
+- Jeda antar-kalimat > 0,5 dtk dipangkas ke 0,5 dtk (ffmpeg `aselect`, 31 jeda, −7 dtk) → **84,5 dtk** audio, video 85,8 dtk. Timing dari jeda audio (42/46 cocok).
+- `scene.js`: lembah ep. 01 (W=9). Lempeng batu melendut → retak dari bawah → patah (Pak Bero lompat balik). Lengkung batu baji tersusun (panah tekan), makin landai → panah dorongan membesar; tepi bergeser (tebing digeser keluar) → panjang busur tetap → lengkung turun → runtuh. Pangkal batu → membesar jadi raksasa di tanah lunak. Lengkung baja terikat (rusuk, penggantung batang tegak, jalan menyala = batang pengikat). Matahari + pemuaian (dilebih-lebihkan, poros di perletakan kiri), dikunci → pangkal retak, perletakan rol + siar muai jari-jari, mobil lewat "Gludak!". Fabricius (x=300, dua lengkung + lubang pilar, pejalan kaki), Kalikuto (x=600, dua setengah lengkung tegak lalu direbahkan).
+- Aset baru: `engine/car.js`.
 
 ### 2026-11-23: Ep. 04 Jembatan lengkung (dokumen)
 - Request penonton (YouTube ep. 01). Naskah + cek fakta 13 klaim, direview & dikoreksi pemilik, rencana adegan per baris. Produksi ditunda (keputusan pemilik).
