@@ -1,3 +1,4 @@
 node_modules/
 out/
 *.log
+episodes/*/audio-asli.mp3
