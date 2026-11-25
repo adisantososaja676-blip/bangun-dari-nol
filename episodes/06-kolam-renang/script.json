@@ -1,0 +1,21 @@
+{
+  "id": "06-kolam-renang",
+  "title": "Bikin kolam renang sendiri, bisa nggak?",
+  "notes": "Request penonton (kolam renang). Nama penonton tidak ditampilkan. Penanda teks: *kata* = kuning (istilah), !kata! = merah (kegagalan). Hapus penanda saat generate TTS.",
+  "lines": [
+    { "id": "hook", "text": "Bikin *kolam renang* sendiri, bisa nggak?" },
+    { "id": "intro", "text": "Ini request dari komentar kalian. Pak Bero mulai dari gali lubang." },
+    { "id": "resap", "text": "Lubangnya diisi air. Masalahnya, airnya langsung !meresap! ke tanah." },
+    { "id": "beton", "text": "Jadi dinding dan lantainya dicor *beton* bertulang." },
+    { "id": "rembes", "text": "Masalahnya, beton itu berpori, dan bisa retak halus. Airnya !merembes! keluar pelan-pelan." },
+    { "id": "kedap", "text": "Jadi betonnya dilapisi *lapisan kedap air*, baru ditutup keramik. Soalnya keramik dan natnya sendiri nggak kedap air." },
+    { "id": "hijau", "text": "Kolamnya penuh. Masalahnya, beberapa hari kemudian airnya !hijau!. Lumut dan kuman berkembang di air yang diam." },
+    { "id": "filter", "text": "Jadi dipasang *pompa* dan *filter*. Airnya diputer terus, kotorannya disaring, lalu dikasih *klorin* buat bunuh kuman." },
+    { "id": "bilas", "text": "Makanya kita disuruh bilas dulu sebelum nyebur. Keringat dan minyak di badan bikin klorinnya cepat habis." },
+    { "id": "kuras", "text": "Masalahnya, waktu kolamnya dikuras, air tanah yang tinggi di bawahnya ngedorong ke atas. Kolam kosong itu ringan, jadi bisa !terangkat!." },
+    { "id": "katup", "text": "Jadi di lantainya dipasang *katup pelepas tekanan*. Kalau air tanah ngedorong, katupnya kebuka, airnya masuk, tekanannya seimbang." },
+    { "id": "berdiri", "text": "Sekarang kolamnya *siap dipakai*." },
+    { "id": "fakta", "text": "Oh iya, kolam ukuran Olimpiade itu 50 kali 25 meter. Kalau dalamnya 2 meter, isinya 2,5 juta liter. Itu lebih dari 130 ribu galon air minum." },
+    { "id": "outro", "text": "Habis ini, Pak Bero bangun apa lagi ya?" }
+  ]
+}

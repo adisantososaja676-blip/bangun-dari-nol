@@ -7,7 +7,7 @@ Semua mengikuti rumus: coba → "Masalahnya, …" → perbaiki → berdiri.
 | 1 | **Bendungan** | Pilot. Berang-berang memang tukang bendungan. |
 | 2 | Rumah tahan gempa | |
 | 3 | Gedung pencakar langit melawan angin | Peredam massa (tuned mass damper) |
-| 4 | Jalan raya | Tanah → becek → batu → aspal → drainase |
+| 4 | Jalan raya | Tanah → becek → batu → aspal → drainase. **Dikerjakan jadi ep. 05** |
 | 5 | Pondasi di tanah lembek | Tiang pancang, kasus Jakarta |
 | 6 | Terowongan menembus gunung | |
 | 7 | Terowongan bawah laut | |
@@ -34,3 +34,4 @@ Semua mengikuti rumus: coba → "Masalahnya, …" → perbaiki → berdiri.
 | 28 | Jalan layang | |
 | 29 | Bendungan raksasa: lengkung vs gravitasi | Sekuel ep. 1 |
 | 30 | Jembatan gantung | Paling akhir: terlalu mirip video referensi |
+| 31 | Kolam renang | **Request penonton** → dikerjakan jadi ep. 06 |

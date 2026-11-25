@@ -2,9 +2,9 @@
 
 **Judul/hook:** Bikin jembatan nyeberangin sungai lebar, bisa nggak?
 **Asal ide:** request penonton (komentar YouTube ep. 01, @Danzzz_W2s: "Buat jembatan").
-**Durasi:** ±89 detik (perkiraan 1412 karakter; final mengikuti audio)
+**Durasi:** 85,8 detik (audio TTS 1.412 karakter; jeda antar-kalimat dipangkas maks. 0,5 dtk)
 **Sumber teks kebenaran:** [`script.json`](script.json). File ini versi baca + catatan riset.
-**Status:** 📄 **dokumen saja** (keputusan pemilik, sesi 3). Naskah + cek fakta final setelah review. **Jangan generate audio/animasi sebelum pemilik bilang lanjut.**
+**Status:** ✅ final + cover + `upload.md` (sesi 4), siap upload.
 
 ## Beda dengan video referensi
 
@@ -70,7 +70,7 @@ Video referensi @ngekepoyuk.id juga membahas jembatan, tapi rantainya **jembatan
 
 **Catatan visual:** sungai & lembah ep. 01 dipakai ulang (`buildValley`), dilebarkan, tepinya tanah lunak. Penggantung jalan = batang baja tegak (bukan kabel). Tahap baja padat istilah: label `batang pengikat`, `perletakan`, `siar muai` muncul **satu per satu**, masing-masing dengan sorotan bagiannya. Diagram panah: tekan (kuning, sepanjang lengkung), dorongan samping (merah) di kaki lengkung, tarik di batang pengikat. Pemuaian: jalan memanjang dilebih-lebihkan + label "+3,6 cm". Kalikuto: dua lengkung merah berdiri tegak di tiap tepi lalu berputar turun sampai bertemu. Tidak ada tragedi nyata di episode ini.
 
-## Rencana adegan per baris (untuk sesi produksi nanti)
+## Rencana adegan per baris (dipakai di `scene.js`)
 
 Dunia: `buildValley` ep. 01 (W dilebarkan ±12, tepi tanah cokelat lunak), kamera di atas alur (|x| < 3,5) atau potongan samping. Pak Bero di tepi kiri.
 

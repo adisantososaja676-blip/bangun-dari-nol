@@ -28,22 +28,31 @@ _Update file ini di setiap PR. Paling baru di atas._
 | Ep. 03 Pondasi di tanah lembek: naskah + cek fakta + audio + animasi | ✅ `episodes/03-pondasi-lembek/` (81,5 dtk), preview disetujui pemilik ("OK gas") |
 | Ep. 03: upload kit + render final + cover | ✅ final 1080x1920 & cover (frame t=1.5) dikirim. **TAYANG** |
 | Aset baru: rumah & diorama potongan tanah | ✅ `engine/house.js` (`createHouse`), `engine/soil.js` (`buildDiorama`) |
-| Ep. 04 Jembatan lengkung (request penonton): naskah + cek fakta | 🟡 `episodes/04-jembatan-lengkung/` (±89 dtk), 📄 **dokumen saja** (naskah + cek fakta + rencana adegan); produksi menunggu aba-aba pemilik |
-| Ep. 05 dst | ⬜ antrean di `IDE-VIDEO.md` |
+| Ep. 04 Jembatan lengkung (request penonton): naskah + cek fakta + audio + animasi | ✅ `episodes/04-jembatan-lengkung/` (85,8 dtk), disetujui pemilik ("OK") |
+| Ep. 04: upload kit + render final + cover | ✅ final 1080x1920 (27 MB) + cover (frame t=62.5, jembatan baja) dikirim. **Siap upload** |
+| Aset baru: mobil low-poly | ✅ `engine/car.js` (`createCar`, roda berputar, efek guncang) |
+| Ep. 05 Jalan raya: naskah + cek fakta + audio + animasi | ✅ `episodes/05-jalan-raya/` (83,1 dtk), naskah & preview disetujui ("OK") |
+| Ep. 05: upload kit + render final + cover | ✅ final 1080x1920 + cover (frame t=2, mobil hampir masuk lubang) dikirim. **Siap upload** |
+| Aset baru: truk, skrip pangkas jeda | ✅ `engine/truck.js` (`createTruck`, `setLoad` 0–2), `tools/trim-pauses.py` |
+| Ep. 06 Kolam renang (request penonton): naskah + cek fakta + audio + animasi | ✅ `episodes/06-kolam-renang/` (79,3 dtk), naskah & preview disetujui ("ok") |
+| Ep. 06: upload kit + render final + cover | ✅ final 1080x1920 + cover (frame t=1.2, kolam biru + pelampung) dikirim. **Siap upload** |
+| Ep. 07 dst | ⬜ antrean di `IDE-VIDEO.md` |
 
 ## Langkah berikutnya
 
-> Jadwal target: **posting harian** jam 18.00–19.00 WIB. Ep. 01, 02, 03 sudah tayang. **Stok siap upload: 0** → ep. 04 perlu diproduksi.
+> Jadwal target: **posting harian** jam 18.00–19.00 WIB. Ep. 01, 02, 03 sudah tayang. **Stok siap upload: ep. 04, 05, 06** (sesi 4).
 
 1. ✅ Ep. 02 & 03 sudah diunggah pemilik.
 2. ✅ Komentar request "Buat jembatan" dibalas. Nama penonton **tidak** ditampilkan di video.
 3. **Pemilik:** pantau komentar ep. 01–03 untuk request topik berikutnya.
-4. **Claude (setelah pemilik bilang lanjut):** ep. 04 Jembatan lengkung: `script.json` sudah final (±89 dtk), rencana adegan per baris ada di `episodes/04-jembatan-lengkung/naskah.md`. Langkah: TTS → stills → preview → OK → final + cover + `upload.md`.
-5. **Claude:** ep. 05 usulan: Gedung vs angin (Taipei 101) atau Jalan raya (pakai `buildDiorama` untuk lapisan jalan). Cek komentar penonton dulu.
-6. **Pemilik:** kabari handle YouTube final, lalu catat di `KONTEKS.md`.
-7. Setelah 12 video: evaluasi (retensi 3 dtk, % ditonton, komentar).
+4. **Pemilik:** upload ep. 04 (video, cover, `upload.md` sudah dikirim) + balas komentar request.
+5. **Pemilik:** upload ep. 05 (video, cover, `upload.md` sudah dikirim). Stok siap upload: ep. 04 + ep. 05.
+6. **Pemilik:** upload ep. 06 + balas komentar request. Stok siap upload: ep. 04, 05, 06.
+   **Claude:** ep. 07: cek komentar penonton dulu; cadangan: Gedung vs angin (Taipei 101), Candi tanpa semen, Terowongan.
+7. **Pemilik:** kabari handle YouTube final, lalu catat di `KONTEKS.md`.
+8. Setelah 12 video: evaluasi (retensi 3 dtk, % ditonton, komentar).
 
-✅ API key KIE tersimpan sebagai **network secret** environment (host `api.kie.ai`, disimpan ulang di sesi 3). TTS: `KIE_API_KEY=proxy-injected NODE_USE_ENV_PROXY=1 node tools/tts.mjs episodes/<ep>`. Cek saldo: `curl -s -H "Authorization: Bearer x" https://api.kie.ai/api/v1/chat/credit` (sisa ±959 kredit per akhir sesi 3).
+✅ API key KIE tersimpan sebagai **network secret** environment (host `api.kie.ai`). Key sesi 3 **kedaluwarsa 24 Nov 2026** → disimpan ulang di sesi 4. Kalau 401 "expired", minta pemilik isi formulir aman lagi. TTS: `KIE_API_KEY=proxy-injected NODE_USE_ENV_PROXY=1 node tools/tts.mjs episodes/<ep>`. Cek saldo: `curl -s -H "Authorization: Bearer x" https://api.kie.ai/api/v1/chat/credit` (sisa 934,86 kredit setelah TTS ep. 04, sesi 4).
 
 ## Catatan teknis / kendala yang diketahui
 
@@ -55,6 +64,31 @@ _Update file ini di setiap PR. Paling baru di atas._
 - Narasi dibaca satu tarikan; bagian Situ Gintung belum dibuat lebih pelan (TTS satu task). Bisa dipecah jadi beberapa task kalau perlu.
 
 ## Log
+
+### 2026-11-25: Ep. 05 Jalan raya (naskah → preview)
+- Pemilik pilih jalan raya ("pastikan risetnya akurat"). Riset silang: FHWA (batu pecah vs kerikil bulat), TxDOT (lapisan menyebar beban), APWA/PennDOT (lubang = air + beban), sejarah tarmac (debu), AASHO (pangkat 4, hati-hati: analisis ulang ≈ pangkat 3), Buton (Badan Geologi 792,5 juta ton sumber daya). Naskah OK pemilik.
+- TTS 24 kredit (sisa 910,86), 87,3 → 83,1 dtk setelah `tools/trim-pauses.py`.
+- `scene.js`: diorama dipotong di garis tengah jalan (lapisan terlihat di muka depan, ujung kanan = potongan melintang untuk cembung + selokan). Tanah → lumpur (mobil terjebak) → kerikil bulat menggelinding → batu pecah berlapis → segitiga sebaran beban → debu & batu lepas → aspal → retak + air meresap → lubang tumbuh tiap mobil lewat → cembung + selokan + tambalan → truk kelebihan muatan + kartu AASHO → Pulau Buton (x=300).
+
+### 2026-11-25: Ep. 06 final
+- Preview disetujui → final 1080x1920 + cover t=1.2 ("Bikin kolam|*renang*?") + `upload.md` dikirim.
+
+### 2026-11-25: Ep. 06 Kolam renang (naskah → preview)
+- Request penonton. Riset: Orenda/Wacker (beton berpori, keramik tidak kedap), CDC (klorin, bilas 1 menit), paten + Aqua Magazine (kolam kosong terangkat, katup pelepas tekanan), World Aquatics (kedalaman min. baru 2,5 m → naskah "kalau dalamnya 2 meter"), galon 19 L.
+- TTS 24 kredit (sisa 886,86), 85,6 → 79,3 dtk.
+- `scene.js`: tanah dibangun dari balok di sekitar lubang (bukan `buildDiorama` utuh) supaya bisa digali; dipotong di tengah kolam. Gali → meresap → tulangan + beton → retak & merembes → membran + keramik (tekstur kanvas) → hijau (kartu hari ke-1..3) → pompa/filter/pipa + aliran + pelampung klorin → shower → dikuras, muka air tanah naik (bidang biru di muka potongan), kolam terangkat → katup terbuka, air tanah masuk, kolam turun → kolam Olimpiade (x=300) + tumpukan galon.
+
+### 2026-11-25: Ep. 05 final
+- Preview disetujui → final 1080x1920 + cover t=2 ("Jalan nggak gampang|*bolong*?") + `upload.md` dikirim. PR #5 berisi ep. 04 + ep. 05 (satu branch sesi).
+
+### 2026-11-25: Ep. 04 final
+- Disetujui pemilik → final 1080x1920 (27 MB) + cover t=62.5 ("Bikin jembatan|*lengkung*?") + `upload.md` dikirim.
+
+### 2026-11-25: Ep. 04 Jembatan lengkung (produksi)
+- Pemilik: "lanjut ep 4". Key KIE kedaluwarsa → disimpan ulang. TTS Chris 24 kredit (1.412 karakter), audio asli 91,6 dtk.
+- Jeda antar-kalimat > 0,5 dtk dipangkas ke 0,5 dtk (ffmpeg `aselect`, 31 jeda, −7 dtk) → **84,5 dtk** audio, video 85,8 dtk. Timing dari jeda audio (42/46 cocok).
+- `scene.js`: lembah ep. 01 (W=9). Lempeng batu melendut → retak dari bawah → patah (Pak Bero lompat balik). Lengkung batu baji tersusun (panah tekan), makin landai → panah dorongan membesar; tepi bergeser (tebing digeser keluar) → panjang busur tetap → lengkung turun → runtuh. Pangkal batu → membesar jadi raksasa di tanah lunak. Lengkung baja terikat (rusuk, penggantung batang tegak, jalan menyala = batang pengikat). Matahari + pemuaian (dilebih-lebihkan, poros di perletakan kiri), dikunci → pangkal retak, perletakan rol + siar muai jari-jari, mobil lewat "Gludak!". Fabricius (x=300, dua lengkung + lubang pilar, pejalan kaki), Kalikuto (x=600, dua setengah lengkung tegak lalu direbahkan).
+- Aset baru: `engine/car.js`.
 
 ### 2026-11-23: Ep. 04 Jembatan lengkung (dokumen)
 - Request penonton (YouTube ep. 01). Naskah + cek fakta 13 klaim, direview & dikoreksi pemilik, rencana adegan per baris. Produksi ditunda (keputusan pemilik).
