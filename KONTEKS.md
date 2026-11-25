@@ -63,8 +63,9 @@ Saran yang sudah diberikan ke pemilik (status belum dikonfirmasi): akun Creator/
 | 01 | Bendungan | ✅ **Sudah diunggah pemilik ke semua platform (23 Nov 2026)** dengan cover `01-bendungan-cover.jpg` |
 | 02 | Rumah tahan gempa | ✅ **Tayang** (sesi 3). Menyebut gempa Nias 2005 (visual tenang) |
 | 03 | Pondasi di tanah lembek | ✅ **Tayang** (sesi 3) |
-| 04 | Jembatan lengkung (**request penonton** @Danzzz_W2s di YouTube ep. 01) | 📄 Dokumen saja (naskah final + cek fakta + rencana adegan), produksi menunggu pemilik (sesi 3). Rantai sengaja beda dari video referensi (jembatan gantung) |
-| 05 | Gedung vs angin / Jalan raya (usulan) | Belum |
+| 04 | Jembatan lengkung (**request penonton** @Danzzz_W2s di YouTube ep. 01) | ✅ Diproduksi di sesi 4, siap upload. Rantai sengaja beda dari video referensi (jembatan gantung) |
+| 05 | Jalan raya | ✅ Siap upload (sesi 4) |
+| 06 | Kolam renang (request penonton) | ✅ Siap upload (sesi 4) |
 
 Ep. 01 menyebut tragedi **Situ Gintung (2009)**: visual dibuat tenang & serius. Kalau ada komentar korban/keluarga, balas dengan empati.
 
@@ -162,7 +163,7 @@ node tools/cover.mjs out/02-rumah-gempa-t53_9.png "Rumah tahan|*gempa*?" "Bisa n
 | 01 Bendungan | Tayang |
 | 02 Rumah tahan gempa | ✅ **Tayang** (diunggah pemilik di akhir sesi 3) |
 | 03 Pondasi di tanah lembek | ✅ **Tayang** (diunggah pemilik di akhir sesi 3) |
-| 04 Jembatan lengkung | 📄 Dokumen saja: `script.json` final, `naskah.md` (cek fakta + rencana adegan per baris + perintah produksi). **Jangan buat audio/animasi sebelum pemilik bilang lanjut** |
+| 04 Jembatan lengkung | 📄 Dokumen saja: `script.json` final, `naskah.md` (cek fakta + rencana adegan per baris + perintah produksi). (→ diproduksi di sesi 4) |
 
 ## Render ulang ep. 03
 
@@ -174,17 +175,61 @@ node tools/cover.mjs out/03-pondasi-lembek-t1_5.png "Rumah di tanah|*lembek*?" "
 
 ---
 
-# Sesi 4 (25 Nov 2026): Produksi ep. 04 Jembatan lengkung
+# Sesi 4 (25 Nov 2026): Ep. 04 Jembatan lengkung, Ep. 05 Jalan raya, Ep. 06 Kolam renang
 
-- Pemilik: "baca KONTEKS.md dan PROGRESS.md, lanjut ep 4" = aba-aba produksi ep. 04. Branch `claude/ecstatic-albattani-p2o9xb`.
-- **Key KIE kedaluwarsa** (401 "API key expired at 2026-11-24") → pemilik menyimpan key baru lewat formulir aman (network secret `api.kie.ai`). Saldo 958,86 → TTS 24 kredit → **934,86**.
-- Audio asli 91,6 dtk (> 90). Daripada TTS ulang (bayar), jeda antar-kalimat dipangkas ke maks. 0,5 dtk → 84,5 dtk. Cara ini bisa dipakai lagi kalau episode kepanjangan (perintah di log PROGRESS).
-- Preview disetujui ("OK") → final 1080x1920 + cover (frame t=62.5, jembatan baja merah; teks "Bikin jembatan|*lengkung*?" + "Bisa nggak?") + `upload.md` dikirim.
-- **Ep. 05 = Jalan raya** (pilihan pemilik dari usulan Claude; alternatif: gedung vs angin, candi tanpa semen). Pemilik minta riset super akurat → 3 catatan akurasi di `naskah.md` (2%, 16×, Buton). Naskah OK → audio + animasi + preview dikirim, menunggu OK.
-- Render ulang ep. 04: `node tools/render.mjs --ep 04-jembatan-lengkung --scale 2`; cover: `--still 62.5 --scale 2 --clean` lalu `node tools/cover.mjs out/04-jembatan-lengkung-t62_5.png "Bikin jembatan|*lengkung*?" "Bisa nggak?" out/04-jembatan-lengkung-cover.jpg`.
-- Keputusan visual: kartu intro "Request dari komentar / Bikin jembatan, yuk!" (tanpa nama penonton). Label baja muncul satu per satu (Baja → Jalan digantung → Batang pengikat → Memuai → +3,6 cm → Dikunci/Retak → Perletakan → Siar muai). Penggantung = batang baja tegak.
-- Ep. 05 preview disetujui → final + cover (frame t=2, teks "Jalan nggak gampang|*bolong*?") + `upload.md` dikirim. Render ulang: `node tools/render.mjs --ep 05-jalan-raya --scale 2`; cover: `--still 2 --scale 2 --clean` lalu `node tools/cover.mjs out/05-jalan-raya-t2.png "Jalan nggak gampang|*bolong*?" "Bisa nggak?" out/05-jalan-raya-cover.jpg`.
-- PR: sesi ini hanya punya satu branch → ep. 04 & 05 digabung di **PR #5** (judul diganti "Ep. 04 Jembatan lengkung + Ep. 05 Jalan raya" atas pilihan pemilik).
-- Saldo KIE akhir sesi 4: **910,86 kredit**.
-- **Ep. 06 = Kolam renang (request penonton)**, nama penonton tidak ditampilkan. Naskah & preview disetujui → final + cover (frame t=1.2, teks "Bikin kolam|*renang*?") + `upload.md` dikirim. Saldo KIE akhir: **886,86**. Render ulang: `node tools/render.mjs --ep 06-kolam-renang --scale 2`; cover `--still 1.2 --scale 2 --clean` → `tools/cover.mjs`.
-- **Stok siap upload per akhir sesi 4: ep. 04, 05, 06.**
+> Arsip chat sesi keempat (pemilik menghapus chat-nya setelah sesi ini). Sesi berikutnya: baca juga bagian ini.
+
+## Yang dikerjakan
+
+- Pemilik: "baca KONTEKS.md dan PROGRESS.md, lanjut ep 4" = aba-aba produksi ep. 04. Branch sesi `claude/ecstatic-albattani-p2o9xb` → **PR #5** (ep. 04 + 05 + 06 dalam satu PR karena sesi hanya punya satu branch; judul PR diganti atas pilihan pemilik). **Di-merge ke `main` di akhir sesi atas permintaan pemilik.**
+- **Ep. 04 Jembatan lengkung** (request penonton): TTS → animasi → preview OK → final + cover + `upload.md`.
+- **Ep. 05 Jalan raya** (dipilih pemilik dari usulan Claude; alternatif waktu itu: gedung vs angin, candi tanpa semen). Pemilik minta "risetnya akurat" → naskah + cek fakta → OK → produksi → final.
+- **Ep. 06 Kolam renang** (request penonton, disampaikan pemilik di chat) → naskah + cek fakta → OK → produksi → final.
+- Semua video final, cover & `upload.md` dikirim ke pemilik sebagai lampiran (tidak di-commit; render ulang dengan perintah di bawah).
+
+## Keputusan & catatan
+
+| Topik | Catatan |
+|---|---|
+| API key KIE | Key sesi 3 **kedaluwarsa** (401 "API key expired at 2026-11-24"). Pemilik menyimpan key baru lewat formulir aman (network secret `api.kie.ai`). Kalau muncul 401 expired lagi: minta pemilik isi formulir lagi, jangan minta key di chat |
+| Saldo KIE | 958,86 → 3 × 24 kredit → **886,86 kredit** di akhir sesi |
+| Durasi > 90 dtk | Jangan TTS ulang (bayar). Pakai `python3 tools/trim-pauses.py episodes/<ep>` (jeda > 0,5 dtk dipangkas jadi 0,5 dtk; audio asli disimpan sebagai `audio-asli.mp3`, tidak di-commit), lalu `node tools/timing.mjs episodes/<ep>`. Ep. 04: 91,6 → 85,8; ep. 05: 87,3 → 83,1; ep. 06: 85,6 → 79,3 dtk |
+| Alur kerja yang disukai pemilik | Naskah + cek fakta + "catatan akurasi (minta pemilik cek)" dulu → pemilik bilang OK → TTS + animasi → preview → OK → final + cover + `upload.md`. Pemilik membalas singkat ("OK", "ok", "1") |
+| Request penonton | Nama penonton **tidak** ditampilkan (kartu intro "Request dari komentar"). `upload.md` menyertakan template balasan komentar request |
+| Kamera 9:16 | Benda lebar (jembatan, jalan, kolam) gampang terpotong. Taruh Pak Bero di belakang objek (z negatif) supaya ikut terlihat; kamera agak tinggi melihat ke bawah. Label dekat tepi layar terpotong → geser ke tengah |
+| Gaya visual ep. 05 & 06 | Diorama potongan (dipotong di z=0 melewati garis tengah jalan/kolam). Ep. 06 membangun tanah dari balok di sekitar lubang (bukan `buildDiorama` utuh) supaya lubang bisa digali; muka air tanah = bidang biru di muka potongan |
+| Cover | Ep. 04: t=62.5 (jembatan baja merah), "Bikin jembatan\|*lengkung*?". Ep. 05: t=2 (mobil hampir masuk lubang), "Jalan nggak gampang\|*bolong*?". Ep. 06: t=1.2 (kolam biru + pelampung), "Bikin kolam\|*renang*?". Semua + tag "Bisa nggak?". Judul cover sering menutupi kepala Pak Bero; pilih frame yang tetap jelas |
+| Fakta yang sengaja dibuat hati-hati | Ep. 05: "sekitar 2 persen", "bisa … sampai 16 kali lipat" (AASHO; analisis ulang ≈ 8×), Buton "salah satu yang terbesar" (bukan "80% dunia"). Ep. 06: "bisa terangkat" + "air tanah yang tinggi", "kalau dalamnya 2 meter" (aturan baru World Aquatics min. 2,5 m) |
+| Aset baru | `engine/car.js` (mobil), `engine/truck.js` (truk, `setLoad` 0–2 untuk kelebihan muatan), `tools/trim-pauses.py` |
+| Render paralel | Dua render bisa jalan bersamaan dengan `--port` berbeda (mis. `--port 8125`). Final 1080x1920 ±15–20 menit, preview ±5–6 menit |
+
+## Status per akhir sesi 4
+
+| Ep | Status |
+|---|---|
+| 01–03 | Tayang |
+| 04 Jembatan lengkung | ✅ **Siap upload** (video, cover, `upload.md` sudah di tangan pemilik) |
+| 05 Jalan raya | ✅ **Siap upload** |
+| 06 Kolam renang | ✅ **Siap upload** |
+| 07 | Belum. Cek request di komentar dulu; cadangan: gedung vs angin (Taipei 101), terowongan, candi tanpa semen |
+
+## Pertanyaan terbuka untuk pemilik
+
+- Handle YouTube final (dari sesi 1, masih belum dicatat).
+- Topik ep. 07 (request baru?).
+
+## Render ulang ep. 04–06
+
+```bash
+node tools/render.mjs --ep 04-jembatan-lengkung --scale 2
+node tools/render.mjs --ep 04-jembatan-lengkung --still 62.5 --scale 2 --clean
+node tools/cover.mjs out/04-jembatan-lengkung-t62_5.png "Bikin jembatan|*lengkung*?" "Bisa nggak?" out/04-jembatan-lengkung-cover.jpg
+
+node tools/render.mjs --ep 05-jalan-raya --scale 2
+node tools/render.mjs --ep 05-jalan-raya --still 2 --scale 2 --clean
+node tools/cover.mjs out/05-jalan-raya-t2.png "Jalan nggak gampang|*bolong*?" "Bisa nggak?" out/05-jalan-raya-cover.jpg
+
+node tools/render.mjs --ep 06-kolam-renang --scale 2
+node tools/render.mjs --ep 06-kolam-renang --still 1.2 --scale 2 --clean
+node tools/cover.mjs out/06-kolam-renang-t1_2.png "Bikin kolam|*renang*?" "Bisa nggak?" out/06-kolam-renang-cover.jpg
+```

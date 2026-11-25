@@ -52,6 +52,7 @@ KIE_API_KEY=<key pemilik> NODE_USE_ENV_PROXY=1 node tools/tts.mjs episodes/<ep> 
 - **API key tidak boleh di-commit.** Sudah tersimpan sebagai network secret environment (`api.kie.ai`): pakai `KIE_API_KEY=proxy-injected`.
 - Jaringan environment harus mengizinkan: `api.kie.ai`, `kie.ai`, `tempfile.aiquickdraw.com`, `file.aiquickdraw.com` (hasil Gemini), `static.aiquickdraw.com` (contoh suara). Node butuh `NODE_USE_ENV_PROXY=1` di container cloud.
 - Biaya: ±12 kredit per 1.000 karakter, minimal 12 kredit per task. 1 episode ≈ 24 kredit.
+- Audio > 90 dtk? Jangan TTS ulang: `python3 tools/trim-pauses.py episodes/<ep>` (pangkas jeda > 0,5 dtk) lalu `node tools/timing.mjs episodes/<ep>`.
 - KIE **tidak** mengembalikan timestamp per kata, jadi `tools/timing.mjs` menyelaraskan sendiri: jeda di audio (ffmpeg silencedetect) dicocokkan ke tanda baca naskah dengan DP yang menjaga kecepatan bicara konsisten. Cek hasilnya (`timing.json`) dan beberapa still sebelum render final.
 - Alternatif lebih presisi: `python3 tools/align.py` (faster-whisper → `words.json`; perlu akses huggingface.co untuk unduh model).
 - Contoh suara lain ada di `out/tts/` lokal (tidak di-commit). Daftar ID suara: `node kie-cli.mjs doc elevenlabs/text-to-speech-multilingual-v2`.
@@ -63,6 +64,7 @@ Animasi otomatis ikut waktu suara karena adegan diikat ke id baris naskah.
 - `engine/house.js`: rumah Pak Bero (`createHouse`, retak `setCrack`). `engine/soil.js`: diorama potongan tanah (`buildDiorama`).
 - `engine/kit.js`: renderer, palet `PAL`, lembah sungai `buildValley`, tanah lapang `buildField`, goyangan gempa `quake`, hujan, panah, partikel instanced, kamera `cameraAt(keys,t)`.
 - `engine/bero.js`: model & pose Pak Bero.
+- `engine/car.js` (`createCar`) & `engine/truck.js` (`createTruck`, `setLoad`): kendaraan low-poly.
 - `engine/overlay.js`: subtitle per kata, label 3D→2D, kartu, watermark.
 - `engine/main.js`: memuat episode & `window.renderAt(t)`.
 - **Aturan emas:** `update(t)` harus fungsi murni dari waktu `t` (tanpa state yang menumpuk) supaya render frame-per-frame deterministik.
