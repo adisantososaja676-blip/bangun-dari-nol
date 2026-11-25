@@ -30,7 +30,8 @@ _Update file ini di setiap PR. Paling baru di atas._
 | Aset baru: rumah & diorama potongan tanah | ✅ `engine/house.js` (`createHouse`), `engine/soil.js` (`buildDiorama`) |
 | Ep. 04 Jembatan lengkung (request penonton): naskah + cek fakta + audio + animasi | 🟡 `episodes/04-jembatan-lengkung/` (85,8 dtk), preview dikirim, **menunggu OK pemilik** |
 | Aset baru: mobil low-poly | ✅ `engine/car.js` (`createCar`, roda berputar, efek guncang) |
-| Ep. 05 dst | ⬜ antrean di `IDE-VIDEO.md` |
+| Ep. 05 Jalan raya: naskah + cek fakta | 🟡 `episodes/05-jalan-raya/` (1.336 karakter, ±80–85 dtk), **menunggu review pemilik** |
+| Ep. 06 dst | ⬜ antrean di `IDE-VIDEO.md` |
 
 ## Langkah berikutnya
 
@@ -40,7 +41,7 @@ _Update file ini di setiap PR. Paling baru di atas._
 2. ✅ Komentar request "Buat jembatan" dibalas. Nama penonton **tidak** ditampilkan di video.
 3. **Pemilik:** pantau komentar ep. 01–03 untuk request topik berikutnya.
 4. **Pemilik:** tonton preview ep. 04 → OK / revisi. **Claude (setelah OK):** render final `--scale 2` + cover + `upload.md` (caption draf ada di `naskah.md`). Usulan cover: frame lengkung batu runtuh (t≈27) atau jembatan baja + mobil (t≈63), teks "Jembatan|*lengkung*?" + "Bisa nggak?".
-5. **Claude:** ep. 05 usulan: Gedung vs angin (Taipei 101) atau Jalan raya (pakai `buildDiorama` untuk lapisan jalan). Cek komentar penonton dulu.
+5. **Pemilik:** review naskah ep. 05 Jalan raya (dipilih pemilik sesi 4), terutama 3 catatan akurasi di `naskah.md` (2%, 16×, Buton). **Claude (setelah OK):** TTS → animasi diorama jalan (pakai `buildDiorama` + `car.js`) → preview.
 6. **Pemilik:** kabari handle YouTube final, lalu catat di `KONTEKS.md`.
 7. Setelah 12 video: evaluasi (retensi 3 dtk, % ditonton, komentar).
 

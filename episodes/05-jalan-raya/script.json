@@ -1,0 +1,22 @@
+{
+  "id": "05-jalan-raya",
+  "title": "Bikin jalan yang nggak gampang bolong, bisa nggak?",
+  "notes": "Penanda teks: *kata* = kuning (istilah), !kata! = merah (kegagalan). Hapus penanda saat generate TTS.",
+  "lines": [
+    { "id": "hook", "text": "Bikin *jalan* yang nggak gampang bolong, bisa nggak?" },
+    { "id": "intro", "text": "Pak Bero mulai dari tanah. Tanahnya dipadatkan, mobil bisa lewat." },
+    { "id": "lumpur", "text": "Masalahnya, kena hujan, tanahnya jadi lumpur. Mobilnya !terjebak!." },
+    { "id": "kerikil", "text": "Jadi ditaburi kerikil sungai. Masalahnya, kerikilnya bulat, gampang !menggelinding! dilindas ban." },
+    { "id": "batu", "text": "Jadi pakai *batu pecah* yang bersudut. Sudutnya saling *ngunci*, dan disusun berlapis: batu besar di bawah, yang kecil di atas." },
+    { "id": "sebar", "text": "Lapisan batu ini *nyebarin beban* roda, jadi tanah di bawahnya cuma kena tekanan kecil." },
+    { "id": "debu", "text": "Masalahnya, mobil yang ngebut bikin debunya beterbangan, dan batu di permukaan lama-lama !lepas!." },
+    { "id": "aspal", "text": "Jadi permukaannya dilapisi *aspal*, perekat hitam yang ngelem kerikil jadi satu." },
+    { "id": "retak", "text": "Masalahnya, lama-lama aspalnya retak halus. Air hujan masuk lewat retakan, lapisan batu di bawahnya jadi lembek." },
+    { "id": "lubang", "text": "Dilindas terus, aspalnya ambrol jadi !lubang!." },
+    { "id": "cembung", "text": "Jadi jalannya dibikin *cembung*, miring sekitar 2 persen ke pinggir, biar air hujan langsung ngalir ke *selokan*. Retakan kecil juga cepat ditutup." },
+    { "id": "truk", "text": "Musuh terakhirnya: truk kelebihan muatan. Menurut uji jalan di Amerika, beban satu sumbu dua kali lipat bisa bikin kerusakan jalan sampai *16 kali lipat*." },
+    { "id": "berdiri", "text": "Sekarang jalannya *awet*." },
+    { "id": "buton", "text": "Oh iya, Indonesia punya aspal alam di Pulau Buton, Sulawesi Tenggara, salah satu yang terbesar di dunia. Tapi sebagian besar aspal jalan kita masih impor." },
+    { "id": "outro", "text": "Habis ini, Pak Bero bangun apa lagi ya?" }
+  ]
+}
