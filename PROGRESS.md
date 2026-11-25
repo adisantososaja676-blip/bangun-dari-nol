@@ -28,9 +28,11 @@ _Update file ini di setiap PR. Paling baru di atas._
 | Ep. 03 Pondasi di tanah lembek: naskah + cek fakta + audio + animasi | ✅ `episodes/03-pondasi-lembek/` (81,5 dtk), preview disetujui pemilik ("OK gas") |
 | Ep. 03: upload kit + render final + cover | ✅ final 1080x1920 & cover (frame t=1.5) dikirim. **TAYANG** |
 | Aset baru: rumah & diorama potongan tanah | ✅ `engine/house.js` (`createHouse`), `engine/soil.js` (`buildDiorama`) |
-| Ep. 04 Jembatan lengkung (request penonton): naskah + cek fakta + audio + animasi | 🟡 `episodes/04-jembatan-lengkung/` (85,8 dtk), preview dikirim, **menunggu OK pemilik** |
+| Ep. 04 Jembatan lengkung (request penonton): naskah + cek fakta + audio + animasi | ✅ `episodes/04-jembatan-lengkung/` (85,8 dtk), disetujui pemilik ("OK") |
+| Ep. 04: upload kit + render final + cover | ✅ final 1080x1920 (27 MB) + cover (frame t=62.5, jembatan baja) dikirim. **Siap upload** |
 | Aset baru: mobil low-poly | ✅ `engine/car.js` (`createCar`, roda berputar, efek guncang) |
-| Ep. 05 Jalan raya: naskah + cek fakta | 🟡 `episodes/05-jalan-raya/` (1.336 karakter, ±80–85 dtk), **menunggu review pemilik** |
+| Ep. 05 Jalan raya: naskah + cek fakta + audio + animasi | 🟡 `episodes/05-jalan-raya/` (83,1 dtk), naskah disetujui ("OK"), preview dikirim, **menunggu OK pemilik** |
+| Aset baru: truk, skrip pangkas jeda | ✅ `engine/truck.js` (`createTruck`, `setLoad` 0–2), `tools/trim-pauses.py` |
 | Ep. 06 dst | ⬜ antrean di `IDE-VIDEO.md` |
 
 ## Langkah berikutnya
@@ -40,8 +42,8 @@ _Update file ini di setiap PR. Paling baru di atas._
 1. ✅ Ep. 02 & 03 sudah diunggah pemilik.
 2. ✅ Komentar request "Buat jembatan" dibalas. Nama penonton **tidak** ditampilkan di video.
 3. **Pemilik:** pantau komentar ep. 01–03 untuk request topik berikutnya.
-4. **Pemilik:** tonton preview ep. 04 → OK / revisi. **Claude (setelah OK):** render final `--scale 2` + cover + `upload.md` (caption draf ada di `naskah.md`). Usulan cover: frame lengkung batu runtuh (t≈27) atau jembatan baja + mobil (t≈63), teks "Jembatan|*lengkung*?" + "Bisa nggak?".
-5. **Pemilik:** review naskah ep. 05 Jalan raya (dipilih pemilik sesi 4), terutama 3 catatan akurasi di `naskah.md` (2%, 16×, Buton). **Claude (setelah OK):** TTS → animasi diorama jalan (pakai `buildDiorama` + `car.js`) → preview.
+4. **Pemilik:** upload ep. 04 (video, cover, `upload.md` sudah dikirim) + balas komentar request.
+5. **Pemilik:** tonton preview ep. 05 → OK / revisi. **Claude (setelah OK):** render final `--scale 2` + cover + `upload.md` (draf caption di `naskah.md`). Usulan cover: frame lubang + mobil (t≈1.5), teks "Jalan nggak gampang|*bolong*?" + "Bisa nggak?".
 6. **Pemilik:** kabari handle YouTube final, lalu catat di `KONTEKS.md`.
 7. Setelah 12 video: evaluasi (retensi 3 dtk, % ditonton, komentar).
 
@@ -57,6 +59,14 @@ _Update file ini di setiap PR. Paling baru di atas._
 - Narasi dibaca satu tarikan; bagian Situ Gintung belum dibuat lebih pelan (TTS satu task). Bisa dipecah jadi beberapa task kalau perlu.
 
 ## Log
+
+### 2026-11-25: Ep. 05 Jalan raya (naskah → preview)
+- Pemilik pilih jalan raya ("pastikan risetnya akurat"). Riset silang: FHWA (batu pecah vs kerikil bulat), TxDOT (lapisan menyebar beban), APWA/PennDOT (lubang = air + beban), sejarah tarmac (debu), AASHO (pangkat 4, hati-hati: analisis ulang ≈ pangkat 3), Buton (Badan Geologi 792,5 juta ton sumber daya). Naskah OK pemilik.
+- TTS 24 kredit (sisa 910,86), 87,3 → 83,1 dtk setelah `tools/trim-pauses.py`.
+- `scene.js`: diorama dipotong di garis tengah jalan (lapisan terlihat di muka depan, ujung kanan = potongan melintang untuk cembung + selokan). Tanah → lumpur (mobil terjebak) → kerikil bulat menggelinding → batu pecah berlapis → segitiga sebaran beban → debu & batu lepas → aspal → retak + air meresap → lubang tumbuh tiap mobil lewat → cembung + selokan + tambalan → truk kelebihan muatan + kartu AASHO → Pulau Buton (x=300).
+
+### 2026-11-25: Ep. 04 final
+- Disetujui pemilik → final 1080x1920 (27 MB) + cover t=62.5 ("Bikin jembatan|*lengkung*?") + `upload.md` dikirim.
 
 ### 2026-11-25: Ep. 04 Jembatan lengkung (produksi)
 - Pemilik: "lanjut ep 4". Key KIE kedaluwarsa → disimpan ulang. TTS Chris 24 kredit (1.412 karakter), audio asli 91,6 dtk.

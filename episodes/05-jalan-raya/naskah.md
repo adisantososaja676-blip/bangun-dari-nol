@@ -1,9 +1,9 @@
 # Ep. 05: Jalan raya
 
 **Judul/hook:** Bikin jalan yang nggak gampang bolong, bisa nggak?
-**Durasi:** ±80–85 detik (1.336 karakter; final mengikuti audio)
+**Durasi:** 83,1 detik (audio TTS 1.336 karakter; jeda dipangkas maks. 0,5 dtk)
 **Sumber teks kebenaran:** [`script.json`](script.json). File ini versi baca + catatan riset.
-**Status:** 📄 naskah + cek fakta, **menunggu review pemilik**. Jangan generate audio sebelum pemilik bilang OK.
+**Status:** 🎬 naskah disetujui pemilik (sesi 4); audio + animasi + preview selesai, menunggu OK preview.
 
 ## Naskah
 

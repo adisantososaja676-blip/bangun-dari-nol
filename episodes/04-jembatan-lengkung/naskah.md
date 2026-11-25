@@ -4,7 +4,7 @@
 **Asal ide:** request penonton (komentar YouTube ep. 01, @Danzzz_W2s: "Buat jembatan").
 **Durasi:** 85,8 detik (audio TTS 1.412 karakter; jeda antar-kalimat dipangkas maks. 0,5 dtk)
 **Sumber teks kebenaran:** [`script.json`](script.json). File ini versi baca + catatan riset.
-**Status:** 🎬 produksi (sesi 4): audio + animasi + preview selesai, menunggu persetujuan pemilik.
+**Status:** ✅ final + cover + `upload.md` (sesi 4), siap upload.
 
 ## Beda dengan video referensi
 

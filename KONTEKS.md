@@ -179,5 +179,7 @@ node tools/cover.mjs out/03-pondasi-lembek-t1_5.png "Rumah di tanah|*lembek*?" "
 - Pemilik: "baca KONTEKS.md dan PROGRESS.md, lanjut ep 4" = aba-aba produksi ep. 04. Branch `claude/ecstatic-albattani-p2o9xb`.
 - **Key KIE kedaluwarsa** (401 "API key expired at 2026-11-24") → pemilik menyimpan key baru lewat formulir aman (network secret `api.kie.ai`). Saldo 958,86 → TTS 24 kredit → **934,86**.
 - Audio asli 91,6 dtk (> 90). Daripada TTS ulang (bayar), jeda antar-kalimat dipangkas ke maks. 0,5 dtk → 84,5 dtk. Cara ini bisa dipakai lagi kalau episode kepanjangan (perintah di log PROGRESS).
-- Animasi + preview 540x960 (85,8 dtk) selesai & dikirim. Menunggu OK pemilik → final + cover + `upload.md`.
+- Preview disetujui ("OK") → final 1080x1920 + cover (frame t=62.5, jembatan baja merah; teks "Bikin jembatan|*lengkung*?" + "Bisa nggak?") + `upload.md` dikirim.
+- **Ep. 05 = Jalan raya** (pilihan pemilik dari usulan Claude; alternatif: gedung vs angin, candi tanpa semen). Pemilik minta riset super akurat → 3 catatan akurasi di `naskah.md` (2%, 16×, Buton). Naskah OK → audio + animasi + preview dikirim, menunggu OK.
+- Render ulang ep. 04: `node tools/render.mjs --ep 04-jembatan-lengkung --scale 2`; cover: `--still 62.5 --scale 2 --clean` lalu `node tools/cover.mjs out/04-jembatan-lengkung-t62_5.png "Bikin jembatan|*lengkung*?" "Bisa nggak?" out/04-jembatan-lengkung-cover.jpg`.
 - Keputusan visual: kartu intro "Request dari komentar / Bikin jembatan, yuk!" (tanpa nama penonton). Label baja muncul satu per satu (Baja → Jalan digantung → Batang pengikat → Memuai → +3,6 cm → Dikunci/Retak → Perletakan → Siar muai). Penggantung = batang baja tegak.
