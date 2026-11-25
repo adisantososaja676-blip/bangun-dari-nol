@@ -34,7 +34,7 @@ _Update file ini di setiap PR. Paling baru di atas._
 | Ep. 05 Jalan raya: naskah + cek fakta + audio + animasi | ✅ `episodes/05-jalan-raya/` (83,1 dtk), naskah & preview disetujui ("OK") |
 | Ep. 05: upload kit + render final + cover | ✅ final 1080x1920 + cover (frame t=2, mobil hampir masuk lubang) dikirim. **Siap upload** |
 | Aset baru: truk, skrip pangkas jeda | ✅ `engine/truck.js` (`createTruck`, `setLoad` 0–2), `tools/trim-pauses.py` |
-| Ep. 06 Kolam renang (request penonton): naskah + cek fakta | 🟡 `episodes/06-kolam-renang/` (±1.235 karakter), **menunggu review pemilik** |
+| Ep. 06 Kolam renang (request penonton): naskah + cek fakta + audio + animasi | 🟡 `episodes/06-kolam-renang/` (79,3 dtk), naskah disetujui ("ok"), preview dikirim, **menunggu OK pemilik** |
 | Ep. 07 dst | ⬜ antrean di `IDE-VIDEO.md` |
 
 ## Langkah berikutnya
@@ -46,7 +46,7 @@ _Update file ini di setiap PR. Paling baru di atas._
 3. **Pemilik:** pantau komentar ep. 01–03 untuk request topik berikutnya.
 4. **Pemilik:** upload ep. 04 (video, cover, `upload.md` sudah dikirim) + balas komentar request.
 5. **Pemilik:** upload ep. 05 (video, cover, `upload.md` sudah dikirim). Stok siap upload: ep. 04 + ep. 05.
-6. **Pemilik:** review naskah ep. 06 Kolam renang (request penonton), terutama catatan akurasi (terangkat, kedalaman Olimpiade). **Claude (setelah OK):** TTS → `trim-pauses` → animasi diorama kolam + muka air tanah → preview.
+6. **Pemilik:** tonton preview ep. 06 → OK / revisi. **Claude (setelah OK):** final `--scale 2` + cover + `upload.md` (draf caption di `naskah.md`).
 7. **Pemilik:** kabari handle YouTube final, lalu catat di `KONTEKS.md`.
 8. Setelah 12 video: evaluasi (retensi 3 dtk, % ditonton, komentar).
 
@@ -67,6 +67,11 @@ _Update file ini di setiap PR. Paling baru di atas._
 - Pemilik pilih jalan raya ("pastikan risetnya akurat"). Riset silang: FHWA (batu pecah vs kerikil bulat), TxDOT (lapisan menyebar beban), APWA/PennDOT (lubang = air + beban), sejarah tarmac (debu), AASHO (pangkat 4, hati-hati: analisis ulang ≈ pangkat 3), Buton (Badan Geologi 792,5 juta ton sumber daya). Naskah OK pemilik.
 - TTS 24 kredit (sisa 910,86), 87,3 → 83,1 dtk setelah `tools/trim-pauses.py`.
 - `scene.js`: diorama dipotong di garis tengah jalan (lapisan terlihat di muka depan, ujung kanan = potongan melintang untuk cembung + selokan). Tanah → lumpur (mobil terjebak) → kerikil bulat menggelinding → batu pecah berlapis → segitiga sebaran beban → debu & batu lepas → aspal → retak + air meresap → lubang tumbuh tiap mobil lewat → cembung + selokan + tambalan → truk kelebihan muatan + kartu AASHO → Pulau Buton (x=300).
+
+### 2026-11-25: Ep. 06 Kolam renang (naskah → preview)
+- Request penonton. Riset: Orenda/Wacker (beton berpori, keramik tidak kedap), CDC (klorin, bilas 1 menit), paten + Aqua Magazine (kolam kosong terangkat, katup pelepas tekanan), World Aquatics (kedalaman min. baru 2,5 m → naskah "kalau dalamnya 2 meter"), galon 19 L.
+- TTS 24 kredit (sisa 886,86), 85,6 → 79,3 dtk.
+- `scene.js`: tanah dibangun dari balok di sekitar lubang (bukan `buildDiorama` utuh) supaya bisa digali; dipotong di tengah kolam. Gali → meresap → tulangan + beton → retak & merembes → membran + keramik (tekstur kanvas) → hijau (kartu hari ke-1..3) → pompa/filter/pipa + aliran + pelampung klorin → shower → dikuras, muka air tanah naik (bidang biru di muka potongan), kolam terangkat → katup terbuka, air tanah masuk, kolam turun → kolam Olimpiade (x=300) + tumpukan galon.
 
 ### 2026-11-25: Ep. 05 final
 - Preview disetujui → final 1080x1920 + cover t=2 ("Jalan nggak gampang|*bolong*?") + `upload.md` dikirim. PR #5 berisi ep. 04 + ep. 05 (satu branch sesi).

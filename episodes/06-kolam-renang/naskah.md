@@ -2,9 +2,9 @@
 
 **Judul/hook:** Bikin kolam renang sendiri, bisa nggak?
 **Asal ide:** request penonton (kolam renang). Nama penonton **tidak** ditampilkan (keputusan pemilik).
-**Durasi:** ±75–80 detik (±1.235 karakter; final mengikuti audio)
+**Durasi:** 79,3 detik (audio TTS 1.234 karakter; jeda dipangkas maks. 0,5 dtk)
 **Sumber teks kebenaran:** [`script.json`](script.json). File ini versi baca + catatan riset.
-**Status:** 📄 naskah + cek fakta, **menunggu review pemilik**. Jangan generate audio sebelum pemilik bilang OK.
+**Status:** 🎬 naskah disetujui pemilik; audio + animasi + preview selesai, menunggu OK preview.
 
 ## Naskah
 
