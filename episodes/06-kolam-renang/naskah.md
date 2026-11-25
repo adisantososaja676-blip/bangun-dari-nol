@@ -4,7 +4,7 @@
 **Asal ide:** request penonton (kolam renang). Nama penonton **tidak** ditampilkan (keputusan pemilik).
 **Durasi:** 79,3 detik (audio TTS 1.234 karakter; jeda dipangkas maks. 0,5 dtk)
 **Sumber teks kebenaran:** [`script.json`](script.json). File ini versi baca + catatan riset.
-**Status:** 🎬 naskah disetujui pemilik; audio + animasi + preview selesai, menunggu OK preview.
+**Status:** ✅ final + cover + `upload.md` (sesi 4), siap upload.
 
 ## Naskah
 
