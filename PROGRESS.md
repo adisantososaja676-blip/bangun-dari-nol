@@ -48,6 +48,8 @@ _Update file ini di setiap PR. Paling baru di atas._
 
 ## Langkah berikutnya
 
+> **Serah-terima sesi 5:** lihat bagian "Serah-terima akhir sesi 5" di paling bawah `KONTEKS.md` (alur kerja, saldo KIE, jebakan teknis).
+
 > Jadwal target: **posting harian** jam 18.00–19.00 WIB. Ep. 01–06 sudah tayang (dikonfirmasi pemilik, sesi 5). **Stok siap upload: ep. 07, 08, 09** (sesi 5).
 
 1. ✅ Ep. 02 & 03 sudah diunggah pemilik.
@@ -75,6 +77,9 @@ _Update file ini di setiap PR. Paling baru di atas._
 - Narasi dibaca satu tarikan; bagian Situ Gintung belum dibuat lebih pelan (TTS satu task). Bisa dipecah jadi beberapa task kalau perlu.
 
 ## Log
+
+### 2026-11-28: Serah-terima sesi 5
+- PR #7 (ep. 09) di-merge atas permintaan pemilik (sesi akan dihapus). Catatan serah-terima lengkap di `KONTEKS.md`. Stok siap upload: ep. 07, 08, 09.
 
 ### 2026-11-28: Ep. 09 final
 - Preview disetujui ("ok") → final 1080x1920 + cover t=34.8 ("Bikin rel|*kereta*?") + `upload.md` dikirim.
