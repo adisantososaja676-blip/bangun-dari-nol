@@ -2,9 +2,9 @@
 
 **Judul/hook:** Bikin candi dari batu tanpa semen, bisa nggak?
 **Asal ide:** antrean `IDE-VIDEO.md` #27 (dipilih pemilik, sesi 5).
-**Durasi target:** ±70–75 detik (1.126 karakter)
+**Durasi:** 73,7 detik (audio TTS 1.126 karakter; 79,7 → 73,7 dtk setelah jeda dipangkas maks. 0,5 dtk)
 **Sumber teks kebenaran:** [`script.json`](script.json). File ini versi baca + catatan riset.
-**Status:** 📄 naskah + cek fakta, menunggu OK pemilik sebelum TTS.
+**Status:** ✅ naskah disetujui ("OK"), audio + animasi selesai, preview dikirim (sesi 5).
 
 ## Naskah
 

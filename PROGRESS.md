@@ -39,7 +39,8 @@ _Update file ini di setiap PR. Paling baru di atas._
 | Ep. 07 Gedung vs angin: naskah + cek fakta + audio + animasi | ✅ `episodes/07-gedung-angin/` (79,7 dtk), naskah disetujui ("OK"), preview dikirim |
 | Ep. 07: upload kit + render final + cover | ✅ final 1080x1920 (50 MB) + cover (frame t=26.5, rangka melengkung kena angin) dikirim. **Siap upload** |
 | Aset baru: gedung rangka baja bergoyang | ✅ `engine/tower.js` (`createTower`: rangka, pengaku silang, inti beton, kaca kotak/bertangga, goyangan geser per lantai) |
-| Ep. 08 dst | ⬜ antrean di `IDE-VIDEO.md` |
+| Ep. 08 Candi tanpa semen: naskah + cek fakta + audio + animasi | ✅ `episodes/08-candi/` (73,7 dtk), naskah disetujui ("OK"), preview dikirim |
+| Ep. 09 dst | ⬜ antrean di `IDE-VIDEO.md` |
 
 ## Langkah berikutnya
 
@@ -52,7 +53,8 @@ _Update file ini di setiap PR. Paling baru di atas._
 5. **Pemilik:** upload ep. 05 (video, cover, `upload.md` sudah dikirim). Stok siap upload: ep. 04 + ep. 05.
 6. **Pemilik:** upload ep. 06 + balas komentar request. Stok siap upload: ep. 04, 05, 06.
    ✅ Ep. 07 Gedung vs angin diproduksi (sesi 5).
-   **Claude:** ep. 08: cek request penonton dulu; cadangan: Candi tanpa semen, Terowongan, Rel kereta.
+   ✅ Ep. 08 Candi tanpa semen diproduksi (sesi 5).
+   **Claude:** ep. 09: cek request penonton dulu; cadangan: Terowongan, Rel kereta, Kapal besi mengapung.
 7. **Pemilik:** kabari handle YouTube final, lalu catat di `KONTEKS.md`.
 8. Setelah 12 video: evaluasi (retensi 3 dtk, % ditonton, komentar).
 
@@ -68,6 +70,11 @@ _Update file ini di setiap PR. Paling baru di atas._
 - Narasi dibaca satu tarikan; bagian Situ Gintung belum dibuat lebih pelan (TTS satu task). Bisa dipecah jadi beberapa task kalau perlu.
 
 ## Log
+
+### 2026-11-28: Ep. 08 Candi tanpa semen (naskah → preview)
+- Pemilik pilih "Candi tanpa semen". Riset: detik (4 sambungan Borobudur: ekor burung, takikan, alur-lidah, purus; bukan putih telur), corbel arch candi, 100 jaladwara (laporan pemugaran), UNESCO (air meresap → dinding melesak & miring), pemugaran 1973–1983 (drainase + beton), NatGeo (±1 juta batu dibongkar & dipasang lagi).
+- TTS 24 kredit (sisa **838,86**; key masih berlaku), 79,7 → 73,7 dtk.
+- `scene.js`: dinding uji batu instanced (gempa → batu atas meluncur & jatuh), demo ekor burung (Extrude) & takikan, ambang batu melendut → retak → patah, lengkung semu tumbuh per baris + panah beban, candi rekaan 3 teras (inti tanah, dinding batu instanced, pagar langkan, stupa lonceng, tangga), hujan + genangan di lorong, 12 jaladwara + pancuran air, potongan: inti basah + rembesan + dinding samping miring, pemugaran: dinding diangkat, lapisan kedap biru + pipa, dinding kembali. Borobudur (x=300): 6 teras bujur sangkar + 3 teras lingkaran (32/24/16 stupa) + stupa induk; batu terbang keluar ke halaman lalu kembali.
 
 ### 2026-11-28: Ep. 07 final
 - Preview disetujui ("OK") → final 1080x1920 (50 MB, 79,7 dtk) + cover t=26.5 ("Gedung tinggi tahan|*angin*?") + `upload.md` dikirim.
