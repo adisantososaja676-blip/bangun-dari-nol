@@ -264,7 +264,7 @@ node tools/cover.mjs out/06-kolam-renang-t1_2.png "Bikin kolam|*renang*?" "Bisa 
 | Ep | Status |
 |---|---|
 | 01–03 | Tayang |
-| 04–06 | Siap upload (status upload belum dikonfirmasi pemilik) |
+| 04–06 | ✅ **Tayang** (dikonfirmasi pemilik di akhir sesi 5) |
 | 07 Gedung vs angin | ✅ **Siap upload** |
 | 08 Candi tanpa semen | ✅ **Siap upload** (lihat bagian ep. 08 di bawah) |
 | 09 | Belum. Cadangan: terowongan, rel kereta, kapal besi mengapung |
@@ -290,3 +290,9 @@ node tools/render.mjs --ep 08-candi --scale 2
 node tools/render.mjs --ep 08-candi --still 1.5 --scale 2 --clean
 node tools/cover.mjs out/08-candi-t1_5.png "Bikin candi tanpa|*semen*?" "Bisa nggak?" out/08-candi-cover.jpg
 ```
+
+## Penutup sesi 5
+
+- Pemilik: ep. 04–06 **sudah tayang**; **belum ada request penonton** baru untuk ep. 09.
+- Semua pekerjaan sesi 5 (ep. 07 + 08) di-PR & di-merge ke `main` atas permintaan pemilik ("push semua ke github karena aku akan hapus sesi ini"). Sesi berikutnya mulai dari `main`.
+- Stok siap upload: ep. 07, 08 (video/cover/upload.md sudah di tangan pemilik; render ulang dengan perintah di atas kalau hilang).

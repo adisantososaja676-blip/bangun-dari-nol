@@ -45,7 +45,7 @@ _Update file ini di setiap PR. Paling baru di atas._
 
 ## Langkah berikutnya
 
-> Jadwal target: **posting harian** jam 18.00–19.00 WIB. Ep. 01, 02, 03 sudah tayang. **Stok siap upload: ep. 04, 05, 06** (sesi 4) + **ep. 07, 08** (sesi 5). Status upload ep. 04–06 belum dikonfirmasi pemilik.
+> Jadwal target: **posting harian** jam 18.00–19.00 WIB. Ep. 01–06 sudah tayang (dikonfirmasi pemilik, sesi 5). **Stok siap upload: ep. 07, 08** (sesi 5). Stok < 3 → prioritaskan produksi ep. 09–10.
 
 1. ✅ Ep. 02 & 03 sudah diunggah pemilik.
 2. ✅ Komentar request "Buat jembatan" dibalas. Nama penonton **tidak** ditampilkan di video.
@@ -55,7 +55,7 @@ _Update file ini di setiap PR. Paling baru di atas._
 6. **Pemilik:** upload ep. 06 + balas komentar request. Stok siap upload: ep. 04, 05, 06.
    ✅ Ep. 07 Gedung vs angin diproduksi (sesi 5).
    ✅ Ep. 08 Candi tanpa semen diproduksi (sesi 5).
-   **Claude:** ep. 09: cek request penonton dulu; cadangan: Terowongan, Rel kereta, Kapal besi mengapung.
+   **Claude:** ep. 09: per akhir sesi 5 **belum ada request penonton baru**; usulkan dari cadangan: Terowongan, Rel kereta, Kapal besi mengapung.
 7. **Pemilik:** kabari handle YouTube final, lalu catat di `KONTEKS.md`.
 8. Setelah 12 video: evaluasi (retensi 3 dtk, % ditonton, komentar).
 
