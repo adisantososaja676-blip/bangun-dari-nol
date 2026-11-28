@@ -1,0 +1,20 @@
+{
+  "id": "08-candi",
+  "title": "Bikin candi dari batu tanpa semen, bisa nggak?",
+  "notes": "Penanda teks: *kata* = kuning (istilah), !kata! = merah (kegagalan). Hapus penanda saat generate TTS.",
+  "lines": [
+    { "id": "hook", "text": "Bikin *candi* dari batu tanpa semen, bisa nggak?" },
+    { "id": "intro", "text": "Pak Bero mulai dari numpuk batu kotak, rapi banget." },
+    { "id": "geser", "text": "Masalahnya, batunya cuma ditumpuk. Kena getaran gempa dikit, batunya !bergeser! dan jatuh." },
+    { "id": "kunci", "text": "Jadi tiap batu dipahat biar saling ngunci. Ada sambungan *ekor burung*, ada *takikan*, kayak kepingan puzzle." },
+    { "id": "pintu", "text": "Masalahnya, waktu bikin pintu, batu panjang di atas lubangnya nggak kuat. Batunya !patah! di tengah." },
+    { "id": "semu", "text": "Jadi batunya disusun menjorok sedikit-sedikit dari kiri dan kanan, sampai ketemu di atas. Namanya *lengkung semu*." },
+    { "id": "hujan", "text": "Masalahnya, hujan di sini deras banget. Airnya !menggenang! di lorong candi." },
+    { "id": "jaladwara", "text": "Jadi di tiap tingkat dipasang *jaladwara*, pancuran batu buat buang air hujan. Di Borobudur jumlahnya seratus." },
+    { "id": "resap", "text": "Masalahnya, air tetap meresap lewat celah batu. Bukit tanah di dalam candi jadi basah, dindingnya !miring!." },
+    { "id": "pugar", "text": "Jadi waktu dipugar, di dalamnya dipasang *saluran air* dan lapisan kedap air. Dindingnya disusun tegak lagi." },
+    { "id": "berdiri", "text": "Sekarang candinya *berdiri kokoh*." },
+    { "id": "fakta", "text": "Oh iya, waktu Borobudur dipugar tahun 1970-an, sekitar sejuta batunya dibongkar satu per satu, dibersihkan, terus dipasang lagi. Kayak puzzle raksasa." },
+    { "id": "outro", "text": "Habis ini, Pak Bero bangun apa lagi ya?" }
+  ]
+}
