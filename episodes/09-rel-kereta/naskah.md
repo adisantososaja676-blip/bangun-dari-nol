@@ -4,7 +4,7 @@
 **Asal ide:** antrean `IDE-VIDEO.md` #9 (dipilih pemilik, sesi 5; belum ada request penonton).
 **Durasi:** 72,5 detik (audio TTS 1.083 karakter; 78,0 → 72,5 dtk setelah jeda dipangkas maks. 0,5 dtk)
 **Sumber teks kebenaran:** [`script.json`](script.json). File ini versi baca + catatan riset.
-**Status:** ✅ naskah disetujui ("ok"), audio + animasi selesai, preview dikirim (sesi 5).
+**Status:** ✅ final + cover + `upload.md` (sesi 5), siap upload.
 
 ## Naskah
 

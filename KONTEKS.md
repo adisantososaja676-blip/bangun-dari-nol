@@ -267,7 +267,8 @@ node tools/cover.mjs out/06-kolam-renang-t1_2.png "Bikin kolam|*renang*?" "Bisa 
 | 04–06 | ✅ **Tayang** (dikonfirmasi pemilik di akhir sesi 5) |
 | 07 Gedung vs angin | ✅ **Siap upload** |
 | 08 Candi tanpa semen | ✅ **Siap upload** (lihat bagian ep. 08 di bawah) |
-| 09 | Belum. Cadangan: terowongan, rel kereta, kapal besi mengapung |
+| 09 Rel kereta | ✅ **Siap upload** (lihat bagian ep. 09 di bawah) |
+| 10 | Belum. Cadangan: terowongan, kapal besi mengapung, tower crane |
 
 ## Render ulang ep. 07
 
@@ -296,3 +297,16 @@ node tools/cover.mjs out/08-candi-t1_5.png "Bikin candi tanpa|*semen*?" "Bisa ng
 - Pemilik: ep. 04–06 **sudah tayang**; **belum ada request penonton** baru untuk ep. 09.
 - Semua pekerjaan sesi 5 (ep. 07 + 08) di-PR & di-merge ke `main` atas permintaan pemilik ("push semua ke github karena aku akan hapus sesi ini"). Sesi berikutnya mulai dari `main`.
 - Stok siap upload: ep. 07, 08 (video/cover/upload.md sudah di tangan pemilik; render ulang dengan perintah di atas kalau hilang).
+
+## Ep. 09 Rel kereta (sesi 5, lanjutan setelah PR #6)
+
+- Pemilik: "lanjut ep 9", belum ada request → pilih **rel kereta**. Branch sesi dimulai ulang dari `main` (PR #6 sudah merge).
+- TTS 24 kredit (sisa **814,86**), 78,0 → 72,5 dtk.
+- Rantai: rel di tanah amblas → bantalan → hujan, bantalan geser → kerikil balas → panas, memuai & melengkung → celah sambungan ("jeglek") → ujung rel aus → rel dilas panjang + dijepit. Fakta: Whoosh pakai pelat beton (slab track), sampai 350 km/jam. Kereta cepat di animasi = desain umum, bukan replika.
+- Aset baru: `engine/train.js`. Cover t=34.8 (rel merah melengkung), "Bikin rel|*kereta*?".
+
+```bash
+node tools/render.mjs --ep 09-rel-kereta --scale 2
+node tools/render.mjs --ep 09-rel-kereta --still 34.8 --scale 2 --clean
+node tools/cover.mjs out/09-rel-kereta-t34_8.png "Bikin rel|*kereta*?" "Bisa nggak?" out/09-rel-kereta-cover.jpg
+```

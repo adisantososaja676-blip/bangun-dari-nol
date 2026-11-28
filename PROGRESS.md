@@ -42,12 +42,13 @@ _Update file ini di setiap PR. Paling baru di atas._
 | Ep. 08 Candi tanpa semen: naskah + cek fakta + audio + animasi | ✅ `episodes/08-candi/` (73,7 dtk), naskah disetujui ("OK"), preview dikirim |
 | Ep. 08: upload kit + render final + cover | ✅ final 1080x1920 + cover (frame t=1.5, candi 3 teras + gapura) dikirim. **Siap upload** |
 | Ep. 09 Rel kereta: naskah + cek fakta + audio + animasi | ✅ `episodes/09-rel-kereta/` (72,5 dtk), naskah disetujui ("ok"), preview dikirim |
+| Ep. 09: upload kit + render final + cover | ✅ final 1080x1920 + cover (frame t=34.8, rel melengkung) dikirim. **Siap upload** |
 | Aset baru: kereta | ✅ `engine/train.js` (`createTrain`: lokomotif, gerbong datar & boks, `place(x,{yAt,zAt,bob,roll})`, `top(i)`) |
 | Ep. 10 dst | ⬜ antrean di `IDE-VIDEO.md` |
 
 ## Langkah berikutnya
 
-> Jadwal target: **posting harian** jam 18.00–19.00 WIB. Ep. 01–06 sudah tayang (dikonfirmasi pemilik, sesi 5). **Stok siap upload: ep. 07, 08** (sesi 5). Stok < 3 → prioritaskan produksi ep. 09–10.
+> Jadwal target: **posting harian** jam 18.00–19.00 WIB. Ep. 01–06 sudah tayang (dikonfirmasi pemilik, sesi 5). **Stok siap upload: ep. 07, 08, 09** (sesi 5).
 
 1. ✅ Ep. 02 & 03 sudah diunggah pemilik.
 2. ✅ Komentar request "Buat jembatan" dibalas. Nama penonton **tidak** ditampilkan di video.
@@ -74,6 +75,9 @@ _Update file ini di setiap PR. Paling baru di atas._
 - Narasi dibaca satu tarikan; bagian Situ Gintung belum dibuat lebih pelan (TTS satu task). Bisa dipecah jadi beberapa task kalau perlu.
 
 ## Log
+
+### 2026-11-28: Ep. 09 final
+- Preview disetujui ("ok") → final 1080x1920 + cover t=34.8 ("Bikin rel|*kereta*?") + `upload.md` dikirim.
 
 ### 2026-11-28: Ep. 09 Rel kereta (naskah → preview)
 - Belum ada request penonton → pemilik pilih "Rel kereta". Riset: UMY (fungsi balas, rel panjang min. 325–450 m, satuan rel 25 m), Ruangguru/Okezone (batu bersudut), Rail stressing & FRA (suhu netral, sun kink), ProQuest/FRA/TRID (celah → ujung rel aus, sambungan titik lemah), paten CWR (dijepit ke bantalan), Xinhua (Whoosh slab track CRTS III), 350 km/jam.
