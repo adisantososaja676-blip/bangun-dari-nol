@@ -1,0 +1,21 @@
+{
+  "id": "07-gedung-angin",
+  "title": "Bikin gedung pencakar langit tahan angin, bisa nggak?",
+  "notes": "Penanda teks: *kata* = kuning (istilah), !kata! = merah (kegagalan). Hapus penanda saat generate TTS.",
+  "lines": [
+    { "id": "hook", "text": "Bikin *gedung pencakar langit* yang tahan angin, bisa nggak?" },
+    { "id": "intro", "text": "Pak Bero mulai dari numpuk bata, makin lama makin tinggi." },
+    { "id": "tebal", "text": "Masalahnya, makin tinggi, bata paling bawah nanggung beban makin berat. Dindingnya harus makin !tebal!, sampai ruangannya habis." },
+    { "id": "monadnock", "text": "Gedung bata di Chicago tahun 1891 aja, tebal dinding bawahnya hampir 2 meter." },
+    { "id": "rangka", "text": "Jadi Pak Bero pakai *rangka baja*. Ringan, kuat, bisa tinggi banget." },
+    { "id": "goyang", "text": "Masalahnya, angin ngedorong gedungnya. Puncaknya !bergoyang!, orang di lantai atas bisa pusing dan mual." },
+    { "id": "kaku", "text": "Jadi rangkanya dikasih *pengaku silang* dan *inti beton* di tengah. Gedungnya jadi lebih kaku." },
+    { "id": "pusaran", "text": "Masalahnya, angin yang lewat bikin *pusaran* bergantian di kiri dan kanan. Gedungnya didorong ke samping bolak-balik. Kalau iramanya pas, goyangannya !makin besar!." },
+    { "id": "sudut", "text": "Jadi sudut gedungnya *dibikin bertangga*. Pusarannya jadi berantakan, dorongannya melemah." },
+    { "id": "topan", "text": "Masalahnya, waktu angin topan, gedungnya masih !goyang!." },
+    { "id": "peredam", "text": "Jadi di dekat puncak digantung bola baja raksasa, namanya *peredam massa*. Bolanya berayun melawan arah goyangan gedung, jadi goyangannya teredam." },
+    { "id": "berdiri", "text": "Sekarang gedungnya *berdiri tenang*." },
+    { "id": "fakta", "text": "Oh iya, bola kayak gini beneran ada di Taipei 101, Taiwan. Beratnya 660 ton, digantung di lantai 87 sampai 92. Waktu topan tahun 2015, bola itu berayun sampai 1 meter." },
+    { "id": "outro", "text": "Habis ini, Pak Bero bangun apa lagi ya?" }
+  ]
+}

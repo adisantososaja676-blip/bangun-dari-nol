@@ -233,3 +233,66 @@ node tools/render.mjs --ep 06-kolam-renang --scale 2
 node tools/render.mjs --ep 06-kolam-renang --still 1.2 --scale 2 --clean
 node tools/cover.mjs out/06-kolam-renang-t1_2.png "Bikin kolam|*renang*?" "Bisa nggak?" out/06-kolam-renang-cover.jpg
 ```
+
+---
+
+# Sesi 5 (28 Nov 2026): Ep. 07 Gedung pencakar langit vs angin
+
+> Arsip chat sesi kelima. Sesi berikutnya: baca juga bagian ini.
+
+## Yang dikerjakan
+
+- Pemilik: "baca KONTEKS.md dan PROGRESS.md, lanjut ep 7". Tidak ada request penonton baru → Claude menawarkan 4 topik (gedung vs angin, candi tanpa semen, terowongan, rel kereta) → pemilik pilih **gedung vs angin**.
+- Branch sesi `claude/bold-ptolemy-x1c1pf`. Alur sama dengan sesi 4: naskah + cek fakta → "OK" → TTS + animasi → preview → "OK" → final + cover + `upload.md` (dikirim sebagai lampiran, tidak di-commit).
+
+## Keputusan & catatan
+
+| Topik | Catatan |
+|---|---|
+| API key KIE | Kedaluwarsa lagi (401 "expired at 2026-11-26"), ±2 hari setelah disimpan. Disimpan ulang lewat formulir aman (`request_credential`, host `api.kie.ai`). Perkirakan tiap sesi perlu isi ulang |
+| Saldo KIE | 886,86 → 24 kredit → **862,86** |
+| Durasi | Audio 86,1 → **79,7 dtk** setelah `trim-pauses.py` |
+| Rantai | Bata (dinding menebal, Monadnock 1891) → rangka baja (goyang, mual) → pengaku silang + inti beton → pusaran bergantian (resonansi) → sudut bertangga → topan → peredam massa → Taipei 101 (660 ton, lantai 87–92, ayunan 1 m topan Soudelor 2015) |
+| Fakta hati-hati | Angka 25% (sudut) & 40% (peredam) sengaja tidak dipakai (sumber slide/pabrikan). "1 meter" = ayunan bola, bukan gedung |
+| Aset baru | `engine/tower.js` (`createTower`): gedung per lantai, goyangan geser via matriks per lantai (fungsi murni dari t), pengaku, inti, kaca kotak/bertangga, opsi `coreTop`/`braceTop`. Bisa dipakai ulang untuk gedung parkir, gempa gedung tinggi, tower crane |
+| Visual | Pusaran ditampilkan dari **tampak atas** (kamera di atas sisi hulu angin, layar-atas = arah angin). Bola peredam harus emisif + pengaku atas disembunyikan supaya terlihat |
+| Cover | t=26.5 (rangka baja melengkung + panah angin), "Gedung tinggi tahan\|*angin*?" + "Bisa nggak?" |
+| Render final | ±12,5 menit (2.390 frame), 50 MB |
+
+## Status per akhir sesi 5
+
+| Ep | Status |
+|---|---|
+| 01–03 | Tayang |
+| 04–06 | ✅ **Tayang** (dikonfirmasi pemilik di akhir sesi 5) |
+| 07 Gedung vs angin | ✅ **Siap upload** |
+| 08 Candi tanpa semen | ✅ **Siap upload** (lihat bagian ep. 08 di bawah) |
+| 09 | Belum. Cadangan: terowongan, rel kereta, kapal besi mengapung |
+
+## Render ulang ep. 07
+
+```bash
+node tools/render.mjs --ep 07-gedung-angin --scale 2
+node tools/render.mjs --ep 07-gedung-angin --still 26.5 --scale 2 --clean
+node tools/cover.mjs out/07-gedung-angin-t26_5.png "Gedung tinggi tahan|*angin*?" "Bisa nggak?" out/07-gedung-angin-cover.jpg
+```
+
+## Ep. 08 Candi tanpa semen (sesi 5, lanjutan)
+
+- Pemilik: "lanjut ep 8" → pilih **candi tanpa semen** dari 4 usulan → naskah OK → preview OK → final.
+- TTS 24 kredit (sisa **838,86**), 79,7 → 73,7 dtk. Key KIE masih berlaku di hari yang sama.
+- Rantai: batu tumpuk → gempa, bergeser → ekor burung & takikan → ambang pintu patah → lengkung semu → hujan menggenang → jaladwara (Borobudur 100) → air meresap, dinding miring → pemugaran (saluran air + lapisan kedap). Fakta: pemugaran 1973–1983, ±1 juta batu dibongkar & dipasang lagi (NatGeo, angka bulat).
+- **Sensitivitas:** candi = tempat ibadah aktif. Candi di animasi = rekaan sederhana (bukan replika), tanpa arca, Pak Bero tidak memanjat stupa. Borobudur hanya siluet di bagian fakta.
+- Cover t=1.5 (candi utuh), "Bikin candi tanpa|*semen*?" + "Bisa nggak?".
+
+```bash
+node tools/render.mjs --ep 08-candi --scale 2
+node tools/render.mjs --ep 08-candi --still 1.5 --scale 2 --clean
+node tools/cover.mjs out/08-candi-t1_5.png "Bikin candi tanpa|*semen*?" "Bisa nggak?" out/08-candi-cover.jpg
+```
+
+## Penutup sesi 5
+
+- Pemilik: ep. 04–06 **sudah tayang**; **belum ada request penonton** baru untuk ep. 09.
+- Semua pekerjaan sesi 5 (ep. 07 + 08) di-PR & di-merge ke `main` atas permintaan pemilik ("push semua ke github karena aku akan hapus sesi ini"). Sesi berikutnya mulai dari `main`.
+- Stok siap upload: ep. 07, 08 (video/cover/upload.md sudah di tangan pemilik; render ulang dengan perintah di atas kalau hilang).

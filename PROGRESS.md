@@ -36,11 +36,16 @@ _Update file ini di setiap PR. Paling baru di atas._
 | Aset baru: truk, skrip pangkas jeda | ✅ `engine/truck.js` (`createTruck`, `setLoad` 0–2), `tools/trim-pauses.py` |
 | Ep. 06 Kolam renang (request penonton): naskah + cek fakta + audio + animasi | ✅ `episodes/06-kolam-renang/` (79,3 dtk), naskah & preview disetujui ("ok") |
 | Ep. 06: upload kit + render final + cover | ✅ final 1080x1920 + cover (frame t=1.2, kolam biru + pelampung) dikirim. **Siap upload** |
-| Ep. 07 dst | ⬜ antrean di `IDE-VIDEO.md` |
+| Ep. 07 Gedung vs angin: naskah + cek fakta + audio + animasi | ✅ `episodes/07-gedung-angin/` (79,7 dtk), naskah disetujui ("OK"), preview dikirim |
+| Ep. 07: upload kit + render final + cover | ✅ final 1080x1920 (50 MB) + cover (frame t=26.5, rangka melengkung kena angin) dikirim. **Siap upload** |
+| Aset baru: gedung rangka baja bergoyang | ✅ `engine/tower.js` (`createTower`: rangka, pengaku silang, inti beton, kaca kotak/bertangga, goyangan geser per lantai) |
+| Ep. 08 Candi tanpa semen: naskah + cek fakta + audio + animasi | ✅ `episodes/08-candi/` (73,7 dtk), naskah disetujui ("OK"), preview dikirim |
+| Ep. 08: upload kit + render final + cover | ✅ final 1080x1920 + cover (frame t=1.5, candi 3 teras + gapura) dikirim. **Siap upload** |
+| Ep. 09 dst | ⬜ antrean di `IDE-VIDEO.md` |
 
 ## Langkah berikutnya
 
-> Jadwal target: **posting harian** jam 18.00–19.00 WIB. Ep. 01, 02, 03 sudah tayang. **Stok siap upload: ep. 04, 05, 06** (sesi 4).
+> Jadwal target: **posting harian** jam 18.00–19.00 WIB. Ep. 01–06 sudah tayang (dikonfirmasi pemilik, sesi 5). **Stok siap upload: ep. 07, 08** (sesi 5). Stok < 3 → prioritaskan produksi ep. 09–10.
 
 1. ✅ Ep. 02 & 03 sudah diunggah pemilik.
 2. ✅ Komentar request "Buat jembatan" dibalas. Nama penonton **tidak** ditampilkan di video.
@@ -48,11 +53,13 @@ _Update file ini di setiap PR. Paling baru di atas._
 4. **Pemilik:** upload ep. 04 (video, cover, `upload.md` sudah dikirim) + balas komentar request.
 5. **Pemilik:** upload ep. 05 (video, cover, `upload.md` sudah dikirim). Stok siap upload: ep. 04 + ep. 05.
 6. **Pemilik:** upload ep. 06 + balas komentar request. Stok siap upload: ep. 04, 05, 06.
-   **Claude:** ep. 07: cek komentar penonton dulu; cadangan: Gedung vs angin (Taipei 101), Candi tanpa semen, Terowongan.
+   ✅ Ep. 07 Gedung vs angin diproduksi (sesi 5).
+   ✅ Ep. 08 Candi tanpa semen diproduksi (sesi 5).
+   **Claude:** ep. 09: per akhir sesi 5 **belum ada request penonton baru**; usulkan dari cadangan: Terowongan, Rel kereta, Kapal besi mengapung.
 7. **Pemilik:** kabari handle YouTube final, lalu catat di `KONTEKS.md`.
 8. Setelah 12 video: evaluasi (retensi 3 dtk, % ditonton, komentar).
 
-✅ API key KIE tersimpan sebagai **network secret** environment (host `api.kie.ai`). Key sesi 3 **kedaluwarsa 24 Nov 2026** → disimpan ulang di sesi 4. Kalau 401 "expired", minta pemilik isi formulir aman lagi. TTS: `KIE_API_KEY=proxy-injected NODE_USE_ENV_PROXY=1 node tools/tts.mjs episodes/<ep>`. Cek saldo: `curl -s -H "Authorization: Bearer x" https://api.kie.ai/api/v1/chat/credit` (sisa 934,86 kredit setelah TTS ep. 04, sesi 4).
+✅ API key KIE tersimpan sebagai **network secret** environment (host `api.kie.ai`). Key sesi 3 **kedaluwarsa 24 Nov 2026** → disimpan ulang di sesi 4. Kalau 401 "expired", minta pemilik isi formulir aman lagi. TTS: `KIE_API_KEY=proxy-injected NODE_USE_ENV_PROXY=1 node tools/tts.mjs episodes/<ep>`. Cek saldo: `curl -s -H "Authorization: Bearer x" https://api.kie.ai/api/v1/chat/credit` (sisa **862,86** kredit setelah TTS ep. 07, sesi 5). Key kedaluwarsa lagi 26 Nov → disimpan ulang sesi 5 (key KIE tampaknya berumur ±2 hari).
 
 ## Catatan teknis / kendala yang diketahui
 
@@ -64,6 +71,23 @@ _Update file ini di setiap PR. Paling baru di atas._
 - Narasi dibaca satu tarikan; bagian Situ Gintung belum dibuat lebih pelan (TTS satu task). Bisa dipecah jadi beberapa task kalau perlu.
 
 ## Log
+
+### 2026-11-28: Ep. 08 final
+- Preview disetujui ("OK") → final 1080x1920 + cover t=1.5 ("Bikin candi tanpa|*semen*?") + `upload.md` dikirim.
+
+### 2026-11-28: Ep. 08 Candi tanpa semen (naskah → preview)
+- Pemilik pilih "Candi tanpa semen". Riset: detik (4 sambungan Borobudur: ekor burung, takikan, alur-lidah, purus; bukan putih telur), corbel arch candi, 100 jaladwara (laporan pemugaran), UNESCO (air meresap → dinding melesak & miring), pemugaran 1973–1983 (drainase + beton), NatGeo (±1 juta batu dibongkar & dipasang lagi).
+- TTS 24 kredit (sisa **838,86**; key masih berlaku), 79,7 → 73,7 dtk.
+- `scene.js`: dinding uji batu instanced (gempa → batu atas meluncur & jatuh), demo ekor burung (Extrude) & takikan, ambang batu melendut → retak → patah, lengkung semu tumbuh per baris + panah beban, candi rekaan 3 teras (inti tanah, dinding batu instanced, pagar langkan, stupa lonceng, tangga), hujan + genangan di lorong, 12 jaladwara + pancuran air, potongan: inti basah + rembesan + dinding samping miring, pemugaran: dinding diangkat, lapisan kedap biru + pipa, dinding kembali. Borobudur (x=300): 6 teras bujur sangkar + 3 teras lingkaran (32/24/16 stupa) + stupa induk; batu terbang keluar ke halaman lalu kembali.
+
+### 2026-11-28: Ep. 07 final
+- Preview disetujui ("OK") → final 1080x1920 (50 MB, 79,7 dtk) + cover t=26.5 ("Gedung tinggi tahan|*angin*?") + `upload.md` dikirim.
+
+### 2026-11-28: Ep. 07 Gedung pencakar langit vs angin (naskah → preview)
+- Pemilik pilih "Gedung vs angin" dari 4 usulan. Riset silang: Monadnock 1891 (dinding bawah ±1,8 m), kenyamanan penghuni (sopite syndrome, batas milli-g), vortex shedding & resonansi (Physics Today), sudut bertangga Taipei 101 (STRUCTURE 2006), peredam 660 ton lantai 87–92 & ayunan 1 m saat topan Soudelor 2015 (Guinness). Angka 25%/40% sengaja tidak dipakai.
+- Key KIE kedaluwarsa lagi (26 Nov) → disimpan ulang lewat formulir aman. TTS 24 kredit (sisa **862,86**), 86,1 → 79,7 dtk setelah `trim-pauses.py`.
+- `scene.js`: menara bata instanced (dinding menebal, ruangan menyempit, dinding depan dibuka), rangka baja tumbuh per lantai, angin = garis partikel, goyang (Pak Bero pusing di puncak), pengaku X + inti beton, tampak atas jalan pusaran bergantian + panah samping, kaca kotak → bertangga (pusaran berantakan), topan + hujan, bola peredam berayun berlawanan, Taipei 101 (x=300, 8 segmen + pita emas lantai 87–92), ruang peredam (x=600, bola 5,5 m, 8 kabel, piston, penggaris 1 m).
+- Aset baru: `engine/tower.js`.
 
 ### 2026-11-25: Ep. 05 Jalan raya (naskah → preview)
 - Pemilik pilih jalan raya ("pastikan risetnya akurat"). Riset silang: FHWA (batu pecah vs kerikil bulat), TxDOT (lapisan menyebar beban), APWA/PennDOT (lubang = air + beban), sejarah tarmac (debu), AASHO (pangkat 4, hati-hati: analisis ulang ≈ pangkat 3), Buton (Badan Geologi 792,5 juta ton sumber daya). Naskah OK pemilik.

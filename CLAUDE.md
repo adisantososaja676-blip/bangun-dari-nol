@@ -65,6 +65,7 @@ Animasi otomatis ikut waktu suara karena adegan diikat ke id baris naskah.
 - `engine/kit.js`: renderer, palet `PAL`, lembah sungai `buildValley`, tanah lapang `buildField`, goyangan gempa `quake`, hujan, panah, partikel instanced, kamera `cameraAt(keys,t)`.
 - `engine/bero.js`: model & pose Pak Bero.
 - `engine/car.js` (`createCar`) & `engine/truck.js` (`createTruck`, `setLoad`): kendaraan low-poly.
+- `engine/tower.js` (`createTower`): gedung rangka baja per lantai, goyangan geser `update({sx,sz,...})`, pengaku silang, inti beton, kaca kotak/bertangga.
 - `engine/overlay.js`: subtitle per kata, label 3D→2D, kartu, watermark.
 - `engine/main.js`: memuat episode & `window.renderAt(t)`.
 - **Aturan emas:** `update(t)` harus fungsi murni dari waktu `t` (tanpa state yang menumpuk) supaya render frame-per-frame deterministik.
