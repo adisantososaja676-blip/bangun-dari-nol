@@ -233,3 +233,45 @@ node tools/render.mjs --ep 06-kolam-renang --scale 2
 node tools/render.mjs --ep 06-kolam-renang --still 1.2 --scale 2 --clean
 node tools/cover.mjs out/06-kolam-renang-t1_2.png "Bikin kolam|*renang*?" "Bisa nggak?" out/06-kolam-renang-cover.jpg
 ```
+
+---
+
+# Sesi 5 (28 Nov 2026): Ep. 07 Gedung pencakar langit vs angin
+
+> Arsip chat sesi kelima. Sesi berikutnya: baca juga bagian ini.
+
+## Yang dikerjakan
+
+- Pemilik: "baca KONTEKS.md dan PROGRESS.md, lanjut ep 7". Tidak ada request penonton baru → Claude menawarkan 4 topik (gedung vs angin, candi tanpa semen, terowongan, rel kereta) → pemilik pilih **gedung vs angin**.
+- Branch sesi `claude/bold-ptolemy-x1c1pf`. Alur sama dengan sesi 4: naskah + cek fakta → "OK" → TTS + animasi → preview → "OK" → final + cover + `upload.md` (dikirim sebagai lampiran, tidak di-commit).
+
+## Keputusan & catatan
+
+| Topik | Catatan |
+|---|---|
+| API key KIE | Kedaluwarsa lagi (401 "expired at 2026-11-26"), ±2 hari setelah disimpan. Disimpan ulang lewat formulir aman (`request_credential`, host `api.kie.ai`). Perkirakan tiap sesi perlu isi ulang |
+| Saldo KIE | 886,86 → 24 kredit → **862,86** |
+| Durasi | Audio 86,1 → **79,7 dtk** setelah `trim-pauses.py` |
+| Rantai | Bata (dinding menebal, Monadnock 1891) → rangka baja (goyang, mual) → pengaku silang + inti beton → pusaran bergantian (resonansi) → sudut bertangga → topan → peredam massa → Taipei 101 (660 ton, lantai 87–92, ayunan 1 m topan Soudelor 2015) |
+| Fakta hati-hati | Angka 25% (sudut) & 40% (peredam) sengaja tidak dipakai (sumber slide/pabrikan). "1 meter" = ayunan bola, bukan gedung |
+| Aset baru | `engine/tower.js` (`createTower`): gedung per lantai, goyangan geser via matriks per lantai (fungsi murni dari t), pengaku, inti, kaca kotak/bertangga, opsi `coreTop`/`braceTop`. Bisa dipakai ulang untuk gedung parkir, gempa gedung tinggi, tower crane |
+| Visual | Pusaran ditampilkan dari **tampak atas** (kamera di atas sisi hulu angin, layar-atas = arah angin). Bola peredam harus emisif + pengaku atas disembunyikan supaya terlihat |
+| Cover | t=26.5 (rangka baja melengkung + panah angin), "Gedung tinggi tahan\|*angin*?" + "Bisa nggak?" |
+| Render final | ±12,5 menit (2.390 frame), 50 MB |
+
+## Status per akhir sesi 5
+
+| Ep | Status |
+|---|---|
+| 01–03 | Tayang |
+| 04–06 | Siap upload (status upload belum dikonfirmasi pemilik) |
+| 07 Gedung vs angin | ✅ **Siap upload** |
+| 08 | Belum. Cadangan: candi tanpa semen, terowongan, rel kereta |
+
+## Render ulang ep. 07
+
+```bash
+node tools/render.mjs --ep 07-gedung-angin --scale 2
+node tools/render.mjs --ep 07-gedung-angin --still 26.5 --scale 2 --clean
+node tools/cover.mjs out/07-gedung-angin-t26_5.png "Gedung tinggi tahan|*angin*?" "Bisa nggak?" out/07-gedung-angin-cover.jpg
+```

@@ -37,12 +37,13 @@ _Update file ini di setiap PR. Paling baru di atas._
 | Ep. 06 Kolam renang (request penonton): naskah + cek fakta + audio + animasi | ✅ `episodes/06-kolam-renang/` (79,3 dtk), naskah & preview disetujui ("ok") |
 | Ep. 06: upload kit + render final + cover | ✅ final 1080x1920 + cover (frame t=1.2, kolam biru + pelampung) dikirim. **Siap upload** |
 | Ep. 07 Gedung vs angin: naskah + cek fakta + audio + animasi | ✅ `episodes/07-gedung-angin/` (79,7 dtk), naskah disetujui ("OK"), preview dikirim |
+| Ep. 07: upload kit + render final + cover | ✅ final 1080x1920 (50 MB) + cover (frame t=26.5, rangka melengkung kena angin) dikirim. **Siap upload** |
 | Aset baru: gedung rangka baja bergoyang | ✅ `engine/tower.js` (`createTower`: rangka, pengaku silang, inti beton, kaca kotak/bertangga, goyangan geser per lantai) |
 | Ep. 08 dst | ⬜ antrean di `IDE-VIDEO.md` |
 
 ## Langkah berikutnya
 
-> Jadwal target: **posting harian** jam 18.00–19.00 WIB. Ep. 01, 02, 03 sudah tayang. **Stok siap upload: ep. 04, 05, 06** (sesi 4).
+> Jadwal target: **posting harian** jam 18.00–19.00 WIB. Ep. 01, 02, 03 sudah tayang. **Stok siap upload: ep. 04, 05, 06** (sesi 4) + **ep. 07** (sesi 5). Status upload ep. 04–06 belum dikonfirmasi pemilik.
 
 1. ✅ Ep. 02 & 03 sudah diunggah pemilik.
 2. ✅ Komentar request "Buat jembatan" dibalas. Nama penonton **tidak** ditampilkan di video.
@@ -67,6 +68,9 @@ _Update file ini di setiap PR. Paling baru di atas._
 - Narasi dibaca satu tarikan; bagian Situ Gintung belum dibuat lebih pelan (TTS satu task). Bisa dipecah jadi beberapa task kalau perlu.
 
 ## Log
+
+### 2026-11-28: Ep. 07 final
+- Preview disetujui ("OK") → final 1080x1920 (50 MB, 79,7 dtk) + cover t=26.5 ("Gedung tinggi tahan|*angin*?") + `upload.md` dikirim.
 
 ### 2026-11-28: Ep. 07 Gedung pencakar langit vs angin (naskah → preview)
 - Pemilik pilih "Gedung vs angin" dari 4 usulan. Riset silang: Monadnock 1891 (dinding bawah ±1,8 m), kenyamanan penghuni (sopite syndrome, batas milli-g), vortex shedding & resonansi (Physics Today), sudut bertangga Taipei 101 (STRUCTURE 2006), peredam 660 ton lantai 87–92 & ayunan 1 m saat topan Soudelor 2015 (Guinness). Angka 25%/40% sengaja tidak dipakai.
