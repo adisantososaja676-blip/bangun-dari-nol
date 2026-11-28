@@ -267,7 +267,8 @@ node tools/cover.mjs out/06-kolam-renang-t1_2.png "Bikin kolam|*renang*?" "Bisa 
 | 04–06 | ✅ **Tayang** (dikonfirmasi pemilik di akhir sesi 5) |
 | 07 Gedung vs angin | ✅ **Siap upload** |
 | 08 Candi tanpa semen | ✅ **Siap upload** (lihat bagian ep. 08 di bawah) |
-| 09 | Belum. Cadangan: terowongan, rel kereta, kapal besi mengapung |
+| 09 Rel kereta | ✅ **Siap upload** (lihat bagian ep. 09 di bawah) |
+| 10 | Belum. Cadangan: terowongan, kapal besi mengapung, tower crane |
 
 ## Render ulang ep. 07
 
@@ -296,3 +297,46 @@ node tools/cover.mjs out/08-candi-t1_5.png "Bikin candi tanpa|*semen*?" "Bisa ng
 - Pemilik: ep. 04–06 **sudah tayang**; **belum ada request penonton** baru untuk ep. 09.
 - Semua pekerjaan sesi 5 (ep. 07 + 08) di-PR & di-merge ke `main` atas permintaan pemilik ("push semua ke github karena aku akan hapus sesi ini"). Sesi berikutnya mulai dari `main`.
 - Stok siap upload: ep. 07, 08 (video/cover/upload.md sudah di tangan pemilik; render ulang dengan perintah di atas kalau hilang).
+
+## Ep. 09 Rel kereta (sesi 5, lanjutan setelah PR #6)
+
+- Pemilik: "lanjut ep 9", belum ada request → pilih **rel kereta**. Branch sesi dimulai ulang dari `main` (PR #6 sudah merge).
+- TTS 24 kredit (sisa **814,86**), 78,0 → 72,5 dtk.
+- Rantai: rel di tanah amblas → bantalan → hujan, bantalan geser → kerikil balas → panas, memuai & melengkung → celah sambungan ("jeglek") → ujung rel aus → rel dilas panjang + dijepit. Fakta: Whoosh pakai pelat beton (slab track), sampai 350 km/jam. Kereta cepat di animasi = desain umum, bukan replika.
+- Aset baru: `engine/train.js`. Cover t=34.8 (rel merah melengkung), "Bikin rel|*kereta*?".
+
+```bash
+node tools/render.mjs --ep 09-rel-kereta --scale 2
+node tools/render.mjs --ep 09-rel-kereta --still 34.8 --scale 2 --clean
+node tools/cover.mjs out/09-rel-kereta-t34_8.png "Bikin rel|*kereta*?" "Bisa nggak?" out/09-rel-kereta-cover.jpg
+```
+
+## Serah-terima akhir sesi 5 (28 Nov 2026) — BACA INI DULU
+
+**Status episode**
+
+| Ep | Status |
+|---|---|
+| 01–06 | Tayang |
+| 07 Gedung vs angin, 08 Candi tanpa semen, 09 Rel kereta | ✅ Siap upload (video/cover/`upload.md` sudah dikirim ke pemilik) |
+| 10 | Belum. Belum ada request penonton. Cadangan: terowongan, kapal besi mengapung, tower crane |
+
+**PR:** #6 (ep. 07–08) & #7 (ep. 09) di-merge ke `main`. Sesi berikutnya mulai dari `main`.
+
+**Alur kerja yang disukai pemilik (sudah stabil, ulangi persis):**
+1. Pemilik: "baca KONTEKS.md dan PROGRESS.md, lanjut ep N".
+2. Claude tanya topik (AskUserQuestion, 3–4 opsi + rekomendasi; "Other" untuk request penonton).
+3. Riset (WebSearch silang; WebFetch diblokir) → `script.json` + `naskah.md` (cek fakta + catatan akurasi + rencana adegan) → commit/push → kirim `naskah.md` → tunggu "OK".
+4. TTS → `trim-pauses.py` → `timing.mjs` → `scene.js` → still per baris (gabung jadi lembar kontak dengan PIL untuk dicek) → preview `--scale 1` → kirim → tunggu "OK".
+5. Final `--scale 2` (background) + cover (still `--clean --port 8125` paralel) + `upload.md` → kirim 3 file → update `PROGRESS.md`/`KONTEKS.md` → PR → merge kalau pemilik minta.
+
+**Hal teknis yang dipelajari sesi 5 (jangan diulang):**
+- Key KIE kedaluwarsa ±2 hari. Kalau 401 "expired": `request_credential` host `api.kie.ai` (Bearer), pemilik isi formulir. Cek saldo: `curl -s -H "Authorization: Bearer x" https://api.kie.ai/api/v1/chat/credit`. Saldo akhir sesi 5: **814,86**.
+- `rm out/NN-c*.jpg` ikut menghapus `NN-...-cover.jpg` (pola glob kena). Pakai nama sementara yang beda, mis. `out/NNx-*.jpg`.
+- JS: `-(a) ** 2` error di browser → tulis `-((a) ** 2)`. Selalu `node --check episodes/<ep>/scene.js` sebelum render.
+- Render: preview ±4–5 menit, final ±11–13 menit (scale 2, 70–80 dtk). Still/cover bisa paralel dengan `--port 8125`.
+- Kamera 9:16 sempit: objek panjang (rel, dinding) & Pak Bero gampang saling menutupi; taruh Pak Bero di samping/belakang, cek still.
+- Instanced mesh (`makeInstances`) + `setColorAt` untuk ratusan batu/bata/kerikil; posisi dihitung tiap frame dari t (deterministik).
+- Aset baru sesi 5: `engine/tower.js` (gedung bergoyang, kaca bertangga), `engine/train.js` (kereta).
+- `audio-asli.mp3` (sebelum dipangkas) & `out/` memang tidak di-commit (.gitignore). Video bisa dirender ulang dari repo.
+- Pertanyaan terbuka lama: handle YouTube final belum pernah dicatat.
