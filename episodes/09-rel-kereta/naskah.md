@@ -2,9 +2,9 @@
 
 **Judul/hook:** Bikin rel kereta sendiri, bisa nggak?
 **Asal ide:** antrean `IDE-VIDEO.md` #9 (dipilih pemilik, sesi 5; belum ada request penonton).
-**Durasi target:** ±70 detik (1.083 karakter)
+**Durasi:** 72,5 detik (audio TTS 1.083 karakter; 78,0 → 72,5 dtk setelah jeda dipangkas maks. 0,5 dtk)
 **Sumber teks kebenaran:** [`script.json`](script.json). File ini versi baca + catatan riset.
-**Status:** 📄 naskah + cek fakta, menunggu OK pemilik sebelum TTS.
+**Status:** ✅ naskah disetujui ("ok"), audio + animasi selesai, preview dikirim (sesi 5).
 
 ## Naskah
 

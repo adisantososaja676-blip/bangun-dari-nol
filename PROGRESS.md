@@ -41,7 +41,9 @@ _Update file ini di setiap PR. Paling baru di atas._
 | Aset baru: gedung rangka baja bergoyang | ✅ `engine/tower.js` (`createTower`: rangka, pengaku silang, inti beton, kaca kotak/bertangga, goyangan geser per lantai) |
 | Ep. 08 Candi tanpa semen: naskah + cek fakta + audio + animasi | ✅ `episodes/08-candi/` (73,7 dtk), naskah disetujui ("OK"), preview dikirim |
 | Ep. 08: upload kit + render final + cover | ✅ final 1080x1920 + cover (frame t=1.5, candi 3 teras + gapura) dikirim. **Siap upload** |
-| Ep. 09 dst | ⬜ antrean di `IDE-VIDEO.md` |
+| Ep. 09 Rel kereta: naskah + cek fakta + audio + animasi | ✅ `episodes/09-rel-kereta/` (72,5 dtk), naskah disetujui ("ok"), preview dikirim |
+| Aset baru: kereta | ✅ `engine/train.js` (`createTrain`: lokomotif, gerbong datar & boks, `place(x,{yAt,zAt,bob,roll})`, `top(i)`) |
+| Ep. 10 dst | ⬜ antrean di `IDE-VIDEO.md` |
 
 ## Langkah berikutnya
 
@@ -55,7 +57,8 @@ _Update file ini di setiap PR. Paling baru di atas._
 6. **Pemilik:** upload ep. 06 + balas komentar request. Stok siap upload: ep. 04, 05, 06.
    ✅ Ep. 07 Gedung vs angin diproduksi (sesi 5).
    ✅ Ep. 08 Candi tanpa semen diproduksi (sesi 5).
-   **Claude:** ep. 09: per akhir sesi 5 **belum ada request penonton baru**; usulkan dari cadangan: Terowongan, Rel kereta, Kapal besi mengapung.
+   ✅ Ep. 09 Rel kereta diproduksi (sesi 5, tanpa request penonton).
+   **Claude:** ep. 10: cek request penonton dulu; cadangan: Terowongan, Kapal besi mengapung, Tower crane.
 7. **Pemilik:** kabari handle YouTube final, lalu catat di `KONTEKS.md`.
 8. Setelah 12 video: evaluasi (retensi 3 dtk, % ditonton, komentar).
 
@@ -71,6 +74,12 @@ _Update file ini di setiap PR. Paling baru di atas._
 - Narasi dibaca satu tarikan; bagian Situ Gintung belum dibuat lebih pelan (TTS satu task). Bisa dipecah jadi beberapa task kalau perlu.
 
 ## Log
+
+### 2026-11-28: Ep. 09 Rel kereta (naskah → preview)
+- Belum ada request penonton → pemilik pilih "Rel kereta". Riset: UMY (fungsi balas, rel panjang min. 325–450 m, satuan rel 25 m), Ruangguru/Okezone (batu bersudut), Rail stressing & FRA (suhu netral, sun kink), ProQuest/FRA/TRID (celah → ujung rel aus, sambungan titik lemah), paten CWR (dijepit ke bantalan), Xinhua (Whoosh slab track CRTS III), 350 km/jam.
+- TTS 24 kredit (sisa **814,86**), 78,0 → 72,5 dtk.
+- `scene.js`: rel = segmen instanced (bisa melendut, berkelok, bercelah, aus), bantalan instanced (bisa geser), 1.800 kerikil balas instanced, tanah becek, matahari + rel berpendar, celah + pelat sambung + label "Jeglek!", gerbong bergoyang, percikan las menutup celah satu per satu + klip penjepit, Whoosh-like di jalan layang + pelat beton (x=300).
+- Aset baru: `engine/train.js`.
 
 ### 2026-11-28: Ep. 08 final
 - Preview disetujui ("OK") → final 1080x1920 + cover t=1.5 ("Bikin candi tanpa|*semen*?") + `upload.md` dikirim.
