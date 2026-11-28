@@ -2,9 +2,9 @@
 
 **Judul/hook:** Bikin gedung pencakar langit tahan angin, bisa nggak?
 **Asal ide:** antrean `IDE-VIDEO.md` #3 (dipilih pemilik, sesi 5).
-**Durasi target:** ±82 detik (1.275 karakter; jeda dipangkas maks. 0,5 dtk)
+**Durasi:** 79,7 detik (audio TTS 1.275 karakter; 86,1 → 79,7 dtk setelah jeda dipangkas maks. 0,5 dtk)
 **Sumber teks kebenaran:** [`script.json`](script.json). File ini versi baca + catatan riset.
-**Status:** 📄 naskah + cek fakta, menunggu OK pemilik sebelum TTS.
+**Status:** ✅ naskah disetujui ("OK"), audio + animasi selesai, preview dikirim (sesi 5).
 
 ## Naskah
 
@@ -47,6 +47,7 @@
 | Sudut bertangga (notched) membuat pusaran berantakan & dorongan melemah | Ya: Taipei 101 diuji di terowongan angin dengan sudut bulat, dipangkas, dan bertangga; sudut bertangga paling efektif menurunkan momen guling akibat angin (slide RWDI: ±25%, angka **tidak** dipakai di naskah) | [STRUCTURE magazine Jun 2006 (Scribd)](https://www.scribd.com/doc/169728071/F-Taipei-101-June-06), [Irwin/RWDI slide](https://dept.math.lsa.umich.edu/~krasny/math654_irwin.pdf) |
 | Peredam massa: bola baja digantung dekat puncak, berayun melawan arah goyangan → goyangan teredam | Ya: tuned mass damper; pabrikan menyebut mengurangi goyangan sampai 40% (tidak dipakai di naskah) | [Yahoo/News: 660-ton pendulum](https://ca.news.yahoo.com/660-ton-pendulum-protects-taiwans-180430672.html), [Guinness: Largest tuned mass damper](https://www.guinnessworldrecords.com/world-records/774616-largest-tuned-mass-damper) |
 | Taipei 101: 660 ton, digantung di lantai 87–92 | Ya: Guinness 660 ton; lokasi antara lantai 87 & 92 (satu sumber bilang 87–91). Diameter ±5,5 m, 41 pelat baja, 92 kabel | [Guinness](https://www.guinnessworldrecords.com/world-records/774616-largest-tuned-mass-damper), [Yahoo](https://ca.news.yahoo.com/660-ton-pendulum-protects-taiwans-180430672.html) |
+| Kartu: Taipei 101 tinggi 508 meter | Ya: tinggi arsitektur 508 m (termasuk menara antena/puncak) | [Britannica: Taipei 101](https://www.britannica.com/place/Taipei-101) |
 | Topan tahun 2015, bola berayun sampai 1 meter | Ya: Guinness: ayunan terjauh 1 m, Agustus 2015, topan Soudelor (batas maks. 1,5 m). Catatan: 1 m = gerak **bola**, bukan gedung (gedung lantai 90 ±45 cm) | [Guinness](https://www.guinnessworldrecords.com/world-records/774616-largest-tuned-mass-damper), [ArchDaily](https://www.archdaily.com/772017/this-damper-keeps-taipei-101-upright-in-a-typhoon), [Academia Sinica ESC2016](https://meetingorganizer.copernicus.org/ESC2016/ESC2016-603.pdf) |
 
 **Catatan akurasi (minta pemilik cek):**
