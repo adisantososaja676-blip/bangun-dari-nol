@@ -266,7 +266,8 @@ node tools/cover.mjs out/06-kolam-renang-t1_2.png "Bikin kolam|*renang*?" "Bisa 
 | 01–03 | Tayang |
 | 04–06 | Siap upload (status upload belum dikonfirmasi pemilik) |
 | 07 Gedung vs angin | ✅ **Siap upload** |
-| 08 | Belum. Cadangan: candi tanpa semen, terowongan, rel kereta |
+| 08 Candi tanpa semen | ✅ **Siap upload** (lihat bagian ep. 08 di bawah) |
+| 09 | Belum. Cadangan: terowongan, rel kereta, kapal besi mengapung |
 
 ## Render ulang ep. 07
 
@@ -274,4 +275,18 @@ node tools/cover.mjs out/06-kolam-renang-t1_2.png "Bikin kolam|*renang*?" "Bisa 
 node tools/render.mjs --ep 07-gedung-angin --scale 2
 node tools/render.mjs --ep 07-gedung-angin --still 26.5 --scale 2 --clean
 node tools/cover.mjs out/07-gedung-angin-t26_5.png "Gedung tinggi tahan|*angin*?" "Bisa nggak?" out/07-gedung-angin-cover.jpg
+```
+
+## Ep. 08 Candi tanpa semen (sesi 5, lanjutan)
+
+- Pemilik: "lanjut ep 8" → pilih **candi tanpa semen** dari 4 usulan → naskah OK → preview OK → final.
+- TTS 24 kredit (sisa **838,86**), 79,7 → 73,7 dtk. Key KIE masih berlaku di hari yang sama.
+- Rantai: batu tumpuk → gempa, bergeser → ekor burung & takikan → ambang pintu patah → lengkung semu → hujan menggenang → jaladwara (Borobudur 100) → air meresap, dinding miring → pemugaran (saluran air + lapisan kedap). Fakta: pemugaran 1973–1983, ±1 juta batu dibongkar & dipasang lagi (NatGeo, angka bulat).
+- **Sensitivitas:** candi = tempat ibadah aktif. Candi di animasi = rekaan sederhana (bukan replika), tanpa arca, Pak Bero tidak memanjat stupa. Borobudur hanya siluet di bagian fakta.
+- Cover t=1.5 (candi utuh), "Bikin candi tanpa|*semen*?" + "Bisa nggak?".
+
+```bash
+node tools/render.mjs --ep 08-candi --scale 2
+node tools/render.mjs --ep 08-candi --still 1.5 --scale 2 --clean
+node tools/cover.mjs out/08-candi-t1_5.png "Bikin candi tanpa|*semen*?" "Bisa nggak?" out/08-candi-cover.jpg
 ```

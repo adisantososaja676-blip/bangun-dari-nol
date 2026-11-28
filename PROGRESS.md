@@ -40,11 +40,12 @@ _Update file ini di setiap PR. Paling baru di atas._
 | Ep. 07: upload kit + render final + cover | ✅ final 1080x1920 (50 MB) + cover (frame t=26.5, rangka melengkung kena angin) dikirim. **Siap upload** |
 | Aset baru: gedung rangka baja bergoyang | ✅ `engine/tower.js` (`createTower`: rangka, pengaku silang, inti beton, kaca kotak/bertangga, goyangan geser per lantai) |
 | Ep. 08 Candi tanpa semen: naskah + cek fakta + audio + animasi | ✅ `episodes/08-candi/` (73,7 dtk), naskah disetujui ("OK"), preview dikirim |
+| Ep. 08: upload kit + render final + cover | ✅ final 1080x1920 + cover (frame t=1.5, candi 3 teras + gapura) dikirim. **Siap upload** |
 | Ep. 09 dst | ⬜ antrean di `IDE-VIDEO.md` |
 
 ## Langkah berikutnya
 
-> Jadwal target: **posting harian** jam 18.00–19.00 WIB. Ep. 01, 02, 03 sudah tayang. **Stok siap upload: ep. 04, 05, 06** (sesi 4) + **ep. 07** (sesi 5). Status upload ep. 04–06 belum dikonfirmasi pemilik.
+> Jadwal target: **posting harian** jam 18.00–19.00 WIB. Ep. 01, 02, 03 sudah tayang. **Stok siap upload: ep. 04, 05, 06** (sesi 4) + **ep. 07, 08** (sesi 5). Status upload ep. 04–06 belum dikonfirmasi pemilik.
 
 1. ✅ Ep. 02 & 03 sudah diunggah pemilik.
 2. ✅ Komentar request "Buat jembatan" dibalas. Nama penonton **tidak** ditampilkan di video.
@@ -70,6 +71,9 @@ _Update file ini di setiap PR. Paling baru di atas._
 - Narasi dibaca satu tarikan; bagian Situ Gintung belum dibuat lebih pelan (TTS satu task). Bisa dipecah jadi beberapa task kalau perlu.
 
 ## Log
+
+### 2026-11-28: Ep. 08 final
+- Preview disetujui ("OK") → final 1080x1920 + cover t=1.5 ("Bikin candi tanpa|*semen*?") + `upload.md` dikirim.
 
 ### 2026-11-28: Ep. 08 Candi tanpa semen (naskah → preview)
 - Pemilik pilih "Candi tanpa semen". Riset: detik (4 sambungan Borobudur: ekor burung, takikan, alur-lidah, purus; bukan putih telur), corbel arch candi, 100 jaladwara (laporan pemugaran), UNESCO (air meresap → dinding melesak & miring), pemugaran 1973–1983 (drainase + beton), NatGeo (±1 juta batu dibongkar & dipasang lagi).
